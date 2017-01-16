@@ -99,7 +99,7 @@ GreenFill = PatternFill(start_color='FF00FF00',
 YellowFill = PatternFill(start_color='AAFF8000',
                       end_color='AAFF8000',
                       fill_type='solid')
-xfile = openpyxl.load_workbook('report.xlsx')
+xfile = openpyxl.load_workbook('report_template.xlsx')
 sheet = xfile.get_sheet_by_name('report')
 
 for Job in Server_Job_List:
