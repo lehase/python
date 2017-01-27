@@ -2,6 +2,7 @@ import os
 import datetime
 import shutil
 
+
 dnow = datetime.datetime.now()
 n=0
 for root, subFolders, files in os.walk('/edi'):
@@ -15,3 +16,5 @@ for root, subFolders, files in os.walk('/edi'):
             #         os.makedirs(directory)
             # shutil.copy(os.path.join(root, file), str(os.path.join('/tmp/1'+root[4:])+str(file)))
 print n
+
+
