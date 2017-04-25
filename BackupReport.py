@@ -107,8 +107,8 @@ for Job in Server_Job_List:
                       end_color='AAFF8000',
                       fill_type='solid')
     elif Job['JobName'] == 'Index_Maintenance':
-        Fill = PatternFill(start_color='3366ff00',
-                      end_color='3366ff00',
+        Fill = PatternFill(start_color='00CCFF',
+                      end_color='00CCFF',
                       fill_type='solid')
 
     if Job['freq_interval'] & 2:
