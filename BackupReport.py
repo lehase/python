@@ -49,7 +49,7 @@ FROM
         ON [sJOBSCH].[schedule_id] = [sSCH].[schedule_id]
 	LEFT JOIN [msdb].[dbo].[sysjobsteps] AS [sJSTEP]
 		ON [sJOB].[job_id] = [sJSTEP].[job_id]
-WHERE (sJOB.name LIKE 'Backup_FULL' OR sJOB.name LIKE 'Backup_DIFF') AND [sJSTEP].[step_id] = 1
+WHERE (sJOB.name LIKE 'Backup_FULL' OR sJOB.name LIKE 'Backup_DIFF' OR sJOB.name LIKE 'Index_Maintenance') AND [sJSTEP].[step_id] = 1
 '''
 
 
@@ -99,6 +99,7 @@ GreenFill = PatternFill(start_color='FF00FF00',
 YellowFill = PatternFill(start_color='AAFF8000',
                       end_color='AAFF8000',
                       fill_type='solid')
+
 xfile = openpyxl.load_workbook('report_template.xlsx')
 sheet = xfile.get_sheet_by_name('report')
 
@@ -107,10 +108,15 @@ for Job in Server_Job_List:
         Fill = PatternFill(start_color='FF00FF00',
                       end_color='FF00FF00',
                       fill_type='solid')
-    else:
+    elif Job['JobName'] == 'Backup_DIFF':
         Fill = PatternFill(start_color='AAFF8000',
                       end_color='AAFF8000',
                       fill_type='solid')
+    elif Job['JobName'] == 'Index_Maintenance':
+        Fill = PatternFill(start_color='668CFF00',
+                      end_color='668CFF00',
+                      fill_type='solid')
+
     if Job['freq_interval'] & 2:
         sheet[('A'+str(ROW))] = Job['Server']
         sheet[('B'+str(ROW))] = Job['JobName']
