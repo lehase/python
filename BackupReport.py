@@ -111,6 +111,7 @@ for Job in Server_Job_List:
                       end_color='00CCFF',
                       fill_type='solid')
 
+    print Job['Server'], Job['JobName'], Job['freq_interval']
     if Job['freq_interval'] & 2:
         sheet[('A'+str(ROW))] = Job['Server']
         sheet[('B'+str(ROW))] = Job['JobName']
@@ -121,7 +122,6 @@ for Job in Server_Job_List:
         i = 0
         ii = 0
         PointStart1 = 0
-        print Job['Server'], Job['JobName'], Job['Start_Time'], PointStart, Job['last_run_duration'], LenPointStart
         while i != LenPointStart:
             if int(PointStart+i) > 47:
                 sheet[(Tuesday[int(PointStart1+ii)]+str(ROW))] = ''
