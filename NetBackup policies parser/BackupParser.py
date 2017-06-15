@@ -90,7 +90,6 @@ DataList = InputFile.readlines()
 
 
 
-
 List_Schedule = []
 i = 0
 id = 1
@@ -140,7 +139,7 @@ while i < len(DataList):
             if not re.match('^$', EditLine):
                 i += 1
             # print 'i+=1'
-        Incl = Incl[:-2]
+        Incl = Incl[:-1]
         Dict['Include'] = Incl
     elif SplitLine[0] == 'Schedule':
         # print 'Schedule: ' + str(i+1)
@@ -199,7 +198,7 @@ for index in Data:
             WorkSheet.write(num, j, 'None')
             j += 1
         try:
-            WorkSheet.write(num, j, index['Include'])
+            WorkSheet.write(num, j, str(index['Include']))
             j += 1
         except:
             WorkSheet.write(num, j, 'None')
