@@ -448,7 +448,7 @@ Policy Info:        (none defined)
 Policy Name:       VMware_MOW03-BAD01DL
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -460,7 +460,7 @@ Policy Name:       VMware_MOW03-BAD01DL
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -506,7 +506,7 @@ Policy Name:       VMware_MOW03-BAD01DL
 Policy Name:       VMware_MOW03-BAP01L
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -564,7 +564,7 @@ Policy Name:       VMware_MOW03-BAP01L
 Policy Name:       VMware_MOW03-BAP55L
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -616,7 +616,7 @@ Policy Name:       VMware_MOW03-BAP55L
 Policy Name:       VMware_MOW03-CTR01
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -674,7 +674,7 @@ Policy Name:       VMware_MOW03-CTR01
 Policy Name:       VMware_MOW03-CTR02
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -686,7 +686,7 @@ Policy Name:       VMware_MOW03-CTR02
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -732,7 +732,7 @@ Policy Name:       VMware_MOW03-CTR02
 Policy Name:       VMware_MOW03-EAD01DL
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -744,7 +744,7 @@ Policy Name:       VMware_MOW03-EAD01DL
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -790,7 +790,7 @@ Policy Name:       VMware_MOW03-EAD01DL
 Policy Name:       VMware_MOW03-EAP01L
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -802,7 +802,7 @@ Policy Name:       VMware_MOW03-EAP01L
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           mow03_back09_advanceddisk
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -848,7 +848,7 @@ Policy Name:       VMware_MOW03-EAP01L
 Policy Name:       VMware_MOW03-MAP01L
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -860,7 +860,7 @@ Policy Name:       VMware_MOW03-MAP01L
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -906,7 +906,7 @@ Policy Name:       VMware_MOW03-MAP01L
 Policy Name:       VMware_MOW03-MAP55L
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -958,7 +958,7 @@ Policy Name:       VMware_MOW03-MAP55L
 Policy Name:       VMware_MOW03-PIP01L
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -977,7 +977,7 @@ Policy Name:       VMware_MOW03-PIP01L
   Data Classification:       Gold
   Residence is Storage Lifecycle Policy:    no
   Application Discovery:      yes
-  Discovery Lifetime:      28800 seconds
+  Discovery Lifetime:      4838400 seconds
   ASC Application and attributes: (none defined)
 
   Granular Restore Info:  no
@@ -985,7 +985,7 @@ Policy Name:       VMware_MOW03-PIP01L
   Use Accelerator:  no
   HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
 
-  Include:  vmware:/?filter=VMDNSName Equal "MOW03-PIP01L"
+  Include:  vmware:/?filter=VMDNSName Equal "mow03-pip01l"
 
   Schedule:              Full
     Type:                Full Backup
@@ -1016,7 +1016,7 @@ Policy Name:       VMware_MOW03-PIP01L
 Policy Name:       VMware_MOW03-SAP98TL
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1104,7 +1104,7 @@ Policy Name:       VMware_MOW03-SAP98TL
 Policy Name:       VMware_MOW03-SAP99TL
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1116,7 +1116,7 @@ Policy Name:       VMware_MOW03-SAP99TL
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -1191,7 +1191,7 @@ Policy Name:       VMware_MOW03-SAP99TL
 Policy Name:       VMware_MOW03-SMP01L
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1249,7 +1249,7 @@ Policy Name:       VMware_MOW03-SMP01L
 Policy Name:       VMware_MOW03-STOR02
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1261,7 +1261,7 @@ Policy Name:       VMware_MOW03-STOR02
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -1307,7 +1307,7 @@ Policy Name:       VMware_MOW03-STOR02
 Policy Name:       VMware_MOW03-WIKI01
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1319,7 +1319,7 @@ Policy Name:       VMware_MOW03-WIKI01
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -1394,7 +1394,7 @@ Policy Name:       VMware_MOW03-WIKI01
 Policy Name:       VMware_MOW03-oebs01dl
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1406,7 +1406,7 @@ Policy Name:       VMware_MOW03-oebs01dl
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -1442,10 +1442,10 @@ Policy Name:       VMware_MOW03-oebs01dl
 
 ------------------------------------------------------------
 
-Policy Name:       VMware_hypess_hyperion_hypdb
+Policy Name:       VMware_mow03-SAPT01
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1458,62 +1458,6 @@ Policy Name:       VMware_hypess_hyperion_hypdb
   Disaster Recovery:   0
   Collect BMR info:    no
   Residence:           mow03-back09-hcart2-robot-tld-3
-  Volume Pool:         NetBackup
-  Server Group:        *ANY*
-  Keyword:             (none specified)
-  Data Classification:       Gold
-  Residence is Storage Lifecycle Policy:    no
-  Application Discovery:      yes
-  Discovery Lifetime:      28800 seconds
-  ASC Application and attributes: (none defined)
-
-  Granular Restore Info:  no
-  Ignore Client Direct:  no
-  Use Accelerator:  no
-  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
-
-  Include:  vmware:/?filter=Displayname Equal "hypess" OR Displayname Equal "hyperion" OR Displayname Equal "hypdb"
-
-  Schedule:              Full
-    Type:                Full Backup
-    Calendar sched: Enabled
-     Included Dates-----------
-         No days of week entered
-        Day 5 of month
-        Day 20 of month
-     Excluded Dates----------
-        No specific exclude dates entered
-        No exclude days of week entered
-    PFI Recovery:        0
-    Maximum MPX:         1
-    Retention Level:     4 (2 months)
-    Number Copies:       1
-    Fail on Error:       0
-    Residence:           (specific storage unit not required)
-    Volume Pool:         (same as policy volume pool)
-    Server Group:        (same as specified for policy)
-    Residence is Storage Lifecycle Policy:         0
-    Daily Windows:
-          среда      01:12:30  -->  среда      19:47:30
-
-------------------------------------------------------------
-
-Policy Name:       VMware_mow03-SAPT01
-
-  Policy Type:         VMware
-  Active:              no
-  Effective date:      04/07/2016 13:54:45
-  File Restore Raw:    yes
-  Application Consistent:    yes
-  Block Incremental:   yes
-  Mult. Data Streams:  no
-  Client Encrypt:      no
-  Checkpoint:          no
-  Policy Priority:     0
-  Max Jobs/Policy:     Unlimited
-  Disaster Recovery:   0
-  Collect BMR info:    no
-  Residence:           (specific storage unit not required)
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -1553,7 +1497,7 @@ Policy Name:       VMware_mow03-SAPT01
 Policy Name:       VMware_mow03-ejp01l
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1611,7 +1555,7 @@ Policy Name:       VMware_mow03-ejp01l
 Policy Name:       VMware_mow03-hyp01
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1623,7 +1567,7 @@ Policy Name:       VMware_mow03-hyp01
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           mow03_back09_advanceddisk
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -1703,7 +1647,7 @@ Policy Name:       VMware_mow03-hyp01
 Policy Name:       VMware_mow03-hyp01l
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1715,7 +1659,7 @@ Policy Name:       VMware_mow03-hyp01l
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -1795,7 +1739,7 @@ Policy Name:       VMware_mow03-hyp01l
 Policy Name:       VMware_mow03-mrls01
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1807,7 +1751,7 @@ Policy Name:       VMware_mow03-mrls01
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -1888,7 +1832,7 @@ Policy Name:       VMware_mow03-mrls01
 Policy Name:       VMware_mow03-mrls03
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1900,7 +1844,7 @@ Policy Name:       VMware_mow03-mrls03
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -1981,7 +1925,7 @@ Policy Name:       VMware_mow03-mrls03
 Policy Name:       VMware_mow03-navi01
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1993,7 +1937,7 @@ Policy Name:       VMware_mow03-navi01
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -2039,7 +1983,7 @@ Policy Name:       VMware_mow03-navi01
 Policy Name:       VMware_mow03-sbo01
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -2051,7 +1995,7 @@ Policy Name:       VMware_mow03-sbo01
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -2097,7 +2041,7 @@ Policy Name:       VMware_mow03-sbo01
 Policy Name:       VMware_mow03-sbo01d
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -2109,7 +2053,7 @@ Policy Name:       VMware_mow03-sbo01d
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           mow03_back09_advanceddisk
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -2148,7 +2092,7 @@ Policy Name:       VMware_mow03-sbo01d
 Policy Name:       VMware_mow03-smd01dl
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -2160,7 +2104,7 @@ Policy Name:       VMware_mow03-smd01dl
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -2206,7 +2150,7 @@ Policy Name:       VMware_mow03-smd01dl
 Policy Name:       VMware_mow03-wdp01l
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -2218,7 +2162,7 @@ Policy Name:       VMware_mow03-wdp01l
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -2264,7 +2208,7 @@ Policy Name:       VMware_mow03-wdp01l
 Policy Name:       VMware_mow03-wdp02l
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -2322,7 +2266,7 @@ Policy Name:       VMware_mow03-wdp02l
 Policy Name:       VMware_mow03-wpb01
 
   Policy Type:         VMware
-  Active:              no
+  Active:              yes
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -2334,7 +2278,7 @@ Policy Name:       VMware_mow03-wpb01
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           (specific storage unit not required)
+  Residence:           mow03-back09-hcart2-robot-tld-3
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -2484,7 +2428,7 @@ Policy Name:       mow02-dag_exchangedb
 Policy Name:       mow02-fs01
 
   Policy Type:         MS-Windows
-  Active:              no
+  Active:              yes
   Effective date:      10/31/2014 11:10:19
   Backup network drvs: no
   Collect TIR info:    no
@@ -2495,7 +2439,7 @@ Policy Name:       mow02-fs01
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           dp_mow02
+  Residence:           mow03_back07_dpdisk-stu
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -7624,6 +7568,7 @@ Policy Name:       mow03-stor01l_itfiles_backup_HYP
   HW/OS/Client:  Linux         SuSE2.6.16    mow03-stor01l.cherkizovsky.net
 
   Include:  /itfiles/BACKUP/HYP
+            /itfiles/distr
 
   Schedule:              Full
     Type:                Full Backup
@@ -9296,7 +9241,7 @@ Policy Name:       test_VMware_mow03-srv03
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           mow03-back09-hcart2-robot-tld-3
+  Residence:           mow03_back09_advanceddisk
   Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
@@ -9335,7 +9280,7 @@ Policy Name:       test_VMware_mow03-srv03
 Policy Name:       test_VMware_mow03-stor02
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes

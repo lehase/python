@@ -1,0 +1,826 @@
+function ToggleItem(_item){
+    $(_item).parent().parent().children().last().toggle();
+}
+
+function msgBox(text){
+    $("#dialog-message").html('<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>' + text + '</P>');
+    $("#dialog-message").dialog('open');
+}
+
+function doCheck(){
+    var barcode = false;
+    var result = true;
+    $('#selected_fields').children().each(function(){
+        if($(this).text() == 'Штрихкод'){
+            barcode = true;
+        }
+    });
+    if(!barcode){
+        msgBox('Поле штрихкод обязательно для отображения.');
+        result = false;
+    }
+
+    $('#Add_Where').children().each(function(){
+        if($(this).attr('disabled') == 'disabled' &&($(this).attr('DataType') == 'date' || $(this).attr('DataType') == 'number')){
+            var nickname = $(this).val();
+            var name = $(this).text();
+            $('#Where_Items').children().find("input[type='checkbox']").each(function(){
+                if(this.checked && ($(this).attr('field_name') == nickname)){
+                    var datefrom = $($(this).parent().parent().find("input[type='text']")[0]).val();
+                    var dateto = $($(this).parent().parent().find("input[type='text']")[1]).val();
+                    if($(this).attr('DataType') == 'date'){
+                        if (datefrom){
+                            try{
+                                datefrom=$.datepicker.parseDate('dd.mm.yy', datefrom)
+                            }catch(e){
+                                msgBox('Некорректный формат даты в поле "' + name + ' с".');
+                                result = false;
+                            }
+                        }
+                        if (dateto){
+                            try{
+                                dateto=$.datepicker.parseDate('dd.mm.yy', dateto)
+                            }catch(e){
+                                msgBox('Некорректный формат даты в поле "' + name + ' по".');
+                                result = false;
+                            }
+                        }
+                        if (datefrom && dateto && datefrom>dateto){
+                            msgBox('Дата в поле "' + name + ' с" должна быть меньше даты в поле "' + name + ' по".');
+                            result = false;
+                        }
+                    } else {
+                        if(datefrom){
+                            if(isNaN(parseInt(datefrom,10))){
+                                msgBox('Некорректное значение в поле "' + name + ' с".');
+                                result = false;
+                            }
+                        }
+
+                        if(dateto){
+                            if(isNaN(parseInt(dateto,10))){
+                                msgBox('Некорректное значение в поле "' + name + ' с".');
+                                result = false;
+                            }
+                        }
+
+                        if (datefrom && dateto && datefrom>dateto){
+                            msgBox('Значение в поле "' + name + ' с" должно быть меньше значения в поле "' + name + ' по".');
+                            result = false;
+                        }
+                    }
+                }
+            });
+        }
+    });
+    return result;
+}
+
+function doClean(){
+    $('#Add_Where').children().each(function(){
+        $(this).attr('disabled', false);
+    });
+    $('#Add_Order').children().each(function(){
+        $(this).attr('disabled', false);
+    });
+    $('#Where_Items').find('tr').each(function(){
+        if($(this).find('input[type="checkbox"]').first().attr('disabled') != 'disabled'){
+            $(this).remove();
+        } else {
+            $(this).find('input[type="radio"]').first().attr('checked', true);
+        }
+    });
+    $($('#Order_Items').children()).remove();
+    $($("#available_fields").children()).remove();
+    $($("#selected_fields").children()).remove();
+    var available_content = '';
+    var selected_content = '';
+    var _items = $('#Add_Where').children();
+    for(var j = 0; j < _items.length; j++){
+        if($(_items[j]).val() != ''){
+            if(j < _items.length / 2){
+                selected_content += "<li class='ui-state-default' field_name='" + $(_items[j]).val() + "'>" + $(_items[j]).text() + "</li>";
+            } else {
+                available_content += "<li class='state-grey' field_name='" + $(_items[j]).val() + "'>" + $(_items[j]).text() + "</li>";
+            }
+        }
+    }
+    $('#select_all').attr('checked', false);
+    $("#available_fields").append(available_content);
+    $("#selected_fields").append(selected_content);
+}
+
+function doClose(){
+    document.location.href = $('#originalNextURL').val();
+}
+
+function AddOrderItem(nickname, val){
+    var name = '';
+    $('#Add_Order').children().each(function(){
+        if($(this).val() == nickname){
+            name = $(this).text();
+            $(this).attr('disabled', true);
+        }
+    });
+    var content = '<tr>' +
+        '<td><input type="checkbox" checked="checked" onclick="ToggleItem(this);" field_name="' + nickname + '"/></td>' +
+        '<td>' + name + '</td>' +
+        '<td width="40%"></td>' +
+        '<td><select>';
+    if(val){
+        if(val == 'ASC'){
+            content += '<option value="ASC" selected="selected">По возрастанию</option>' +
+            '<option value="DESC">По убыванию</option>';
+        } else {
+            content += '<option value="ASC">По возрастанию</option>' +
+            '<option value="DESC" selected="selected">По убыванию</option>';
+        }
+    } else {
+        content += '<option value="ASC">По возрастанию</option>' +
+        '<option value="DESC">По убыванию</option>';
+    }
+
+    $('#Order_Items').append(content + '</select></td></tr>');
+    $('#Add_Order').children().first().attr('selected', 'selected');
+}
+
+function MapDataToView(obj){
+    if(obj){
+        for (var prop in obj){
+            if(obj.hasOwnProperty(prop)){
+                switch (prop){
+                    case 'ORDERED':
+                        var order = obj[prop];
+                        if(order && (order != "")){
+                            for(var y = 0; y < order.split(',').length; y++){
+                                AddOrderItem(order.split(',')[y].split(' ')[0], order.split(',')[y].split(' ')[1]);
+                            }
+                        }
+                        break;
+                    case 'SELECTED':
+                        var selected_items = obj[prop];
+                        if(selected_items){
+                            var select = selected_items.split(',');
+                            $('#available_fields').children().remove();
+                            $('#selected_fields').children().remove();
+                            var counter = 0;
+                            $('#Add_Order').children().each(function(){
+                                var check = false;
+                                for(var u = 0; u < select.length; u++){
+                                    if(select[u] == $(this).val()){
+                                        check = true;
+                                    }
+                                }
+                                if($(this).text() != " " && !check){
+                                    $('#available_fields').append("<li class='state-grey'>" + $(this).text() + "</li>");
+                                }
+                            });
+                            select.forEach(function(element, index, array){
+                                $('#Add_Order').children().each(function(){
+                                    if($(this).text() != " " && element == $(this).val()){
+                                        $('#selected_fields').append("<li class='ui-state-default'>" + $(this).text() + "</li>");
+                                        counter++;
+                                    }
+                                });
+                            });
+                            if(($('#Add_Order').children().length -1) == counter) { $('#select_all').attr('checked', true); }
+                        }
+                        break;
+                    default:
+                        if(obj[prop]){
+                            $('#Add_Where').children().each(function(){
+                                if($(this).val() == prop){ AddWhereItem(prop, obj[prop]); }
+                            });
+                        }
+                }
+            }
+        }
+    }
+}
+
+function AddWhereItem(nickname, val){
+    var _type;
+    var src;
+    var maxlength;
+    var valueField;
+    var textField;
+    var name;
+    var add = false;
+
+    $('#Add_Where').children().each(function(){
+        if($(this).val() == nickname){
+            _type = $(this).attr('DataType');
+            src = $(this).attr('DataSource');
+            maxlength = $(this).attr('Max_Length');
+            valueField = $(this).attr('valueField');
+            textField = $(this).attr('textField');
+            name = $(this).text();
+        }
+    });
+    var check = true;
+    if(val != undefined){
+        switch(_type){
+            case 'date':
+                if((val[0] == (nickname + 'FROM')) || (val[1] == (nickname + 'TO'))) { check = false; }
+                break;
+            case 'number':
+                if((val[0] == (nickname + 'FROM')) || (val[1] == (nickname + 'TO'))) { check = false; }
+                break;
+            default:
+                if(val == nickname) { check = false; }
+                break;
+        }
+    }
+    var content = '<tr>' +
+        '<td><input type="checkbox" checked="checked" onclick="ToggleItem(this);" field_name="' + nickname + '" DataType="' + _type +'" /></td>' +
+        '<td>' + name + '</td><td width="20%"></td><td>';
+    if(val != undefined && check){
+        switch(_type){
+            case 'string':
+                if(val != ''){
+                    content += '<input type="text" field_name="' + nickname + '" size="50" maxlength="' + maxlength + '" value="' + val + '"/></td></tr>';
+                    add = true;
+                }
+                break;
+            case 'date':
+                if(val[0] != '' || val[1] != ''){
+                    content += 'c&nbsp;&nbsp;' +
+                    '<input type="text" class="datetime_value" field_name="' + nickname + 'FROM" size="10" value="' + val[0] + '" />' +
+                    '&nbsp;&nbsp;по&nbsp;&nbsp;' +
+                    '<input type="text" class="datetime_value" field_name="' + nickname + 'TO" size="10" value="' + val[1] + '" /></td></tr>';
+                    add = true;
+                }
+                break;
+            case 'autocomplete':
+                if(val != ''){
+                    var list = val.split(',');
+                    var field_val;
+                    content += '<select multiple="multiple" class="autocomplete_item">';
+                    if(window.Common.Dictionaries[src]){
+                        for(var k = 0; k < window.Common.Dictionaries[src].length; k++){
+                            var selected = false;
+                            for(var j = 0; j < list.length; j++){
+                                if(isNaN(parseInt(list[j],10))){
+                                    field_val = list[j].substring(2,list[j].length - 1);
+                                } else {
+                                    field_val = list[j];
+                                }
+                                if(field_val == window.Common.Dictionaries[src][k].value){
+                                    selected = true;
+                                }
+                            }
+                            if(selected){
+                                content += '<option value="' + window.Common.Dictionaries[src][k].value + '" selected="selected">' +  window.Common.Dictionaries[src][k].text + '</option>';
+                            } else{
+                                content += '<option value="' + window.Common.Dictionaries[src][k].value + '">' +  window.Common.Dictionaries[src][k].text + '</option>';
+                            }
+                        }
+                    } else {
+                        for(var k = 0; k < list.length; k++){
+                            if(isNaN(parseInt(list[k],10))){
+                                field_val = list[k].substring(2,list[k].length - 1);
+                            } else {
+                                field_val = list[k];
+                            }
+
+                            $.ajax({
+                                type: "POST",
+                                url: document.location.origin + document.location.pathname,
+                                async: false,
+                                data: {
+                                    func: 'nickname.do',
+                                    nickname: src,
+                                    action: 'open',
+                                    key: field_val.replace(/&quot;/g, '"')
+                                },
+                                success: function(response){
+                                    if(response.actualRows > 0){
+                                        content += '<option value="' + response.myRows[0][valueField].toString().replace(/"/g, '&quot;') + '" selected="selected">' +  response.myRows[0][textField] + '</option>';
+                                    }
+                                }
+                            });
+                        }
+                    }
+                    content += '</select></td></tr>';
+                    add = true;
+                }
+                break;
+            case 'number':
+                if(val[0] != '' || val[1] != ''){
+                    content += 'c&nbsp;&nbsp;' +
+                    '<input type="text" field_name="' + nickname + 'FROM" size="5" value="' + val[0] + '" />' +
+                    '&nbsp;&nbsp;по&nbsp;&nbsp;' +
+                    '<input type="text" field_name="' + nickname + 'TO" size="5" value="' + val[1] + '" /></td></tr>';
+                    add = true;
+                }
+                break;
+        }
+    } else {
+        add = true;
+        switch(_type){
+            case 'string':
+                content += '<input type="text" field_name="' + nickname + '" size="50" maxlength="' + maxlength + '" /></td></tr>';
+                break;
+            case 'date':
+                content += 'c&nbsp;&nbsp;' +
+                '<input type="text" class="datetime_value" field_name="' + nickname + 'FROM" size="10" />' +
+                '&nbsp;&nbsp;по&nbsp;&nbsp;' +
+                '<input type="text" class="datetime_value" field_name="' + nickname + 'TO" size="10" /></td></tr>';
+                break;
+            case 'autocomplete':
+                content += '<select multiple="multiple" class="autocomplete_item">';
+                if(window.Common.Dictionaries[src]){
+                    for(var k = 0; k < window.Common.Dictionaries[src].length; k++){
+                        content += '<option value="' + window.Common.Dictionaries[src][k].value + '">' +  window.Common.Dictionaries[src][k].text + '</option>';
+                    }
+                }
+                content += '</select>';
+                break;
+            case 'number':
+                content += 'c&nbsp;&nbsp;' +
+                '<input type="text" field_name="' + nickname + 'FROM" size="5" />' +
+                '&nbsp;&nbsp;по&nbsp;&nbsp;' +
+                '<input type="text" field_name="' + nickname + 'TO" size="5" /></td></tr>';
+                break;
+        }
+    }
+
+    if(add){
+        $('#Where_Items').append(content);
+        $('#Add_Where')
+            .children()
+            .filter(function(){
+                return this.value == nickname;
+            }).attr('disabled', true);
+
+        $('#Add_Where').children().first().attr('selected', 'selected');
+        if(_type == 'date'){
+            $('.datetime_value')
+                .datepicker({
+                    dateFormat: "dd.mm.yy",
+                    showOn: "button",
+                    buttonImage: Common.zSupportUrl + "datepicker.gif",
+                    buttonImageOnly: true,
+                    buttonText: "Выберите дату"
+                });
+        }
+        if(_type == 'autocomplete'){
+            if(window.Common.Dictionaries[src]){
+                $($('#Where_Items').find('tr').last().find('select')[0]).tokenize({
+                    nbDropdownElements: window.Common.Dictionaries[src].length
+                });
+            } else {
+                $($('#Where_Items').find('tr').last().find('select')[0]).tokenize({
+                    datas: '',
+                    searchParam:{
+                        func: 'nickname.do',
+                        nickname: src,
+                        action: 'open'
+                    },
+                    valueField: valueField,
+                    textField: textField,
+                    htmlField: textField
+                });
+            }
+        }
+    }
+}
+
+function MapDataToForm(){
+    $('#Add_Where').children().each(function(){
+        if(!$(this).attr('disabled')){
+            if($(this).attr('DataType') == 'date' || $(this).attr('DataType') == 'number'){
+                $('#' + $(this).val() + 'FROM').val('');
+                $('#' + $(this).val() + 'TO').val('');
+            } else {
+                $('#' + $(this).val()).val('');
+            }
+        }
+    });
+    $('#Where_Items').children().find("input[type='checkbox']").each(function(){
+        var FieldName = $(this).attr('field_name');
+        var FieldType = '';
+        $('#Add_Where').children().each(function(){
+            if($(this).val() == FieldName){
+                FieldType = $(this).attr('DataType');
+            }
+        });
+        if(this.checked){
+            if($(this).attr('disabled') != 'disabled'){
+                switch(FieldType){
+                    case 'string':
+                        $("#" + FieldName).val($(this).parent().parent().find("input[type='text']").val());
+                        break;
+                    case 'autocomplete':
+                        var result = '';
+                        var cnt = 0;
+                        $(this).parent().parent().find('select').children().each(function(){
+                            if($(this).attr('selected')){
+                                cnt++;
+                                if(!isNaN(parseInt($(this).val(), 10))){
+                                    result += $(this).val() + ',';
+                                } else {
+                                    result += "N'" + $(this).val() + "',"; //.replace(/"/g, '&quot;')
+                                }
+                            }
+                        });
+                        if(cnt > 0){
+                            result = result.substring(0,result.length - 1);
+                            $("#" + FieldName).val(result);
+                        } else { $("#" + FieldName).val(''); }
+                        break;
+                    case 'date':
+                        $('#' + FieldName + 'FROM').val($($(this).parent().parent().find("input[type='text']")[0]).val());
+                        $('#' + FieldName + 'TO').val($($(this).parent().parent().find("input[type='text']")[1]).val());
+                        break;
+                    case 'number':
+                        $('#' + FieldName + 'FROM').val($($(this).parent().parent().find("input[type='text']")[0]).val());
+                        $('#' + FieldName + 'TO').val($($(this).parent().parent().find("input[type='text']")[1]).val());
+                        break;
+                }
+            } else {
+                $("#" + FieldName).val($(this).parent().parent().find("input[type='radio']:checked").val());
+            }
+        } else {
+            if(FieldType == 'date' || FieldType == 'number'){
+                $('#' + FieldName + 'FROM').val('');
+                $('#' + FieldName + 'TO').val('');
+            } else {
+                $('#' + FieldName).val('');
+            }
+        }
+    });
+
+    var select = '';
+    $('#selected_fields').children().each(function(){
+        var select_item = $(this).text();
+        $('#Add_Order').children().each(function(){
+            if(select_item == $(this).text()){
+                select += $(this).val() + ',';
+            }
+        });
+    });
+    $('#SELECTED').val(select.substring(0,select.length - 1));
+
+    var order = '';
+    $('#Order_Items').children().find("input[type='checkbox']").each(function(){
+        if(this.checked){
+            order += $(this).attr('field_name') + ' ' + $(this).parent().parent().find('select option:selected').val() + ',';
+        }
+    });
+    $('#ORDERED').val(order.substring(0,order.length - 1));
+}
+
+function doSearch(NeedToSave){
+    if(doCheck()){
+        if($('#HIGHLIGHTED').length > 0){ $('#HIGHLIGHTED').val(''); }
+        $('#BrowseViewFrm').find('[name="objId"]').val(Common.MyID);
+        MapDataToForm();
+        if(NeedToSave){ doSave('Default'); }
+        checkStatus();
+        $('#BrowseViewFrm').submit();
+    }
+}
+
+function doExcel(){
+    MapDataToForm();
+    checkStatus();
+    var check_data = new Object();
+    check_data['func'] = 'nickname.do';
+    check_data['nickname'] = Common.CheckDataSize;
+    check_data['action'] = 'open';
+    $('.SEARCH_PARAMETRS').each(function(){
+        check_data[$(this).attr('name')] = $(this).val();
+    });
+    $.ajax({
+        type: "POST",
+        url: Common.zGlobalUrl != "" ? Common.zGlobalUrl : document.location.origin + document.location.pathname,
+        dataType: 'json',
+        data: check_data,
+        async: false,
+        cache: false,
+        success: function(response){
+            if(response.actualRows > 0){
+                if(response.myRows[0].cnt > Common.DataSize){
+                    msgBox('Результаты поиска превышают максимально допустимое значение. Пожалуйста, уточните параметры поиска');
+                } else {
+                    $('#BrowseViewFrm').find('[name="objId"]').val(Common.ExcelReport);
+                    $('#BrowseViewFrm').submit();
+                }
+            }
+        },
+        error: function(xhr, response, errorThrown){
+            return false;
+        }
+    });
+}
+
+function doSave(Mode){
+    if(doCheck()){
+        var InsertedData = new Object({
+            func: 'nickname.do',
+            nickname: Common.SaveSearch,
+            action: 'open'
+        });
+        var Name;
+        switch(Mode){
+            case 'Default':
+                InsertedData['SEARCH'] = 'DEFAULT';
+                InsertedData['PUBLIC'] = 0;
+                InsertedData['UPDATE'] = 1;
+                $('.SEARCH_PARAMETRS').each(function(){
+                    InsertedData[$(this).attr('name')] = $(this).val().replace(new RegExp("'",'g'),"''");
+                });
+                $.ajax({
+                    type: "POST",
+                    url: Common.zGlobalUrl != "" ? Common.zGlobalUrl : document.location.origin + document.location.pathname,
+                    dataType: 'json',
+                    data: InsertedData,
+                    async: true,
+                    cache: false
+                });
+                break;
+            case 'Save':
+                Name = $('#SAVED_SEARCHES').find('input[type="text"]').first().val();
+                if(CheckSearchName(Name)){
+                    msgBox('Поиск с таким именем уже существует.');
+                    return;
+                } else {
+                    if(Name != ''){
+                        InsertedData['SEARCH'] = Name;
+                        InsertedData['PUBLIC'] = Number($('#SAVED_SEARCHES').find('input[type="checkbox"]').first()[0].checked);
+                        InsertedData['UPDATE'] = 0;
+                        MapDataToForm();
+                        $('.SEARCH_PARAMETRS').each(function(){
+                            InsertedData[$(this).attr('name')] = $(this).val().replace(new RegExp("'",'g'),"''");
+                        });
+                        $.ajax({
+                            type: "POST",
+                            url: Common.zGlobalUrl != "" ? Common.zGlobalUrl : document.location.origin + document.location.pathname,
+                            dataType: 'json',
+                            async: false,
+                            cache: false,
+                            data: InsertedData,
+                            success: function(data){
+                                if(data.actualRows > 0){
+                                    if(Mode == 'Save'){
+                                        $('#Searches').prepend('<option public="' + data.myRows[0].PUBLIC + '" selected>' + data.myRows[0].SEARCH + '</option>');
+                                        $('#SAVED_SEARCHES').find('input[type="text"]').first().val('');
+                                        $('#SAVED_SEARCHES').find('input[type="checkbox"]').first().attr('checked', false);
+                                    }
+                                    msgBox('Поиск успешно сохранен!');
+                                } else {
+                                    msgBox('Во время сохранения поиска возникла ошибка. Пожалуйста, обратитесь к системному администратору.');
+                                }
+                            },
+                            error: function(data, errorThrown){
+                                msgBox('Во время сохранения поиска возникла ошибка. Пожалуйста, обратитесь к системному администратору.');
+                            }
+                        });
+                    } else {
+                        msgBox('Пожалуйста, заполните имя сохраняемого поиска.');
+                        return;
+                    }
+                }
+                break;
+            case 'Change':
+                Name = $("#Searches option:selected").text();
+                InsertedData['SEARCH'] = Name;
+                InsertedData['PUBLIC'] = Number($("#Searches option:selected").attr('public'));
+                InsertedData['UPDATE'] = 1;
+                MapDataToForm();
+                $('.SEARCH_PARAMETRS').each(function(){
+                    InsertedData[$(this).attr('name')] = $(this).val().replace(new RegExp("'",'g'),"''");
+                });
+                if((Number($("#Searches option:selected").attr('public')) == 1) && (!CheckUserPermissions())){
+                    msgBox('У вас недостаточно прав для удаления данного поиска.');
+                    return;
+                } else {
+                    $.ajax({
+                        type: "POST",
+                        url: Common.zGlobalUrl != "" ? Common.zGlobalUrl : document.location.origin + document.location.pathname,
+                        dataType: 'json',
+                        async: false,
+                        cache: false,
+                        data: InsertedData,
+                        success: function(data){
+                            if(data.actualRows > 0){
+                                if(Mode == 'Save'){
+                                    $('#Searches').append('<option public="' + data.myRows[0].PUBLIC + '">' + data.myRows[0].SEARCH + '</option>');
+                                    $('#SAVED_SEARCHES').find('input[type="text"]').first().val('');
+                                    $('#SAVED_SEARCHES').find('input[type="checkbox"]').first().attr('checked', false);
+                                }
+                                msgBox('Поиск успешно изменен!');
+                            } else {
+                                msgBox('Во время изменения поиска возникла ошибка. Пожалуйста, обратитесь к системному администратору.');
+                            }
+                        },
+                        error: function(data, errorThrown){
+                            msgBox('Во время изменения поиска возникла ошибка. Пожалуйста, обратитесь к системному администратору.');
+                        }
+                    });
+                }
+                break;
+        }
+    }
+}
+
+function ApplySearch(){
+    var name = $('#Searches').find('option:selected').text();
+    if(name != ''){
+        $.ajax({
+            type: "POST",
+            url: Common.zGlobalUrl != "" ? Common.zGlobalUrl : document.location.origin + document.location.pathname,
+            dataType: 'json',
+            data:{
+                func: 'nickname.do',
+                nickname: Common.GetSearch,
+                action: 'open',
+                SearchName: name
+            },
+            cache: false,
+            success: function(response){
+                if(response.actualRows > 0){
+                    for(var prop in response.myRows[0]){
+                        if($('#' + prop).length > 0){
+                            if(response.myRows[0][prop] == null){
+                                $('#' + prop).val('');
+                            } else {
+                                $('#' + prop).val(response.myRows[0][prop]);
+                            }
+                        }
+                    }
+                    $('#SEARCH').val(name);
+                    $('#BrowseViewFrm').submit();
+                }
+            }
+        });
+    }
+}
+
+function CheckSearchName(name){
+    var Exists = false;
+    $.ajax({
+        type: "POST",
+        url: Common.zGlobalUrl != "" ? Common.zGlobalUrl : document.location.origin + document.location.pathname,
+        dataType: "json",
+        data:{
+            func: 'nickname.do',
+            nickname: Common.GetSearches,
+            action: 'open'
+        },
+        async: false,
+        cache: false,
+        success: function(response){
+            if(response.actualRows > 0){
+                for(var j = 0;j < response.actualRows; j++){
+                    if(response.myRows[j].SEARCH == name){
+                        Exists = true;
+                        if($('#Searches option').filter(function() { return this.text == name }).length == 0){
+                            $('#Searches').append('<option public="' + response.myRows[j].PUBLIC + '" >' + response.myRows[j].SEARCH + '</option>');
+                        }
+                    }
+                }
+            }
+        }
+    });
+    return Exists;
+}
+function CheckUserPermissions(){
+    var result = false;
+    $.ajax({
+        type: "POST",
+        url: Common.zGlobalUrl != "" ? Common.zGlobalUrl : document.location.origin + document.location.pathname,
+        dataType: "json",
+        data:{
+            func: 'nickname.do',
+            nickname: 'ff_group_wr',
+            action: 'open',
+            GroupID: Common.AllowedPublic
+        },
+        async: false,
+        cache: false,
+        success: function(response){
+            if(response.actualRows > 0){ result = true; }
+        }
+    });
+    return result;
+}
+
+function doDelete(){
+    var IsPublic = $("#Searches option:selected").attr('public');
+    var name = $("#Searches option:selected").text();
+    var drop = true;
+    if(IsPublic == 1 && (!CheckUserPermissions())){
+        msgBox('У вас недостаточно прав для удаления данного поиска.');
+    } else {
+        $.ajax({
+            type: "POST",
+            url: Common.zGlobalUrl != "" ? Common.zGlobalUrl : document.location.origin + document.location.pathname,
+            dataType: "json",
+            data:{
+                func: 'nickname.do',
+                nickname: 'ff_drop_wr',
+                action: 'open',
+                TableName: Common.SQL_Table,
+                SearchName: name,
+                IsPublic: IsPublic
+            },
+            async: false,
+            cache: false,
+            success: function(response){
+                if(response.actualRows == 0){
+                    $("#Searches option:selected").remove();
+                    msgBox('Поиск успешно удален.');
+                }
+            },
+            error: function(data, errorThrown){
+                msgBox('Во время удаления поиска возникла ошибка. Пожалуйста, обратитесь к системному администратору.');
+            }
+        });
+    }
+}
+
+function doRename(old_name, new_name){
+    var IsPublic = $("#Searches option:selected").attr('public');
+    if(IsPublic == 1 && (!CheckUserPermissions())){
+        msgBox('У вас недостаточно прав для переименования данного поиска.');
+    } else {
+        if(CheckSearchName(new_name)){
+            msgBox('Поиск с таким именем уже существует.');
+            return;
+        } else {
+            $.ajax({
+                type: "POST",
+                url: Common.zGlobalUrl != "" ? Common.zGlobalUrl : document.location.origin + document.location.pathname,
+                dataType: "json",
+                data: {
+                    func: 'nickname.do',
+                    nickname: 'ff_rename_wr',
+                    action: 'open',
+                    TableName: Common.SQL_Table,
+                    OldName: old_name,
+                    NewName: new_name,
+                    IsPublic: IsPublic
+                },
+                async: false,
+                success: function(response){
+                    if(response.actualRows == 1){
+                        $("#Searches option:selected").text(new_name);
+                        msgBox('Поиск успешно переименован!');
+                    }
+                },
+                error: function(data, errorThrown){
+                    msgBox('Во время переименования поиска возникла ошибка. Пожалуйста, обратитесь к системному администратору.');
+                }
+            });
+        }
+    }
+}
+
+function checkStatus() {
+    if (window.Common.statusProcessing != undefined
+        && window.Common.statusDone != undefined) {
+        var sourcetype = $('#SOURCETYPE').val();
+        var statusArray = $('#STATUS').val()!="" ?  $('#STATUS').val().split(',') : [];
+        var returnArray = [];
+        if ( statusArray.length==0 && sourcetype==1 ) {
+            $('#STATUS').val( window.Common.statusProcessing.join(","));
+        }
+        else if ( statusArray.length>0 && sourcetype==1 ) {
+            for(n=0; n<statusArray.length; n++) {
+                var index = window.Common.statusProcessing.indexOf(statusArray[n]);
+                if (index > -1)
+                    returnArray.push(statusArray[n]);
+            }
+            if ( returnArray.length==0 )
+                $('#STATUS').val("N'empty'");
+            else
+                $('#STATUS').val(returnArray.join(","));
+        }
+        else if ( statusArray.length==0 &&  sourcetype==2 ) {
+            $('#STATUS').val( window.Common.statusDone.join(","));
+        }
+        else if ( statusArray.length>0 &&  sourcetype==2 ) {
+            for(n=0; n<statusArray.length; n++) {
+                var index = window.Common.statusDone.indexOf(statusArray[n]);
+                if (index > -1)
+                    returnArray.push(statusArray[n]);
+            }
+            if ( returnArray.length==0 )
+                $('#STATUS').val("N'empty'");
+            else
+                $('#STATUS').val(returnArray.join(","));
+        }
+    }
+}���%i�      WMbCWMbC<�sIWN��   ;    :http://mow03-opt01/img//_sabris/FlexibleFilters/js/main.js necko:classified 1 request-method GET response-head HTTP/1.1 200 OK
+Cache-Control: max-age=86400
+Content-Type: application/javascript
+Last-Modified: Wed, 10 Feb 2016 13:09:05 GMT
+Accept-Ranges: bytes
+Etag: "b06f3b38464d11:0"
+Server: Microsoft-IIS/8.5
+X-Powered-By: ASP.NET
+Date: Tue, 31 May 2016 10:06:34 GMT
+Content-Length: 37048
+ uncompressed-len 0   ��

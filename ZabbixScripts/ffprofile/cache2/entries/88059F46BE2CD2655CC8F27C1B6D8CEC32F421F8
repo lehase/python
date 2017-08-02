@@ -1,0 +1,1220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+
+
+<HEAD>
+<script type="text/javascript">
+supportPath = "/img/";
+</script>
+
+
+
+<META http-equiv="content-type" content="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="/img/style/screen.css?v=1747">
+<link rel="shortcut icon" href="http://mow03-opt01.cherkizovsky.net/img/favicon.ico" type="image/x-icon">
+<STYLE>
+ .browseRow1 { background-color: #FFFFFF;  } 
+ .browseRow2 { background-color: #FFFFFF;  } 
+</STYLE>
+
+<TITLE>Рабочая корпоративная область</TITLE>
+
+
+
+
+<script TYPE="text/javascript">
+var dhtmlHistorySupportDir = "/img/core/";
+</script>
+
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="/img/style/jquery-ui-1.9.2.custom.min.css">
+<script type="text/javascript" src="/img/core/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/img/core/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="/img/core/ajax_dhtml_util.js?v=1747"></script>
+<script type="text/javascript" src="/img/menu_en_US.js?v=1747"></script>
+<script type="text/javascript" src="/img/menu.js?v=1747"></script>
+
+
+<script type="text/javascript" src="/img/webnode/browse.js?v=1747"></script>
+
+<SCRIPT type="text/javascript">
+baseURL = "/OTCS/cs.exe"
+</SCRIPT>
+
+<script>
+var OTvar = jQuery.parseJSON( '{"currentUser":{"birthday":null,"email":null,"firstName":null,"ID":207454476,"lastName":"N\/A","login":"TECH_ZAB_VM"},"customView":{"searchMessage":"Loading search form..."},"livelink":{"cgiPath":"\/OTCS\/cs.exe","name":"Content Server","supportPath":"\/img\/"},"node":{"childCount":9,"createDate":"2014-09-30T13:26:49","creator":"&apos;Admin&apos;","description":"","ID":2000,"modifyDate":"2016-01-29T03:52:42","name":"Рабочая корпоративная область","parentID":-1,"type":141}}' );
+</script>
+<script type="text/javascript" src="/img/core/otfunc_en_US.js?v=1747"/></script>
+<link href="/img/core/otfunc.css?v=1747" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="/img/core/otfunc.js?v=1747"></script>
+
+
+<link href="/img/appearances/custom.css?v=1747" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="/img/appearances/custom.js?v=1747"></script>
+
+
+<SCRIPT>
+var isCompoundEmailItem = false;
+</SCRIPT>
+<script type="text/javascript" src="/img/webnode/browsecoretable_en_US.js?v=1747"></script>
+<script type="text/javascript" src="/img/checkall.js?v=1747"></script>
+</HEAD>
+
+<BODY ONLOAD="onLoadFunc('/img/');">
+
+<script type="text/javascript">
+/** Initialize all of our objects now. */
+window.historyStorage.init();
+
+/** This test is required for the History Support Directory
+The test is to find out if dhtmlHistorySupportDir is already defined */
+
+if( typeof dhtmlHistorySupportDir !== "undefined" && dhtmlHistorySupportDir !== null ) {
+window.dhtmlHistory.create( dhtmlHistorySupportDir );
+} else {
+window.dhtmlHistory.create( "" );
+}
+</script>
+
+<DIV ID="functionMenuParent">
+<IFRAME ID="bridgeFrame" SRC="/img/spacer.gif" TITLE="hidden frame">
+</IFRAME>
+</DIV>
+
+
+
+
+<DIV ID="historyFormLocatorDiv"></DIV>
+
+
+<DIV ID="progressPopupDiv"></DIV>
+
+<TABLE BORDER="0" WIDTH="100%" CLASS="pageBody" STYLE="height: 100%;" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD WIDTH="1%" ALIGN="" VALIGN="MIDDLE">
+
+</TD>
+<TD WIDTH="100%" ALIGN="" VALIGN="MIDDLE">
+
+</TD>
+</TR>
+<TR>
+<TD WIDTH="1%" NOWRAP ALIGN="" VALIGN="MIDDLE">
+</TD>
+<TD ID="LLOuterContainer" STYLE="height: 100%;" VALIGN="TOP">
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="/img/webnode/webnode.css?v=1747">
+
+<TABLE ID="LLInnerContainer" CLASS="pageBody" STYLE="height: 100%;" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BORDER="0">
+<TR>
+<TD  VALIGN="TOP" >
+<DIV ID="mastheadComponent">
+
+<div id="header" class="csx">
+<div id="header-inner">
+<h1 id="logo">
+
+<a href="/OTCS/cs.exe?func=Enterprise.Home" title="Go to Enterprise Workspace">Open Text Content Server</a>
+
+</h1>
+</div>
+</div>
+<div id="nav" class="csx">
+<ul id="tGlobalMenus" class="menu-horizontal">
+<script language="JavaScript1.2">
+__LeavePage = ''
+</script>
+
+
+
+<li id="EnterpriseGlobalMenu" class="has-submenu">
+<a href="javascript:void(0)" onClick="return false;" title=""><span id="globalMenu_0" class="topmenu">Enterprise<div class="topmenu-icon">&nbsp;</div></span></a>
+<ul id="Enterprise">
+<li id="0.0"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=llworkspace','');return false;"><span id="globalMenuItem_0.0" class="globalMenuItem">Workspace</span></a></li>
+
+<li id="0.1"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=user.listusers','');return false;"><span id="globalMenuItem_0.1" class="globalMenuItem">Users &amp; Groups</span></a></li>
+
+<li class="menu-divider" id="0.3"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/OTCS/cs.exe?func=bcprint.openDialog','');return false;"><span id="globalMenuItem_0.3" class="globalMenuItem">Печать штрихкодов</span></a></li>
+
+<li class="menu-divider" id="0.5"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=ll&amp;objtype=198&amp;objaction=browse','');return false;"><span id="globalMenuItem_0.5" class="globalMenuItem">Classifications</span></a></li>
+
+<li id="0.6"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=ll&amp;objtype=54700&amp;objaction=browse','');return false;"><span id="globalMenuItem_0.6" class="globalMenuItem">Contracts Approval</span></a></li>
+
+<li id="0.7"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=cpdb.SearchOrAdd','');return false;"><span id="globalMenuItem_0.7" class="globalMenuItem">Partner Database</span></a></li>
+
+<li id="0.8"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=ll&amp;objtype=413&amp;objaction=browse','');return false;"><span id="globalMenuItem_0.8" class="globalMenuItem">Physical Objects</span></a></li>
+
+<li id="0.9"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=ll&amp;objtype=550&amp;objAction=browse','');return false;"><span id="globalMenuItem_0.9" class="globalMenuItem">Records Management</span></a></li>
+
+<li class="menu-divider" id="0.11"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=ll&amp;objId=14639&amp;objAction=browse','');return false;"><span id="globalMenuItem_0.11" class="globalMenuItem">Document Templates</span></a></li>
+
+</ul>
+</li>
+<li id="PersonalGlobalMenu" class="has-submenu">
+<a href="javascript:void(0)" onClick="return false;" title=""><span id="globalMenu_1" class="topmenu">Personal<div class="topmenu-icon">&nbsp;</div></span></a>
+<ul id="Personal">
+<li id="1.0"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=ll&amp;objtype=142&amp;objaction=browse','');return false;"><span id="globalMenuItem_1.0" class="globalMenuItem">My Workspace</span></a></li>
+
+<li class="menu-divider" id="1.2"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.Assignments','');return false;"><span id="globalMenuItem_1.2" class="globalMenuItem">Assignments</span></a></li>
+
+<li id="1.3"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.PhysicalItems','');return false;"><span id="globalMenuItem_1.3" class="globalMenuItem">Borrowed Items</span></a></li>
+
+<li id="1.4"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.CasePortal','');return false;"><span id="globalMenuItem_1.4" class="globalMenuItem">Case Workspace</span></a></li>
+
+<li id="1.5"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.MyCollections','');return false;"><span id="globalMenuItem_1.5" class="globalMenuItem">Collections</span></a></li>
+
+<li id="1.6"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.Discussions','');return false;"><span id="globalMenuItem_1.6" class="globalMenuItem">Discussions</span></a></li>
+
+<li id="1.7"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.Favorites','');return false;"><span id="globalMenuItem_1.7" class="globalMenuItem">Favorites</span></a></li>
+
+<li id="1.8"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.resubmissions','');return false;"><span id="globalMenuItem_1.8" class="globalMenuItem">Follow Ups</span></a></li>
+
+<li id="1.9"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.MyGroups','');return false;"><span id="globalMenuItem_1.9" class="globalMenuItem">My Groups</span></a></li>
+
+<li id="1.10"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.MyProfile','');return false;"><span id="globalMenuItem_1.10" class="globalMenuItem">My Profile</span></a></li>
+
+<li id="1.11"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.News','');return false;"><span id="globalMenuItem_1.11" class="globalMenuItem">News</span></a></li>
+
+<li id="1.12"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.ChangeAgents&amp;mode=SHOW','');return false;"><span id="globalMenuItem_1.12" class="globalMenuItem">Notification</span></a></li>
+
+<li id="1.13"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.Projects','');return false;"><span id="globalMenuItem_1.13" class="globalMenuItem">Projects</span></a></li>
+
+<li id="1.14"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Prospector.ProspectorTab','');return false;"><span id="globalMenuItem_1.14" class="globalMenuItem">Prospectors</span></a></li>
+
+<li id="1.15"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.Recommendations','');return false;"><span id="globalMenuItem_1.15" class="globalMenuItem">Recommendations</span></a></li>
+
+<li id="1.16"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.RecycleBin','');return false;"><span id="globalMenuItem_1.16" class="globalMenuItem">Recycle Bin</span></a></li>
+
+<li id="1.17"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.RecycleBinToday','');return false;"><span id="globalMenuItem_1.17" class="globalMenuItem">Recycle Bin - Today</span></a></li>
+
+<li id="1.18"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.Reports','');return false;"><span id="globalMenuItem_1.18" class="globalMenuItem">Reports</span></a></li>
+
+<li id="1.19"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=ll&amp;objType=870&amp;objAction=browse','');return false;"><span id="globalMenuItem_1.19" class="globalMenuItem">Reserved Items</span></a></li>
+
+<li id="1.20"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.ManageTabs','');return false;"><span id="globalMenuItem_1.20" class="globalMenuItem">Search Templates</span></a></li>
+
+<li id="1.21"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=Personal.TaskLists','');return false;"><span id="globalMenuItem_1.21" class="globalMenuItem">Task Lists</span></a></li>
+
+<li id="1.22"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=work.workflows','');return false;"><span id="globalMenuItem_1.22" class="globalMenuItem">Workflows</span></a></li>
+
+<li id="1.23"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=ll&amp;objType=532&amp;objAction=browse','');return false;"><span id="globalMenuItem_1.23" class="globalMenuItem">Workbenches</span></a></li>
+
+</ul>
+</li>
+<li id="ToolsGlobalMenu" class="has-submenu">
+<a href="javascript:void(0)" onClick="return false;" title=""><span id="globalMenu_2" class="topmenu">Tools<div class="topmenu-icon">&nbsp;</div></span></a>
+<ul id="Tools">
+<li id="2.0"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=ll&amp;objType=258&amp;objAction=searchprompt','');return false;"><span id="globalMenuItem_2.0" class="globalMenuItem">Search</span></a></li>
+
+<li class="menu-divider" id="2.2"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=ll.DoLogout&amp;secureRequestToken=EEJqkMShl7hpnWWyypbdbWD%2FdTNTvrrFkOfdDZpSvVo%3D','');return false;"><span id="globalMenuItem_2.2" class="globalMenuItem">Log-out</span></a></li>
+
+<li id="2.3"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=otdsintegration.pwchange','');return false;"><span id="globalMenuItem_2.3" class="globalMenuItem">Change Password</span></a></li>
+
+<li id="2.4"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=personal.settings','');return false;"><span id="globalMenuItem_2.4" class="globalMenuItem">Settings</span></a></li>
+
+</ul>
+</li>
+<li id="HelpGlobalMenu" class="has-submenu help-menu-item">
+<a href="javascript:void(0)" onClick="return false;" title=""><span id="help_GlobalMenu" class="topmenu">&nbsp;<div class="help-icon">Help</div><div class="topmenu-icon">&nbsp;</div></span></a>
+<ul>
+<li><a HREF="javascript:void(0)" onClick="openLinksWindow('http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=help.index&keyword=admin.index'); return false;"><span id="help_0" class="globalMenuItem">Contents</span></a></li>
+<li id="Help.1"><a HREF="javascript:void(0)" onClick="openLinksWindow('http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=help.index&keyword=LLWorkspace.VolLibrary.Browse'); return false;"><span id="help_1" class="globalMenuItem">For This Page</span></a></li>
+<li class="menu-divider" id="Help.3"><a HREF="javascript:void(0)" onClick="openLinksWindow('http://online.opentext.com'); return false;"><span id="help_3" class="globalMenuItem">Open Text Online</span></a></li>
+<li class="menu-divider" id="Help.4"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=ll.index','');return false;"><span id="help_4" class="globalMenuItem">About Content Server</span></a></li>
+</ul>
+</li>
+</ul>
+
+
+<SCRIPT TYPE="text/javascript">
+
+
+var useGetRequest = true;
+
+
+var allSearchTypes = new Array()
+
+allSearchTypes[ allSearchTypes.length ] = 'fulltext'
+
+allSearchTypes[ allSearchTypes.length ] = 'nickname'
+
+var _baseUrl = '/OTCS/cs.exe'
+</SCRIPT>
+
+<SCRIPT TYPE="text/javascript" SRC="/img/websbroker/searchbar.js?v=1747"></SCRIPT>
+<SCRIPT TYPE="text/javascript">sd_setupMenuStrings( "There is an empty query. Please enter a valid one.", "Cannot perform a search against From Here (Expanded)." )</SCRIPT>
+
+
+<script TYPE="text/javascript" src="/img/websbroker/websbroker_en_US.js?v=1747" language="javascript"></script>
+
+
+
+
+<input id="hide-search-panel" type="hidden" value="Close Search Panel" />
+<SCRIPT TYPE="text/javascript">sd_setupMenu( "/OTCS/cs.exe" , "/img/" );</SCRIPT>
+
+
+<DIV ID="fulltextmainDivId" STYLE="display:block" CLASS="search-panel csx">
+<div class="search-panel-inner">
+<div class="search-panel-content">
+
+<FORM METHOD="POST" NAME="fulltextSearchBarForm" ID="fulltextSearchBarForm" ACTION="/OTCS/cs.exe" ONSUBMIT="return false" autocomplete="off">
+
+
+<SCRIPT TYPE="text/javascript">sd_locationForm( "fulltext" );</SCRIPT>
+
+
+
+
+
+
+
+<div id="searchBarActionRow" class="search-action-row">
+<label for="fulltextwhere1">Поиск</label>
+
+<input class="search-input search-text-dim" style="width:220px" title="Enter search terms in the form of keywords" value="" name="where1" id="fulltextwhere1" ONKEYUP="return sb_fulltextEnter( this.form, event, 'OTModifyDate1' )">
+<input id="fulltextDateSelect" type="hidden" value="OTModifyDate1" />
+<INPUT CLASS="searchButton searchButtonIcon" TYPE="button" VALUE="Search" NAME="submitButton" ID="fulltextsubmitButton" TITLE="Perform Search">
+<a class="show-search-panel" style="overflow:hidden" href="javascript:void(0)" onclick="return false;" title="Open Search Panel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</div>
+<div class="search-options searchBar">
+
+<div class="searchBut search-type" id="searchBarCellFTMode">
+<label for="">Search type</label>
+<SCRIPT TYPE="text/javascript">
+sd_setupMenu( "/OTCS/cs.exe" , "/img/"  );
+sd_setWidget( 'fulltext' );
+sd_SelectStart( 'Select Search Type', 'Full Text' );
+sd_menuSelectStart();
+sd_menuSelectItem( 'fulltext', 'Full Text' );
+sd_menuSelectItem( 'nickname', 'Nickname' );
+sd_menuEnd();
+</SCRIPT>
+</div>
+<div id="searchBarCellFTSlice" class="searchBut">
+<INPUT TYPE="hidden" ID="ScopeSelection" NAME="ScopeSelection" VALUE="52122758|2000|Within Рабочая корпоративная область">
+
+<SCRIPT TYPE="text/javascript">
+function Changefulltextslices( selectedIndex, valueStr ) {
+
+if ( selectedIndex == 2 ) { 
+clearSearchPrompt( 'fulltext' ); 
+SearchBar.setFromHereQuery( 'document.fulltextSearchBarForm', 'fulltext', true ); 
+document.fulltextSearchBarForm.locationId.value = '2000'; 
+document.fulltextSearchBarForm.withinQuery.value = 'YES'; 
+document.fulltextSearchBarForm.FromHereExpanded.value = 'TRUE'; 
+document.fulltextSearchBarForm.submitButton.disabled = true; 
+document.fulltextSearchBarForm.submitButton.name = 'TRUE'; 
+document.fulltextSearchBarForm.objAction.value = 'searchPrompt'; 
+document.fulltextSearchBarForm.slice.value = '52122758'; 
+document.fulltextSearchBarForm.func.value = 'll'; 
+document.fulltextSearchBarForm.submit() 
+} 
+if ( selectedIndex == 3 ) { 
+selectedIndex = 1 
+document.fulltextSearchBarForm.ScopeSelection.value = '52122758%7C2000%7CWithin%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C';  
+} 
+
+selectedIndex = parseInt(selectedIndex, 10);
+document.fulltextSearchBarForm.ScopeSelection.value = valueStr;
+
+
+document.getElementById('selectedfulltextslices').innerHTML = document.getElementById('fulltextslices' + selectedIndex + 'DivId').innerHTML;
+
+
+generateSearchPromptIfNecessary();
+
+
+document.getElementById('showfulltextslices').style.visibility = "hidden";
+
+}
+
+sd_setBaseURL( "/OTCS/cs.exe" );
+sd_setSupportPath( "/img/" );
+sd_setMenuName( "fulltextslices" );
+sd_menuTxtStart( "Slices", "Select Search Type" , "From Here", "", "" );
+sd_optionsStart();
+
+sd_itemTxt( 'From Here', 1, '52122758%7C2000%7CWithin%20%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B0%D1%8F%20%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C'  );
+sd_itemTxt( 'From Here (Expanded)...', 2, '%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dll%26objType%3D258%26objAction%3Dsearchprompt%26sliceID%3D52122758%26locationId%3D2000%26withinQuery%3DYES%26FromHereExpanded%3DTRUE'  );
+sd_separator( 3 );
+sd_itemTxt( 'Enterprise', 4, '52122758'  );
+sd_itemTxt( 'Enterprise [All Versions]', 5, '52122764'  );
+sd_itemTxt( 'Документы ОЦО', 6, '70733'  );
+sd_menuEnd();
+</SCRIPT>
+
+
+</div>
+<INPUT TYPE="HIDDEN"  NAME="lookfor1" ID="lookfor1" VALUE="allwords">
+<INPUT TYPE="HIDDEN" NAME="modifier1" ID="modifier1" VALUE="">
+<INPUT TYPE="HIDDEN"  NAME="boolean2" ID="boolean2" VALUE="And">
+<INPUT TYPE="HIDDEN"  NAME="lookfor2" ID="lookfor2" VALUE="complexquery">
+<div id="searchBarCellFTType" class="searchBut">
+<INPUT TYPE="HIDDEN"  NAME="typeDropDownId" ID="typeDropDownId" VALUE="1">
+<INPUT TYPE="HIDDEN"  NAME="where2" ID="fulltextwhere2" VALUE="">
+
+<SCRIPT type="text/javascript">
+
+function ChangefulltextObjectType( selectedIndex, valueStr, menuName ) {
+
+
+document.fulltextSearchBarForm.typeDropDownId.value = selectedIndex;
+document.fulltextSearchBarForm.where2.value = valueStr;
+
+
+if( document.getElementById( menuName + selectedIndex + 'DivId') != null )
+{
+document.getElementById('selected' + menuName ).innerHTML = document.getElementById( menuName + selectedIndex + 'DivId').innerHTML
+}
+
+
+if( document.getElementById('show' + menuName) != null )
+{
+document.getElementById('show' + menuName).style.visibility = "hidden"
+}
+
+
+}
+
+document.fulltextSearchBarForm.typeDropDownId.value = '1';
+document.fulltextSearchBarForm.where2.value = '';
+
+sd_setupMenu( "/OTCS/cs.exe" , "/img/"  )
+
+sd_setFormName ( "SearchBarForm" )
+sd_setMenuName( "fulltextObjectType" )
+sd_menuImgStart( "Object type", "Select Searchable Type" , "Everything", "itemID", "websbroker/star.gif" )
+sd_optionsStart()
+
+sd_itemImg( 'Everything', 'websbroker/star.gif', '1', '', 0 )
+sd_separator( "2" )
+sd_itemImg( 'All Documents', 'webdoc/doc.gif', '3', 'OTFilterMIMEType: qlrange &quot;vnd.ms-excel|msword|pdf|powerpoint|text|zip&quot;', 0 )
+sd_itemImg( 'Excel', 'webdoc/appexel.gif', '4', 'OTFilterMIMEType:vnd.ms-excel', 1 )
+sd_itemImg( 'Word', 'webdoc/appword.gif', '5', 'OTFilterMIMEType:msword', 1 )
+sd_itemImg( 'PDF', 'webdoc/apppdf.gif', '6', 'OTFilterMIMEType:pdf', 1 )
+sd_itemImg( 'Zip Archives', 'webdoc/appzip.gif', '7', 'OTFilterMIMEType:zip', 1 )
+sd_itemImg( 'PowerPoint', 'webdoc/appppoin.gif', '8', 'OTFilterMIMEType:powerpoint', 1 )
+sd_itemImg( 'Text', 'webdoc/apptext.gif', '9', 'OTFilterMIMEType:text', 1 )
+sd_separator( "10" )
+sd_itemImg( 'Folders', 'webdoc/folder.gif', '11', 'OTSubType:0', 0 )
+sd_itemImg( 'Media', 'websbroker/picture.gif', '12', 'OTFilterMIMEType: qlrange &quot;jpeg|gif&quot; or OTLLMIMEType: qlrange &quot;jpeg|gif&quot;', 0 )
+sd_itemImg( 'Jpegs', 'webdoc/appjpeg.gif', '13', 'OTFilterMIMEType:jpeg or OTLLMIMEType:jpeg', 1 )
+sd_itemImg( 'Gifs', 'webdoc/appgif.gif', '14', 'OTSubType:144 and OTFilterMIMEType:gif  or OTLLMIMEType:gif', 1 )
+sd_itemImg( 'Task Lists', 'task/16tasklist.gif', '15', 'OTSubType: qlrange &quot;206|212|204|205&quot;', 0 )
+sd_itemImg( 'Milestones', 'task/16milestone.gif', '16', 'OTSubType:212', 1 )
+sd_itemImg( 'Tasks', 'task/16task.gif', '17', 'OTSubType:206', 1 )
+sd_itemImg( 'Projects', 'project/16project.gif', '18', 'OTSubType:202', 0 )
+sd_itemImg( 'Discussions', 'discussion/16discussion.gif', '19', 'OTSubType: qlrange &quot;130|134|215&quot;', 0 )
+sd_menuEnd()
+
+</SCRIPT>
+
+
+
+</div>
+<INPUT TYPE="HIDDEN"  NAME="boolean3" ID="boolean3" VALUE="And">
+<INPUT TYPE="HIDDEN"  NAME="lookfor3" ID="lookfor3" VALUE="complexquery">
+<INPUT TYPE="HIDDEN"  NAME="where3" ID="fulltextwhere3" VALUE="">
+<INPUT TYPE="HIDDEN"  NAME="fromHereQuery" ID="fromHereQuery" VALUE="">
+
+<div id="searchBarCellFTTime" class="searchBut">
+<INPUT TYPE="HIDDEN"  NAME="dateDropDownId" ID="dateDropDownId" VALUE="1">
+<INPUT TYPE="HIDDEN"  NAME="OTModifyDate1" ID="fulltextOTModifyDate1" VALUE="">
+
+<SCRIPT type="text/javascript">
+
+function ChangefulltextDateType( selectedIndex, valueStr, menuName ) {
+
+
+document.fulltextSearchBarForm.dateDropDownId.value = selectedIndex;
+document.fulltextSearchBarForm.OTModifyDate1.value = valueStr;
+
+
+if( document.getElementById( menuName + selectedIndex + 'DivId') != null )
+{
+document.getElementById('selected' + menuName ).innerHTML = document.getElementById( menuName + selectedIndex + 'DivId').innerHTML
+}
+
+
+if( document.getElementById('show' + menuName) != null )
+{
+document.getElementById('show' + menuName).style.visibility = "hidden"
+}
+
+
+}
+
+document.fulltextSearchBarForm.dateDropDownId.value = '1';
+document.fulltextSearchBarForm.OTModifyDate1.value = '';
+
+sd_setupMenu( "/OTCS/cs.exe" , "/img/"  )
+
+sd_setFormName ( "SearchBarForm" )
+sd_setMenuName( "fulltextDateType" )
+sd_menuImgStart( "Last modified", "Select Modification Time Period" , "Anytime", "itemID", "" )
+sd_optionsStart()
+
+sd_itemImg( 'Anytime', '', '1', '', 0 )
+sd_separator( "2" )
+sd_itemImg( 'Modified in the past day', '', '3', 'pastday', 0 )
+sd_itemImg( 'Modified in the past week', '', '4', 'pastweek', 0 )
+sd_itemImg( 'Modified in the past month', '', '5', 'pastmonth', 0 )
+sd_separator( "6" )
+sd_itemImg( 'Modified in the past year', '', '7', 'pastyear', 0 )
+sd_menuEnd()
+
+</SCRIPT>
+
+
+
+</div>
+<div class="searchBut search-links">
+
+<A class="advanced-search" HREF="#" ONCLICK="openURL( '/OTCS/cs.exe?func=ll&amp;objType=258&amp;objAction=searchprompt', '' ); return false;" TITLE="Advanced Search">Advanced Search</A>
+</div>
+
+
+<SCRIPT TYPE="text/javascript">
+sd_fromHereForm("258");
+$(document).ready(function() {
+fullTextDefaultText = getSearchPrompt("fulltext");
+generateSearchPromptIfNecessary("fulltext", true);
+currentVisible = "fulltext";
+});
+</SCRIPT>
+
+<INPUT TYPE="HIDDEN" NAME="location_id1">
+<INPUT TYPE="HIDDEN" NAME="facets" value="user">
+<INPUT TYPE="HIDDEN" NAME="fulltextMode" ID="fulltextMode" VALUE="">
+</div>
+</FORM>
+</div>
+</div>
+</div>
+
+<input id="hide-search-panel" type="hidden" value="Close Search Panel" />
+<div ID="nicknamemainDivId" style="display:none" class="search-panel csx">
+<div class="search-panel-inner">
+<div class="search-panel-content">
+
+<FORM METHOD="GET" NAME="nicknameSearchBarForm" ID="nicknameSearchBarForm" ACTION="/OTCS/cs.exe" ONSUBMIT="return false" autocomplete="off">
+
+<div id="searchBarActionRow" class="search-action-row">
+<label for="nicknamewhere1">Поиск документа по штрихкоду</label>
+
+
+<INPUT class="search-input search-text-dim" style="width:220px" TITLE="Nickname: Type the nickname of the item." NAME="nickname" ID="nicknamewhere1" maxlength="248" VALUE="Nickname" ONKEYUP="return sb_nicknameEnter( this.form, event )">
+
+<INPUT class="searchButton searchButtonIcon" TYPE="button" VALUE="Search" NAME="submitButton" ID="nicknamesubmitButton" TITLE="Perform Search">
+<a class="show-search-panel" href="javascript:void(0)" onclick="return false;" title="Open Search Panel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</div>
+<div id="" class="search-options searchBar" style="">
+<div CLASS="searchBut search-type" ID="searchBarCellNickWidgetMode">
+<label>Search type</label>
+<SCRIPT TYPE="text/javascript">
+sd_setupMenu( "/OTCS/cs.exe" , "/img/"  );
+sd_setWidget( 'nickname' );
+sd_SelectStart( 'Select Search Type', 'Nickname' );
+sd_menuSelectStart();
+sd_menuSelectItem( 'fulltext', 'Full Text' );
+sd_menuSelectItem( 'nickname', 'Nickname' );
+sd_menuEnd();
+</SCRIPT>
+</div>
+<div class="searchBut" ID="searchBarCell">
+<INPUT TYPE="hidden" ID="action" NAME="action" VALUE="open">
+
+<SCRIPT TYPE="text/javascript">
+function Changenicknameaction( selectedIndex, valueStr ) {
+
+selectedIndex = parseInt(selectedIndex, 10);
+document.nicknameSearchBarForm.action.value = valueStr;
+
+
+document.getElementById('selectednicknameaction').innerHTML = document.getElementById('nicknameaction' + selectedIndex + 'DivId').innerHTML;
+
+
+generateSearchPromptIfNecessary();
+
+
+document.getElementById('shownicknameaction').style.visibility = "hidden";
+
+}
+
+sd_setBaseURL( "/OTCS/cs.exe" );
+sd_setSupportPath( "/img/" );
+sd_setMenuName( "nicknameaction" );
+sd_menuTxtStart( "Action", "Select Search Type" , "Open", "", "" );
+sd_optionsStart();
+
+sd_itemTxt( 'Open', 1, 'open'  );
+sd_itemTxt( 'Properties', 2, 'info'  );
+sd_menuEnd();
+</SCRIPT>
+
+
+</div>
+<div class="searchBut search-links" STYLE='height: 0px;'>
+
+</div>
+
+</div>
+<INPUT TYPE="hidden" NAME="func" VALUE="nickname.lookup">
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="javascript">
+$(document).ready(function(){
+nicknameDefaultText = "Nickname";
+
+});
+</SCRIPT>
+
+</FORM>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+<script type="text/javascript">
+
+function performSearchDialog()
+{
+var performSearch = $( "#performSearch" );
+
+performSearch.css("position","absolute");
+
+
+if ( $(window).height() > 0 )
+{
+performSearch.css("top", (($(window).height() - performSearch.outerHeight()) / 2) + $(window).scrollTop() + "px");
+performSearch.css("left", (($(window).width() - performSearch.outerWidth()) / 2) + $(window).scrollLeft() + "px");
+}else{
+performSearch.css("top", (($(document).height() - performSearch.outerHeight()) / 2) + $(document).scrollTop() + "px");
+performSearch.css("left", (($(document).width() - performSearch.outerWidth()) / 2) + $(document).scrollLeft() + "px");
+}
+performSearch.show();
+
+
+
+
+if ( $.browser.msie )
+{
+
+setTimeout( function () { $( '#prgImgContainer' ).html( "<IMG SRC='/img/circleecm_progmeter40x40.gif' ALT='' BORDER='0'>" ); }, 300 );
+}
+}
+
+</script>
+
+<div id="performSearch" style="display:none;z-index:1000;">
+<TABLE WIDTH='150' BORDER='1' BORDERCOLOR='black' CELLPADDING='2' CELLSPACING='0' BGCOLOR='#ffffff'>
+<TR>
+<TD>
+<TABLE BORDER='0' CELLPADDING='0' CELLSPACING='0' WIDTH='100%'>
+<TR>
+<TD id="prgImgContainer" VALIGN='MIDDLE'><IMG SRC='/img/circleecm_progmeter40x40.gif' ID='prgImg' ALT='' BORDER='0'></TD><TD valign='middle' nowrap>&nbsp;<FONT COLOR='black' SIZE='2'>&nbsp;Searching...&nbsp;</FONT></TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</div>
+
+<div class="dropshadow-bottom"></div>
+
+<TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="100%">
+</TD>
+</TR>
+</TABLE>
+
+
+
+<DIV class="locationPageTitle"><DIV class="pageTitleIcon"><IMG SRC="/img/webdoc/icon_library_large.gif" WIDTH="32" HEIGHT="32" BORDER="0" ALT="Enterprise Workspace" TITLE="Enterprise Workspace"></DIV><DIV class="pageTitleText"><H1 ID="2000_141">Рабочая корпоративная область</H1>&nbsp;<A HREF="#" ONCLICK="showFunctionMenu2('nextURL=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dllworkspace', '2000', event );return false"><IMG DATA-OTNAME="wsFuncMenu" SRC="/img/webdoc/actions.png" ID="x2000" BORDER="0" ALT="Functions" TITLE="Functions" ONMOUSEOVER="this.src='/img/webdoc/actions_hover.png'" ONMOUSEOUT="this.src='/img/webdoc/actions.png'"></A><DIV ID="z2000" STYLE="width: 1000px; background-color: #eeeeee;" class="functionMenuDiv"></DIV>&nbsp;</DIV></DIV>
+
+<SCRIPT LANGUAGE="JavaScript1.2">
+function resetPopup()
+{
+}
+
+contentTable = true;
+
+
+$( "#discovery-mode-container" ).keypress( function( e ) {
+if ( e.keyCode == 13 ) {
+location.href="/OTCS/cs.exe?func=personal.settings";
+}
+});
+
+</SCRIPT>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD  VALIGN="TOP" CLASS="pagebody" HEIGHT="100%">
+<TABLE CLASS="pageBody" WIDTH="100%" ALIGN="CENTER" CELLSPACING="0" CELLPADDING="11" BORDER="0">
+<TR>
+<TD VALIGN="TOP">
+<div id="thirdPartyContent">
+<div id="tp_BusinessWorkspaceSidebar">
+<script type="text/javascript" src="/img/otsapxecm/createmenus.js"></script>
+
+<script type="text/javascript">
+
+createMyBWSMenu( "Business Workspaces", "/img/", "/OTCS/cs.exe" );
+</script>
+</div>
+</div>
+<div id="pstageWarning"></div>
+
+
+
+<TABLE BORDER="0" CELLSPACING="3" CELLPADDING="3" WIDTH="100%" ID="featuredItems">
+
+<TR VALIGN="MIDDLE">
+<TD><IMG ALT="" SRC="/img/spacer.gif" WIDTH="1" BORDER="0"></TD>
+
+<TD WIDTH="25%" VALIGN="TOP">
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="top" WIDTH="25%">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD NOWRAP VALIGN="TOP" ALIGN="CENTER">
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=63589&amp;objAction=browse&amp;sort=name&amp;viewType=1"><IMG SRC="/img/8space.gif" WIDTH="8" HEIGHT="8" BORDER="0" ALT="" TITLE=""><IMG SRC="/img/folder_icons/folder14_large.gif" WIDTH="32" HEIGHT="32" BORDER="0" ALT="Folder" TITLE="Folder"></A>
+</TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP" class="catalog" WIDTH="100%" ID="browseCatalog_63589">
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=63589&amp;objAction=browse&amp;sort=name&amp;viewType=1">Архив ОЦО</A>
+
+<A HREF="#" ONCLICK="setSectionName('catView');showFunctionMenu2('nextUrl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dll%26objid%3D2000%26objAction%3Dbrowse%26sort%3Dname', '63589', event, '', '' );setSectionName('');return false"><IMG SRC="/img/actions.png" ID="x63589catView" BORDER="0" ALT="Functions" TITLE="Functions" ONMOUSEOVER="this.src='/img/actions_hover.png'" ONMOUSEOUT="this.src='/img/actions.png'"></A>
+<DIV ID="z63589catView" CLASS="functionMenuDiv" STYLE="width: 1px" ></DIV>
+
+
+
+
+
+
+
+
+
+
+
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+
+</TABLE>
+
+</TD>
+
+<TD NOWRAP>&nbsp;&nbsp;</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="top" WIDTH="25%">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD NOWRAP VALIGN="TOP" ALIGN="CENTER">
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=68599&amp;objAction=browse&amp;sort=name&amp;viewType=1"><IMG SRC="/img/8space.gif" WIDTH="8" HEIGHT="8" BORDER="0" ALT="" TITLE=""><IMG SRC="/img/folder_icons/folder11_large.gif" WIDTH="32" HEIGHT="32" BORDER="0" ALT="Folder" TITLE="Folder"></A>
+</TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP" class="catalog" WIDTH="100%" ID="browseCatalog_68599">
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=68599&amp;objAction=browse&amp;sort=name&amp;viewType=1">Отчеты</A>
+
+<A HREF="#" ONCLICK="setSectionName('catView');showFunctionMenu2('nextUrl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dll%26objid%3D2000%26objAction%3Dbrowse%26sort%3Dname', '68599', event, '', '' );setSectionName('');return false"><IMG SRC="/img/actions.png" ID="x68599catView" BORDER="0" ALT="Functions" TITLE="Functions" ONMOUSEOVER="this.src='/img/actions_hover.png'" ONMOUSEOUT="this.src='/img/actions.png'"></A>
+<DIV ID="z68599catView" CLASS="functionMenuDiv" STYLE="width: 1px" ></DIV>
+
+
+
+
+
+
+
+
+
+
+
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER" class="subCatalog">
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=51692383&amp;objAction=RunReport&amp;viewType=1&amp;nexturl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dllworkspace">Отчет по документам 1С (+фильтры)</A>
+
+
+
+
+
+
+
+
+
+
+,&nbsp;
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=45207969&amp;objAction=RunReport&amp;viewType=1&amp;nexturl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dllworkspace">Отчет по заданиям на печать</A>
+
+
+
+
+
+
+
+
+
+
+,&nbsp;
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=51692384&amp;objAction=RunReport&amp;viewType=1&amp;nexturl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dllworkspace">Отчет по задачам (+фильтры)</A>
+
+
+
+
+
+
+
+
+
+
+,&nbsp;
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=6561409&amp;objAction=RunReport&amp;viewType=1&amp;nexturl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dllworkspace">Отчет по КПЭ операторов ОЦО</A>
+
+
+
+
+
+
+
+
+
+
+,&nbsp;
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=23578707&amp;objAction=RunReport&amp;viewType=1&amp;nexturl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dllworkspace">Отчет по КПЭ операторов ФО</A>
+
+
+
+
+
+
+
+
+
+
+,&nbsp;
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=3797429&amp;objAction=RunReport&amp;viewType=1&amp;nexturl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dllworkspace">Отчет по наполнению архива</A>
+
+
+
+
+
+
+
+
+
+
+,&nbsp;
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=68599&amp;objAction=browse&amp;sort=name&amp;viewType=1">...</A>
+</TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<TD NOWRAP>&nbsp;&nbsp;</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="top" WIDTH="25%">
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+<TR>
+<TD NOWRAP VALIGN="TOP" ALIGN="CENTER">
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=430510&amp;objAction=browse&amp;sort=name&amp;viewType=1"><IMG SRC="/img/8space.gif" WIDTH="8" HEIGHT="8" BORDER="0" ALT="" TITLE=""><IMG SRC="/img/webdoc/folder_large.gif" WIDTH="32" HEIGHT="32" BORDER="0" ALT="Folder" TITLE="Folder"></A>
+</TD>
+</TR>
+<TR>
+<TD ALIGN="CENTER" VALIGN="TOP" class="catalog" WIDTH="100%" ID="browseCatalog_430510">
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=430510&amp;objAction=browse&amp;sort=name&amp;viewType=1">Формы</A>
+
+<A HREF="#" ONCLICK="setSectionName('catView');showFunctionMenu2('nextUrl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dll%26objid%3D2000%26objAction%3Dbrowse%26sort%3Dname', '430510', event, '', '' );setSectionName('');return false"><IMG SRC="/img/actions.png" ID="x430510catView" BORDER="0" ALT="Functions" TITLE="Functions" ONMOUSEOVER="this.src='/img/actions_hover.png'" ONMOUSEOUT="this.src='/img/actions.png'"></A>
+<DIV ID="z430510catView" CLASS="functionMenuDiv" STYLE="width: 1px" ></DIV>
+
+
+
+
+
+
+
+
+
+
+
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+
+<TR>
+<TD VALIGN="TOP" ALIGN="CENTER" class="subCatalog">
+<A HREF="/OTCS/cs.exe?func=ll&amp;objId=51691501&amp;objAction=RunReport&amp;viewType=1&amp;nexturl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dllworkspace">Задания на обработку (+фильтры)</A>
+
+
+
+
+
+
+
+
+
+
+,&nbsp;
+<A HREF="/OTCS/cs.exe?func=ll&amp;objid=430267&amp;objaction=open&amp;sort=name&amp;nexturl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dllworkspace">Реестр передачи документов</A>
+
+
+
+
+
+
+
+
+
+
+,&nbsp;
+<A HREF="/OTCS/cs.exe?func=ll&amp;objid=7472040&amp;objaction=open&amp;sort=name&amp;nexturl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dllworkspace">Создать задание на печать (ОЦО)</A>
+
+
+
+
+
+
+
+
+
+
+</TD>
+</TR>
+</TABLE>
+
+</TD>
+
+<TD NOWRAP>&nbsp;&nbsp;</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+
+&nbsp;
+</TD>
+
+</TR>
+</TABLE>
+<SCRIPT type="text/javascript">
+setAlertMsg( "Please select at least one item." );
+setDataID ( 2000 );
+setCurrentType( "1" );
+setViewLastVar( -1 );
+setImgSrc ( "/img/" );
+setBaseUrl ( "/OTCS/cs.exe" );
+</SCRIPT>
+
+<form name="BrowseViewFrm" method="post" action="/OTCS/cs.exe" enctype="multipart/form-data">
+
+
+
+
+
+
+<input type="hidden" name="func" value="">
+<input type="hidden" name="objAction" value="">
+<input type="hidden" name="objId" value="">
+<input type="hidden" name="name" value="Рабочая корпоративная область">
+<input type="hidden" name="nextUrl" value="/OTCS/cs.exe?func=ll&amp;objid=2000&amp;objAction=browse&amp;sort=name&amp;viewType=1">
+<input type="hidden" name="viewTab" value="">
+<input type="hidden" name="viewType" value="">
+<input type="hidden" name="saveViewType" value="1">
+
+<table align="right" cellspacing="0" cellpadding="0" border="0">
+<tr>
+
+<td>
+<table id="pageFilterTable" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td>
+<script type="text/javascript">
+bc_setupMenu( "/OTCS/cs.exe" , "/img/"  );
+bc_resetTextInMenu()
+bc_setMenuName( "BrowsePageObjectFilter" );
+bc_setDirectWrite();
+
+bc_menuTxtStart( "objMenu", "Select To Filter Displayed Item Types" , "(All item types)", "itemID", "" );
+bc_optionsStart();
+bc_itemTxt( "(All item types)", '0', "" );
+bc_separator( '1' );
+
+bc_itemImg( 'Folder', 'webdoc/folder.gif', '2', '0', 0, 'smallIconMap subtype0 imgCursor' );
+
+bc_menuEnd();
+</script>
+</td>
+
+<script type="text/javascript">
+bc_spaceCell( "/img/", 12 , true );
+</script>
+
+<td>
+<div id="browsesearch" title="Filter by name">
+<span class="sbox"><input type="input" id="srch_fld" autocomplete="off" placeholder="Filter by name" title="Filter by name" value="" onkeypress="browsesearch.onKeyPress( event )" onkeyup="browsesearch.onChange( 'srch_fld' )" onfocus="browsesearch.onFocus('srch_fld')" onblur="browsesearch.onBlur('srch_fld')" style="color: #6D7B8D; font-style: italic;" /></span><span id="browse_search_but" onmouseover="browsesearch.onMouseChangeSB(true)" onmouseout="browsesearch.onMouseChangeSB(false)" class="sbox_r_2" onclick="getFilterEditCellContent( true ); return false;"></span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</td>
+
+<td>
+<DIV id="browse-view-switcher">
+<DIV id="browseIcons" class="browseIcons">
+
+<A HREF="#" onClick="buildTableDetail();return false;" CLASS="currentViewButtonHref" >
+<IMG SRC="/img/ico-list.gif" SI="ico-list.gif" SS="ico-list-on.gif" ID="BV_ViewDetailIcon" ALT="Show Detail View" TITLE="Show Detail View"></A>
+
+<A HREF="#" onClick="buildTableBigImage();return false;" CLASS="currentViewButtonHref" >
+<IMG SRC="/img/ico-large.gif" SI="ico-large.gif" SS="ico-large-on.gif" ID="BV_ViewLargeIcon" ALT="Show Large Icon View" TITLE="Show Large Icon View"></A>
+
+<A HREF="#" onClick="buildTableListView();return false;" CLASS="currentViewButtonHref" >
+<IMG SRC="/img/ico-small.gif" SI="ico-small.gif" SS="ico-small-on.gif" ID="BV_ViewSmallIcon" ALT="Show Small Icon View" TITLE="Show Small Icon View"></A>
+<A HREF="#" onClick="doSubmit2('WebDAV','390');return false;" CLASS="currentViewButtonHref" >
+<IMG SRC="/img/ico-dav.gif" ALT="Show Drag and Drop View" TITLE="Show Drag and Drop View"></A>
+</DIV>
+</DIV>
+</td>
+
+</tr>
+</table>
+
+<DIV ID="browseAndSidebarContainer"  style="clear:both;">
+<DIV ID="sidebarSideIndicator" class='sidebarOnLeft'>
+<DIV ID="sidebarIndicator" class='sidebarOpen'>
+<DIV class="browseview-shim">&nbsp;</DIV>
+
+<SCRIPT type="text/javascript">
+
+
+
+
+</SCRIPT>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr>
+
+
+<td valign="top" class="browseview-wrapper">
+<DIV ID="MainTableAndPaging">
+
+
+<DIV ID="MainOperationTable">
+
+<TABLE CELLPADDING="0" CELLSPACING="0" BORDER="0" ALIGN="CENTER" WIDTH="100%" ID='browseTableDefn1' >
+<TR VALIGN="TOP">
+<TD><DIV CLASS="shadow-right">
+<TABLE WIDTH="100%" BORDER="0" CELLSPACING="1" CELLPADDING="0" CLASS="tblBackground-BrowseView">
+<TR ID='MultiOperationBar1Row' >
+
+<TD>
+<DIV ID="MultiOperationBar1" CLASS="browseMultiSelectColor">
+<DIV ID="MultiDetailOperations" CLASS="MultiDetailOperations">
+<SCRIPT>fn_MultiButtonPosition('/img/multifilebar.png', '0', '0', '-104', '0', 'Copy', 'Copy', 'll.ProcessMultiCopy', 'copy', '0');</SCRIPT>
+<SCRIPT>fn_MultiButtonPosition('/img/multifilebar.png', '0', '-36', '-104', '-36', 'Move', 'Move', 'll.ProcessMultiMove', 'move', '0');</SCRIPT>
+<SCRIPT>fn_MultiButtonPosition('/img/multifilebar.png', '0', '-72', '-104', '-72', 'Delete', 'Delete', 'll.ProcessMultiDelete', 'delete', '0');</SCRIPT>
+<SCRIPT>fn_MultiButtonPosition('/img/multifilebar.png', '0', '-108', '-268', '-108', 'Zip &amp; Download', 'Zip &amp; Download', 'multifile.zipdwnldmulti', 'zipdwnld', '0');</SCRIPT>
+<SCRIPT>fn_MultiButtonPosition('/img/multifilebar.png', '0', '-180', '-268', '-180', 'Zip &amp; E-mail', 'Zip &amp; E-mail', 'multifile.zipemailmulti', 'zipemail', '0');</SCRIPT>
+<SCRIPT>fn_MultiButtonPositionClient( '/img/multifilebar.png', '0', '-324', '-268', '-324', 'EmailLink', 'Email Link', 'emailLink', '0' );</SCRIPT>
+<SCRIPT>fn_MultiButtonPosition('/img/multifilebar.png', '0', '-144', '-134', '-144', 'Print', 'Print', 'multifile.printmulti', 'print', '1');</SCRIPT>
+<SCRIPT type="text/javascript">
+nm_setSupportPath( "/img/" );
+nm_moreMenuStart();
+
+nm_setParentID( "2000" );
+nm_setLocation( "/OTCS/cs.exe" );
+nm_setNextUrl( "/OTCS/cs.exe?func=ll&amp;objid=2000&amp;objAction=browse&amp;sort=name" );
+var menuID = "moreMultiMenu" + $('.toolbar-more-button').size().toString();
+
+nm_AddNewMoreMenuHead( "", menuID, "Select To Access More Menu", "More..." );
+
+
+nm_AddNewMoreMenuItem( "mm_1", "copy.gif", "Copy", "Copy", "ll.ProcessMultiCopy", "copy" );
+nm_AddNewMoreMenuItem( "mm_2", "move.gif", "Move", "Move", "ll.ProcessMultiMove", "move" );
+nm_AddNewMoreMenuItem( "mm_3", "del.gif", "Delete", "Delete", "ll.ProcessMultiDelete", "delete" );
+nm_AddNewMoreMenuItem( "mm_4", "multifile/zipdwnld.gif", "Zip & Download", "Zip & Download", "multifile.zipdwnldmulti", "zipdwnld" );
+nm_AddNewMoreMenuItem( "mm_5", "multifile/zipemail.gif", "Zip & E-mail", "Zip & E-mail", "multifile.zipemailmulti", "zipemail" );
+nm_AddNewMoreMenuItemClient( "mm_6", "", "EmailLink", "Email Link", "emailLink" )
+nm_AddNewMoreMenuItem( "mm_7", "multifile/print.gif", "Print", "Print", "multifile.printmulti", "print" );
+nm_AddNewMenuEnd();
+</SCRIPT>
+<iframe id="emailFrame" style="display: none;"></iframe>
+</DIV>
+
+</DIV>
+
+</TD>
+</TR>
+<TR ID='BrowseCoreRow' >
+
+<TD CLASS="tblForeground">
+<DIV ID="browseCoreDiv"></DIV>
+
+<SCRIPT TYPE="text/javascript">
+var ds = new Date();
+
+setMultiSelectButtons( false );
+setMoreParam( 'nextUrl=%2FOTCS%2Fcs%2Eexe%3Ffunc%3Dll%26objid%3D2000%26objAction%3Dbrowse%26sort%3Dname' );
+setNextURL( '/OTCS/cs.exe?func=ll&objid=2000&objAction=browse&sort=name' );
+setContainerId( "2000" );
+setContainerSubType( "141" );
+setCurrentViewType( "1" );
+setIsPaged( true );
+setHideSize( false );
+setCookiePath( "/OTCS/" );
+
+initPopup();
+
+
+AddMultiButton2( '/img/multifilebar.png', '0', '0', '-104', '0', 'Copy', 'Copy', 'll.ProcessMultiCopy', 'copy' );
+AddMultiButton2( '/img/multifilebar.png', '0', '-36', '-104', '-36', 'Move', 'Move', 'll.ProcessMultiMove', 'move' );
+AddMultiButton2( '/img/multifilebar.png', '0', '-72', '-104', '-72', 'Delete', 'Delete', 'll.ProcessMultiDelete', 'delete' );
+AddMultiButton2( '/img/multifilebar.png', '0', '-108', '-268', '-108', 'Zip &amp; Download', 'Zip &amp; Download', 'multifile.zipdwnldmulti', 'zipdwnld' );
+AddMultiButton2( '/img/multifilebar.png', '0', '-180', '-268', '-180', 'Zip &amp; E-mail', 'Zip &amp; E-mail', 'multifile.zipemailmulti', 'zipemail' );
+AddMultiButton2Client( '/img/multifilebar.png', '0', '-324', '-268', '-324', 'EmailLink', 'Email Link', 'emailLink' );
+AddMultiButton2( '/img/multifilebar.png', '0', '-144', '-134', '-144', 'Print', 'Print', 'multifile.printmulti', 'print' );
+setPageDropDownValues( '[ 25,50,75,100,125,200,300 ]' );
+
+setBrowseColumnDefinition( '({"columns":[{"columnID":"checkboxColumn","isDefault":true},{"columnID":"typeColumn","isDefault":true},{"columnID":"nameWthPrmtdCmdsColumn","isDefault":true},{"columnID":"sizeColumn","isDefault":true},{"columnID":"dateColumn","isDefault":true}],"ok":true})' );
+
+
+
+
+setPageSize( 50 );
+bc_setupMenu( "/OTCS/cs.exe"  , "/img/" );
+
+setSortColumn( "name" )
+
+
+DataStringToVariables( '( {"currentPageNum":0,"totalPages":1,"totalCount":3,"dbTimeTaken":0,"timeTaken":0,"haveBigImages":"false","myRows":[{"dataId":"63589","type":"0","typeName":"Folder","name":"Архив ОЦО","link":"\\/OTCS\\/cs.exe?func=ll&objId=63589&objAction=browse","size":"10 Items","date":"23\\/05\\/2016 10:56","dateReal":"20160523105637","imgStr":"\\/img\\/folder_icons\\/folder14.gif","imgLargeStr":"\\/img\\/folder_icons\\/folder14_large.gif","checked":"false","editable":"true","imgStatus":"\\/img\\/8space.gif","sizeSortStr":"0000000_000000000000010_Архив ОЦО","dataidSortStr":"00000000000000063589","typeSortStr":"0000000__Архив ОЦО","dateSortStr":"20160523105637_Архив ОЦО","container":"true","catalog":"1"}, {"dataId":"68599","type":"0","typeName":"Folder","name":"Отчеты","link":"\\/OTCS\\/cs.exe?func=ll&objId=68599&objAction=browse","size":"13 Items","date":"14\\/08\\/2015 07:59","dateReal":"20150814075922","imgStr":"\\/img\\/folder_icons\\/folder11.gif","imgLargeStr":"\\/img\\/folder_icons\\/folder11_large.gif","checked":"false","editable":"true","imgStatus":"\\/img\\/8space.gif","sizeSortStr":"0000000_000000000000013_Отчеты","dataidSortStr":"00000000000000068599","typeSortStr":"0000000__Отчеты","dateSortStr":"20150814075922_Отчеты","container":"true","catalog":"1"}, {"dataId":"430510","type":"0","typeName":"Folder","name":"Формы","link":"\\/OTCS\\/cs.exe?func=ll&objId=430510&objAction=browse","size":"6 Items","date":"14\\/08\\/2015 08:02","dateReal":"20150814080255","imgStr":"\\/img\\/webdoc\\/folder.gif","imgLargeStr":"\\/img\\/webdoc\\/folder_large.gif","checked":"false","editable":"true","imgStatus":"\\/img\\/8space.gif","sizeSortStr":"0000000_000000000000006_Формы","dataidSortStr":"00000000000000430510","typeSortStr":"0000000__Формы","dateSortStr":"20150814080255_Формы","container":"true","catalog":"1"}] ,"hasStagedContent":"false","pstageID":0})' );
+
+
+AddTypeReference( '0', 'Folder'  );
+</SCRIPT>
+
+</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV class="bottom-shadows">
+<DIV class="shadow-bottom-inside"></DIV>
+<DIV class="shadow-bottom-right"></DIV>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD CLASS="td-no-line-height">&nbsp;</TD>
+<TD CLASS="td-no-line-height">&nbsp;</TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV ID="BrowsePageRowPagingSectionCell" >
+</DIV>
+</DIV>
+</td>
+
+
+</tr>
+</table>
+
+</DIV>
+</DIV>
+</DIV>
+</form>
+
+<div id="BrowsePageRowPagingSectionCell" >
+</div>
+
+<script type="text/javascript">
+
+
+if ( null != self.addPagingFooter )
+{
+addPagingFooter();
+}
+</script>
+<SCRIPT LANGUAGE="JavaScript1.2">
+if ( window.contentTable )
+{
+if ( contentTable )
+{
+document.write( '</TD></TR></TABLE></TD></TR><TR><TD VALIGN="BOTTOM">' )
+}
+}
+</SCRIPT>
+
+
+<div id="footer" class="csx">
+<span class="username">TECH_ZAB_VM</span>
+<span class="date">31/05/2016</span>
+<p class="copyright">
+OpenText Content Server 10.5 Service Pack 1. Copyright &copy; 1995 - 2015 Open Text SA and/or Open Text ULC.
+</p>
+</div>
+<SCRIPT LANGUAGE="JavaScript">
+if ( window.contentTable )
+{
+if ( contentTable )
+{
+document.write( '</TD></TR></TABLE>' )
+}
+}
+</SCRIPT>
+
+
+</TD>
+
+</TR>
+
+</TABLE>
+
+
+<IFRAME ID="HideSelect" SRC="/img/spacer.gif" TITLE="hidden frame" SCROLLING="no" FRAMEBORDER="0"
+STYLE="position:absolute; top: 0px; left:0px; display:none;">
+</IFRAME>
+
+<DIV ID="HideSelectDiv" CLASS="menuItem" STYLE="position:absolute; z-index: 1; display:none; visibility:hidden">
+<IMG SRC="/img/spacer.gif" ALT="" WIDTH="1" HEIGHT="1">
+</DIV>
+</BODY>
+
+</HTML>
+�З��      WMa�WMa�<�i=       A    :http://mow03-opt01.cherkizovsky.net/OTCS/cs.exe?func=llworkspace necko:classified 1 request-method GET response-head HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Type: text/html;charset=UTF-8
+Server: Microsoft-IIS/8.5
+X-Frame-Options: SAMEORIGIN
+X-UA-Compatible: IE=edge
+Persistent-Auth: true
+X-Powered-By: ASP.NET
+Date: Tue, 31 May 2016 10:04:58 GMT
+Content-Length: 50504
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 58 predictor::http://mow03-opt01.cherkizovsky.net/img/style/screen.css?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/jquery-ui-1.9.2.custom.min.css 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/core/jquery-1.7.2.min.js 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/core/jquery-ui-1.9.2.custom.min.js 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/core/ajax_dhtml_util.js?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/menu_en_US.js?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/menu.js?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/webnode/browse.js?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/core/otfunc_en_US.js?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/core/otfunc.css?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/core/otfunc.js?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/appearances/custom.css?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/appearances/custom.js?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/webnode/browsecoretable_en_US.js?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/checkall.js?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/webnode/webnode.css?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/websbroker/searchbar.js?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/websbroker/websbroker_en_US.js?v=1747 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/circleecm_progmeter40x40.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/webdoc/icon_library_large.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/webdoc/actions.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/otsapxecm/createmenus.js 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/spacer.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/8space.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/folder_icons/folder14_large.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/actions.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/folder_icons/folder11_large.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/webdoc/folder_large.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/ico-list.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/ico-large.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/ico-small.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/ico-dav.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/bg_header1x43.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/banner_right_ecmsuite320x43.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/logo_otcs250x43.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/menu_background_sprite.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/otsapxecm/indeterminate_circle16.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/bcselectarrow.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/bcselectbackground.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/smalliconmap.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/shadow_bottom_b24.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/search_small16_dim.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/panel_buttons_sprite.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/menu_separator.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/actions_sprite.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/help16_b24.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/ico-list-on.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/sort-up.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/folder_icons/folder14.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/folder_icons/folder11.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/webdoc/folder.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/search_btn17.gif 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/shadow_right_b24.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/toolbar_background.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/toolbar_separator.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/multifilebar.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/actions16.png 1,1,1464689096,0 predictor::http://mow03-opt01.cherkizovsky.net/img/style/images/shadow_bottom_right_b24.png 1,1,1464689096,0   �H

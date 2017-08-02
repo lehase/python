@@ -1,0 +1,1279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+
+
+<HEAD>
+<script type="text/javascript">
+supportPath = "/img/";
+</script>
+
+
+
+<META http-equiv="content-type" content="text/html; charset=UTF-8">
+<LINK REL="stylesheet" TYPE="text/css" HREF="/img/style/screen.css?v=1747">
+<link rel="shortcut icon" href="http://mow03-opt01/img/favicon.ico" type="image/x-icon">
+<STYLE>
+ .browseRow1 { background-color: #FFFFFF;  } 
+ .browseRow2 { background-color: #FFFFFF;  } 
+</STYLE>
+
+<TITLE>Отчет по задачам (+фильтры)</TITLE>
+
+
+
+
+<script TYPE="text/javascript">
+var dhtmlHistorySupportDir = "/img/core/";
+</script>
+
+
+<LINK REL="stylesheet" TYPE="text/css" HREF="/img/style/jquery-ui-1.9.2.custom.min.css">
+<script type="text/javascript" src="/img/core/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/img/core/jquery-ui-1.9.2.custom.min.js"></script>
+<script type="text/javascript" src="/img/core/ajax_dhtml_util.js?v=1747"></script>
+<script type="text/javascript" src="/img/menu_en_US.js?v=1747"></script>
+<script type="text/javascript" src="/img/menu.js?v=1747"></script>
+
+
+<script type="text/javascript" src="/img/webnode/browse.js?v=1747"></script>
+
+<SCRIPT type="text/javascript">
+baseURL = "/otcs/cs.exe"
+</SCRIPT>
+
+<script>
+var OTvar = jQuery.parseJSON( '{"currentUser":{"birthday":null,"email":null,"firstName":null,"ID":207454476,"lastName":"N\/A","login":"TECH_ZAB_VM"},"customView":{"searchMessage":"Loading search form..."},"livelink":{"cgiPath":"\/otcs\/cs.exe","name":"Content Server","supportPath":"\/img\/"},"node":{"childCount":0,"createDate":"2015-06-18T15:56:21","creator":"&apos;Admin Admin&apos;","description":"","ID":51692384,"modifyDate":"2016-02-25T00:40:36","name":"Отчет по задачам (+фильтры)","parentID":68599,"type":30303}}' );
+</script>
+<script type="text/javascript" src="/img/core/otfunc_en_US.js?v=1747"/></script>
+<link href="/img/core/otfunc.css?v=1747" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="/img/core/otfunc.js?v=1747"></script>
+
+
+<link href="/img/appearances/custom.css?v=1747" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="/img/appearances/custom.js?v=1747"></script>
+
+
+<SCRIPT>
+var isCompoundEmailItem = false;
+</SCRIPT>
+<script type="text/javascript" src="/img/webnode/browsecoretable_en_US.js?v=1747"></script>
+<script type="text/javascript" src="/img/checkall.js?v=1747"></script>
+</HEAD>
+
+<BODY ONLOAD="onLoadFunc('/img/');">
+
+<script type="text/javascript">
+/** Initialize all of our objects now. */
+window.historyStorage.init();
+
+/** This test is required for the History Support Directory
+The test is to find out if dhtmlHistorySupportDir is already defined */
+
+if( typeof dhtmlHistorySupportDir !== "undefined" && dhtmlHistorySupportDir !== null ) {
+window.dhtmlHistory.create( dhtmlHistorySupportDir );
+} else {
+window.dhtmlHistory.create( "" );
+}
+</script>
+
+<DIV ID="functionMenuParent">
+<IFRAME ID="bridgeFrame" SRC="/img/spacer.gif" TITLE="hidden frame">
+</IFRAME>
+</DIV>
+
+
+
+
+<DIV ID="historyFormLocatorDiv"></DIV>
+
+
+<DIV ID="progressPopupDiv"></DIV>
+
+<TABLE BORDER="0" WIDTH="100%" CLASS="pageBody" STYLE="height: 100%;" CELLPADDING="0" CELLSPACING="0">
+<TR>
+<TD WIDTH="1%" ALIGN="" VALIGN="MIDDLE">
+
+</TD>
+<TD WIDTH="100%" ALIGN="" VALIGN="MIDDLE">
+
+</TD>
+</TR>
+<TR>
+<TD WIDTH="1%" NOWRAP ALIGN="" VALIGN="MIDDLE">
+</TD>
+<TD ID="LLOuterContainer" STYLE="height: 100%;" VALIGN="TOP">
+
+<TABLE ID="LLInnerContainer" CLASS="pageBody" STYLE="height: 100%;" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BORDER="0">
+<TR>
+<TD  VALIGN="TOP" >
+<DIV ID="mastheadComponent">
+
+<div id="header" class="csx">
+<div id="header-inner">
+<h1 id="logo">
+
+<a href="/otcs/cs.exe?func=Enterprise.Home" title="Go to Enterprise Workspace">Open Text Content Server</a>
+
+</h1>
+</div>
+</div>
+<div id="nav" class="csx">
+<ul id="tGlobalMenus" class="menu-horizontal">
+<script language="JavaScript1.2">
+__LeavePage = ''
+</script>
+
+
+
+<li id="EnterpriseGlobalMenu" class="has-submenu">
+<a href="javascript:void(0)" onClick="return false;" title=""><span id="globalMenu_0" class="topmenu">Enterprise<div class="topmenu-icon">&nbsp;</div></span></a>
+<ul id="Enterprise">
+<li id="0.0"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=llworkspace','');return false;"><span id="globalMenuItem_0.0" class="globalMenuItem">Workspace</span></a></li>
+
+<li id="0.1"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=user.listusers','');return false;"><span id="globalMenuItem_0.1" class="globalMenuItem">Users &amp; Groups</span></a></li>
+
+<li class="menu-divider" id="0.3"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/OTCS/cs.exe?func=bcprint.openDialog','');return false;"><span id="globalMenuItem_0.3" class="globalMenuItem">Печать штрихкодов</span></a></li>
+
+<li class="menu-divider" id="0.5"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=ll&amp;objtype=198&amp;objaction=browse','');return false;"><span id="globalMenuItem_0.5" class="globalMenuItem">Classifications</span></a></li>
+
+<li id="0.6"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=ll&amp;objtype=54700&amp;objaction=browse','');return false;"><span id="globalMenuItem_0.6" class="globalMenuItem">Contracts Approval</span></a></li>
+
+<li id="0.7"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=cpdb.SearchOrAdd','');return false;"><span id="globalMenuItem_0.7" class="globalMenuItem">Partner Database</span></a></li>
+
+<li id="0.8"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=ll&amp;objtype=413&amp;objaction=browse','');return false;"><span id="globalMenuItem_0.8" class="globalMenuItem">Physical Objects</span></a></li>
+
+<li id="0.9"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=ll&amp;objtype=550&amp;objAction=browse','');return false;"><span id="globalMenuItem_0.9" class="globalMenuItem">Records Management</span></a></li>
+
+<li class="menu-divider" id="0.11"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=ll&amp;objId=14639&amp;objAction=browse','');return false;"><span id="globalMenuItem_0.11" class="globalMenuItem">Document Templates</span></a></li>
+
+</ul>
+</li>
+<li id="PersonalGlobalMenu" class="has-submenu">
+<a href="javascript:void(0)" onClick="return false;" title=""><span id="globalMenu_1" class="topmenu">Personal<div class="topmenu-icon">&nbsp;</div></span></a>
+<ul id="Personal">
+<li id="1.0"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=ll&amp;objtype=142&amp;objaction=browse','');return false;"><span id="globalMenuItem_1.0" class="globalMenuItem">My Workspace</span></a></li>
+
+<li class="menu-divider" id="1.2"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.Assignments','');return false;"><span id="globalMenuItem_1.2" class="globalMenuItem">Assignments</span></a></li>
+
+<li id="1.3"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.PhysicalItems','');return false;"><span id="globalMenuItem_1.3" class="globalMenuItem">Borrowed Items</span></a></li>
+
+<li id="1.4"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.CasePortal','');return false;"><span id="globalMenuItem_1.4" class="globalMenuItem">Case Workspace</span></a></li>
+
+<li id="1.5"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.MyCollections','');return false;"><span id="globalMenuItem_1.5" class="globalMenuItem">Collections</span></a></li>
+
+<li id="1.6"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.Discussions','');return false;"><span id="globalMenuItem_1.6" class="globalMenuItem">Discussions</span></a></li>
+
+<li id="1.7"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.Favorites','');return false;"><span id="globalMenuItem_1.7" class="globalMenuItem">Favorites</span></a></li>
+
+<li id="1.8"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.resubmissions','');return false;"><span id="globalMenuItem_1.8" class="globalMenuItem">Follow Ups</span></a></li>
+
+<li id="1.9"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.MyGroups','');return false;"><span id="globalMenuItem_1.9" class="globalMenuItem">My Groups</span></a></li>
+
+<li id="1.10"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.MyProfile','');return false;"><span id="globalMenuItem_1.10" class="globalMenuItem">My Profile</span></a></li>
+
+<li id="1.11"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.News','');return false;"><span id="globalMenuItem_1.11" class="globalMenuItem">News</span></a></li>
+
+<li id="1.12"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.ChangeAgents&amp;mode=SHOW','');return false;"><span id="globalMenuItem_1.12" class="globalMenuItem">Notification</span></a></li>
+
+<li id="1.13"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.Projects','');return false;"><span id="globalMenuItem_1.13" class="globalMenuItem">Projects</span></a></li>
+
+<li id="1.14"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Prospector.ProspectorTab','');return false;"><span id="globalMenuItem_1.14" class="globalMenuItem">Prospectors</span></a></li>
+
+<li id="1.15"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.Recommendations','');return false;"><span id="globalMenuItem_1.15" class="globalMenuItem">Recommendations</span></a></li>
+
+<li id="1.16"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.RecycleBin','');return false;"><span id="globalMenuItem_1.16" class="globalMenuItem">Recycle Bin</span></a></li>
+
+<li id="1.17"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.RecycleBinToday','');return false;"><span id="globalMenuItem_1.17" class="globalMenuItem">Recycle Bin - Today</span></a></li>
+
+<li id="1.18"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.Reports','');return false;"><span id="globalMenuItem_1.18" class="globalMenuItem">Reports</span></a></li>
+
+<li id="1.19"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=ll&amp;objType=870&amp;objAction=browse','');return false;"><span id="globalMenuItem_1.19" class="globalMenuItem">Reserved Items</span></a></li>
+
+<li id="1.20"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.ManageTabs','');return false;"><span id="globalMenuItem_1.20" class="globalMenuItem">Search Templates</span></a></li>
+
+<li id="1.21"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=Personal.TaskLists','');return false;"><span id="globalMenuItem_1.21" class="globalMenuItem">Task Lists</span></a></li>
+
+<li id="1.22"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=work.workflows','');return false;"><span id="globalMenuItem_1.22" class="globalMenuItem">Workflows</span></a></li>
+
+<li id="1.23"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=ll&amp;objType=532&amp;objAction=browse','');return false;"><span id="globalMenuItem_1.23" class="globalMenuItem">Workbenches</span></a></li>
+
+</ul>
+</li>
+<li id="ToolsGlobalMenu" class="has-submenu">
+<a href="javascript:void(0)" onClick="return false;" title=""><span id="globalMenu_2" class="topmenu">Tools<div class="topmenu-icon">&nbsp;</div></span></a>
+<ul id="Tools">
+<li id="2.0"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=ll&amp;objType=258&amp;objAction=searchprompt','');return false;"><span id="globalMenuItem_2.0" class="globalMenuItem">Search</span></a></li>
+
+<li class="menu-divider" id="2.2"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=ll.DoLogout&amp;secureRequestToken=EEJqkMShl7hpnWWyypbdbXugQvQZmrNmNVi%2BV6hW9hY%3D','');return false;"><span id="globalMenuItem_2.2" class="globalMenuItem">Log-out</span></a></li>
+
+<li id="2.3"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=otdsintegration.pwchange','');return false;"><span id="globalMenuItem_2.3" class="globalMenuItem">Change Password</span></a></li>
+
+<li id="2.4"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=personal.settings','');return false;"><span id="globalMenuItem_2.4" class="globalMenuItem">Settings</span></a></li>
+
+</ul>
+</li>
+<li id="HelpGlobalMenu" class="has-submenu help-menu-item">
+<a href="javascript:void(0)" onClick="return false;" title=""><span id="help_GlobalMenu" class="topmenu">&nbsp;<div class="help-icon">Help</div><div class="topmenu-icon">&nbsp;</div></span></a>
+<ul>
+<li><a HREF="javascript:void(0)" onClick="openLinksWindow('http://mow03-opt01/otcs/cs.exe?func=help.index&keyword=admin.index'); return false;"><span id="help_0" class="globalMenuItem">Contents</span></a></li>
+<li id="Help.1"><a HREF="javascript:void(0)" onClick="openLinksWindow('http://mow03-opt01/otcs/cs.exe?func=help.index&keyword=LL.Webreport Webnode.RunReport'); return false;"><span id="help_1" class="globalMenuItem">For This Page</span></a></li>
+<li class="menu-divider" id="Help.3"><a HREF="javascript:void(0)" onClick="openLinksWindow('http://online.opentext.com'); return false;"><span id="help_3" class="globalMenuItem">Open Text Online</span></a></li>
+<li class="menu-divider" id="Help.4"><a href="javascript:void(0)" onclick="menu_callback( 'http://mow03-opt01/otcs/cs.exe?func=ll.index','');return false;"><span id="help_4" class="globalMenuItem">About Content Server</span></a></li>
+</ul>
+</li>
+</ul>
+
+
+<SCRIPT TYPE="text/javascript">
+
+
+var useGetRequest = true;
+
+
+var allSearchTypes = new Array()
+
+allSearchTypes[ allSearchTypes.length ] = 'fulltext'
+
+allSearchTypes[ allSearchTypes.length ] = 'nickname'
+
+var _baseUrl = '/otcs/cs.exe'
+</SCRIPT>
+
+<SCRIPT TYPE="text/javascript" SRC="/img/websbroker/searchbar.js?v=1747"></SCRIPT>
+<SCRIPT TYPE="text/javascript">sd_setupMenuStrings( "There is an empty query. Please enter a valid one.", "Cannot perform a search against From Here (Expanded)." )</SCRIPT>
+
+
+<script TYPE="text/javascript" src="/img/websbroker/websbroker_en_US.js?v=1747" language="javascript"></script>
+
+
+
+
+<input id="hide-search-panel" type="hidden" value="Close Search Panel" />
+<SCRIPT TYPE="text/javascript">sd_setupMenu( "/otcs/cs.exe" , "/img/" );</SCRIPT>
+
+
+<DIV ID="fulltextmainDivId" STYLE="display:block" CLASS="search-panel csx">
+<div class="search-panel-inner">
+<div class="search-panel-content">
+
+<FORM METHOD="POST" NAME="fulltextSearchBarForm" ID="fulltextSearchBarForm" ACTION="/otcs/cs.exe" ONSUBMIT="return false" autocomplete="off">
+
+
+<SCRIPT TYPE="text/javascript">sd_locationForm( "fulltext" );</SCRIPT>
+
+
+
+
+
+
+
+<div id="searchBarActionRow" class="search-action-row">
+<label for="fulltextwhere1">Поиск</label>
+
+<input class="search-input search-text-dim" style="width:220px" title="Enter search terms in the form of keywords" value="" name="where1" id="fulltextwhere1" ONKEYUP="return sb_fulltextEnter( this.form, event, 'OTModifyDate1' )">
+<input id="fulltextDateSelect" type="hidden" value="OTModifyDate1" />
+<INPUT CLASS="searchButton searchButtonIcon" TYPE="button" VALUE="Search" NAME="submitButton" ID="fulltextsubmitButton" TITLE="Perform Search">
+<a class="show-search-panel" style="overflow:hidden" href="javascript:void(0)" onclick="return false;" title="Open Search Panel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</div>
+<div class="search-options searchBar">
+
+<div class="searchBut search-type" id="searchBarCellFTMode">
+<label for="">Search type</label>
+<SCRIPT TYPE="text/javascript">
+sd_setupMenu( "/otcs/cs.exe" , "/img/"  );
+sd_setWidget( 'fulltext' );
+sd_SelectStart( 'Select Search Type', 'Full Text' );
+sd_menuSelectStart();
+sd_menuSelectItem( 'fulltext', 'Full Text' );
+sd_menuSelectItem( 'nickname', 'Nickname' );
+sd_menuEnd();
+</SCRIPT>
+</div>
+<div id="searchBarCellFTSlice" class="searchBut">
+<INPUT TYPE="hidden" ID="ScopeSelection" NAME="ScopeSelection" VALUE="52122758">
+
+<SCRIPT TYPE="text/javascript">
+function Changefulltextslices( selectedIndex, valueStr ) {
+
+selectedIndex = parseInt(selectedIndex, 10);
+document.fulltextSearchBarForm.ScopeSelection.value = valueStr;
+
+
+document.getElementById('selectedfulltextslices').innerHTML = document.getElementById('fulltextslices' + selectedIndex + 'DivId').innerHTML;
+
+
+generateSearchPromptIfNecessary();
+
+
+document.getElementById('showfulltextslices').style.visibility = "hidden";
+
+}
+
+sd_setBaseURL( "/otcs/cs.exe" );
+sd_setSupportPath( "/img/" );
+sd_setMenuName( "fulltextslices" );
+sd_menuTxtStart( "Slices", "Select Search Type" , "Enterprise", "", "" );
+sd_optionsStart();
+
+sd_itemTxt( 'Enterprise', 1, '52122758'  );
+sd_itemTxt( 'Enterprise [All Versions]', 2, '52122764'  );
+sd_itemTxt( 'Документы ОЦО', 3, '70733'  );
+sd_menuEnd();
+</SCRIPT>
+
+
+</div>
+<INPUT TYPE="HIDDEN"  NAME="lookfor1" ID="lookfor1" VALUE="allwords">
+<INPUT TYPE="HIDDEN" NAME="modifier1" ID="modifier1" VALUE="">
+<INPUT TYPE="HIDDEN"  NAME="boolean2" ID="boolean2" VALUE="And">
+<INPUT TYPE="HIDDEN"  NAME="lookfor2" ID="lookfor2" VALUE="complexquery">
+<div id="searchBarCellFTType" class="searchBut">
+<INPUT TYPE="HIDDEN"  NAME="typeDropDownId" ID="typeDropDownId" VALUE="1">
+<INPUT TYPE="HIDDEN"  NAME="where2" ID="fulltextwhere2" VALUE="">
+
+<SCRIPT type="text/javascript">
+
+function ChangefulltextObjectType( selectedIndex, valueStr, menuName ) {
+
+
+document.fulltextSearchBarForm.typeDropDownId.value = selectedIndex;
+document.fulltextSearchBarForm.where2.value = valueStr;
+
+
+if( document.getElementById( menuName + selectedIndex + 'DivId') != null )
+{
+document.getElementById('selected' + menuName ).innerHTML = document.getElementById( menuName + selectedIndex + 'DivId').innerHTML
+}
+
+
+if( document.getElementById('show' + menuName) != null )
+{
+document.getElementById('show' + menuName).style.visibility = "hidden"
+}
+
+
+}
+
+document.fulltextSearchBarForm.typeDropDownId.value = '1';
+document.fulltextSearchBarForm.where2.value = '';
+
+sd_setupMenu( "/otcs/cs.exe" , "/img/"  )
+
+sd_setFormName ( "SearchBarForm" )
+sd_setMenuName( "fulltextObjectType" )
+sd_menuImgStart( "Object type", "Select Searchable Type" , "Everything", "itemID", "websbroker/star.gif" )
+sd_optionsStart()
+
+sd_itemImg( 'Everything', 'websbroker/star.gif', '1', '', 0 )
+sd_separator( "2" )
+sd_itemImg( 'All Documents', 'webdoc/doc.gif', '3', 'OTFilterMIMEType: qlrange &quot;vnd.ms-excel|msword|pdf|powerpoint|text|zip&quot;', 0 )
+sd_itemImg( 'Excel', 'webdoc/appexel.gif', '4', 'OTFilterMIMEType:vnd.ms-excel', 1 )
+sd_itemImg( 'Word', 'webdoc/appword.gif', '5', 'OTFilterMIMEType:msword', 1 )
+sd_itemImg( 'PDF', 'webdoc/apppdf.gif', '6', 'OTFilterMIMEType:pdf', 1 )
+sd_itemImg( 'Zip Archives', 'webdoc/appzip.gif', '7', 'OTFilterMIMEType:zip', 1 )
+sd_itemImg( 'PowerPoint', 'webdoc/appppoin.gif', '8', 'OTFilterMIMEType:powerpoint', 1 )
+sd_itemImg( 'Text', 'webdoc/apptext.gif', '9', 'OTFilterMIMEType:text', 1 )
+sd_separator( "10" )
+sd_itemImg( 'Folders', 'webdoc/folder.gif', '11', 'OTSubType:0', 0 )
+sd_itemImg( 'Media', 'websbroker/picture.gif', '12', 'OTFilterMIMEType: qlrange &quot;jpeg|gif&quot; or OTLLMIMEType: qlrange &quot;jpeg|gif&quot;', 0 )
+sd_itemImg( 'Jpegs', 'webdoc/appjpeg.gif', '13', 'OTFilterMIMEType:jpeg or OTLLMIMEType:jpeg', 1 )
+sd_itemImg( 'Gifs', 'webdoc/appgif.gif', '14', 'OTSubType:144 and OTFilterMIMEType:gif  or OTLLMIMEType:gif', 1 )
+sd_itemImg( 'Task Lists', 'task/16tasklist.gif', '15', 'OTSubType: qlrange &quot;206|212|204|205&quot;', 0 )
+sd_itemImg( 'Milestones', 'task/16milestone.gif', '16', 'OTSubType:212', 1 )
+sd_itemImg( 'Tasks', 'task/16task.gif', '17', 'OTSubType:206', 1 )
+sd_itemImg( 'Projects', 'project/16project.gif', '18', 'OTSubType:202', 0 )
+sd_itemImg( 'Discussions', 'discussion/16discussion.gif', '19', 'OTSubType: qlrange &quot;130|134|215&quot;', 0 )
+sd_menuEnd()
+
+</SCRIPT>
+
+
+
+</div>
+<INPUT TYPE="HIDDEN"  NAME="boolean3" ID="boolean3" VALUE="And">
+<INPUT TYPE="HIDDEN"  NAME="lookfor3" ID="lookfor3" VALUE="complexquery">
+<INPUT TYPE="HIDDEN"  NAME="where3" ID="fulltextwhere3" VALUE="">
+<INPUT TYPE="HIDDEN"  NAME="fromHereQuery" ID="fromHereQuery" VALUE="">
+
+<div id="searchBarCellFTTime" class="searchBut">
+<INPUT TYPE="HIDDEN"  NAME="dateDropDownId" ID="dateDropDownId" VALUE="1">
+<INPUT TYPE="HIDDEN"  NAME="OTModifyDate1" ID="fulltextOTModifyDate1" VALUE="">
+
+<SCRIPT type="text/javascript">
+
+function ChangefulltextDateType( selectedIndex, valueStr, menuName ) {
+
+
+document.fulltextSearchBarForm.dateDropDownId.value = selectedIndex;
+document.fulltextSearchBarForm.OTModifyDate1.value = valueStr;
+
+
+if( document.getElementById( menuName + selectedIndex + 'DivId') != null )
+{
+document.getElementById('selected' + menuName ).innerHTML = document.getElementById( menuName + selectedIndex + 'DivId').innerHTML
+}
+
+
+if( document.getElementById('show' + menuName) != null )
+{
+document.getElementById('show' + menuName).style.visibility = "hidden"
+}
+
+
+}
+
+document.fulltextSearchBarForm.dateDropDownId.value = '1';
+document.fulltextSearchBarForm.OTModifyDate1.value = '';
+
+sd_setupMenu( "/otcs/cs.exe" , "/img/"  )
+
+sd_setFormName ( "SearchBarForm" )
+sd_setMenuName( "fulltextDateType" )
+sd_menuImgStart( "Last modified", "Select Modification Time Period" , "Anytime", "itemID", "" )
+sd_optionsStart()
+
+sd_itemImg( 'Anytime', '', '1', '', 0 )
+sd_separator( "2" )
+sd_itemImg( 'Modified in the past day', '', '3', 'pastday', 0 )
+sd_itemImg( 'Modified in the past week', '', '4', 'pastweek', 0 )
+sd_itemImg( 'Modified in the past month', '', '5', 'pastmonth', 0 )
+sd_separator( "6" )
+sd_itemImg( 'Modified in the past year', '', '7', 'pastyear', 0 )
+sd_menuEnd()
+
+</SCRIPT>
+
+
+
+</div>
+<div class="searchBut search-links">
+
+<A class="advanced-search" HREF="#" ONCLICK="openURL( '/otcs/cs.exe?func=ll&amp;objType=258&amp;objAction=searchprompt', '' ); return false;" TITLE="Advanced Search">Advanced Search</A>
+</div>
+
+
+<SCRIPT TYPE="text/javascript">
+sd_fromHereForm("258");
+$(document).ready(function() {
+fullTextDefaultText = getSearchPrompt("fulltext");
+generateSearchPromptIfNecessary("fulltext", true);
+currentVisible = "fulltext";
+});
+</SCRIPT>
+
+<INPUT TYPE="HIDDEN" NAME="location_id1">
+<INPUT TYPE="HIDDEN" NAME="facets" value="user">
+<INPUT TYPE="HIDDEN" NAME="fulltextMode" ID="fulltextMode" VALUE="">
+</div>
+</FORM>
+</div>
+</div>
+</div>
+
+<input id="hide-search-panel" type="hidden" value="Close Search Panel" />
+<div ID="nicknamemainDivId" style="display:none" class="search-panel csx">
+<div class="search-panel-inner">
+<div class="search-panel-content">
+
+<FORM METHOD="GET" NAME="nicknameSearchBarForm" ID="nicknameSearchBarForm" ACTION="/otcs/cs.exe" ONSUBMIT="return false" autocomplete="off">
+
+<div id="searchBarActionRow" class="search-action-row">
+<label for="nicknamewhere1">Поиск документа по штрихкоду</label>
+
+
+<INPUT class="search-input search-text-dim" style="width:220px" TITLE="Nickname: Type the nickname of the item." NAME="nickname" ID="nicknamewhere1" maxlength="248" VALUE="Nickname" ONKEYUP="return sb_nicknameEnter( this.form, event )">
+
+<INPUT class="searchButton searchButtonIcon" TYPE="button" VALUE="Search" NAME="submitButton" ID="nicknamesubmitButton" TITLE="Perform Search">
+<a class="show-search-panel" href="javascript:void(0)" onclick="return false;" title="Open Search Panel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</div>
+<div id="" class="search-options searchBar" style="">
+<div CLASS="searchBut search-type" ID="searchBarCellNickWidgetMode">
+<label>Search type</label>
+<SCRIPT TYPE="text/javascript">
+sd_setupMenu( "/otcs/cs.exe" , "/img/"  );
+sd_setWidget( 'nickname' );
+sd_SelectStart( 'Select Search Type', 'Nickname' );
+sd_menuSelectStart();
+sd_menuSelectItem( 'fulltext', 'Full Text' );
+sd_menuSelectItem( 'nickname', 'Nickname' );
+sd_menuEnd();
+</SCRIPT>
+</div>
+<div class="searchBut" ID="searchBarCell">
+<INPUT TYPE="hidden" ID="action" NAME="action" VALUE="open">
+
+<SCRIPT TYPE="text/javascript">
+function Changenicknameaction( selectedIndex, valueStr ) {
+
+selectedIndex = parseInt(selectedIndex, 10);
+document.nicknameSearchBarForm.action.value = valueStr;
+
+
+document.getElementById('selectednicknameaction').innerHTML = document.getElementById('nicknameaction' + selectedIndex + 'DivId').innerHTML;
+
+
+generateSearchPromptIfNecessary();
+
+
+document.getElementById('shownicknameaction').style.visibility = "hidden";
+
+}
+
+sd_setBaseURL( "/otcs/cs.exe" );
+sd_setSupportPath( "/img/" );
+sd_setMenuName( "nicknameaction" );
+sd_menuTxtStart( "Action", "Select Search Type" , "Open", "", "" );
+sd_optionsStart();
+
+sd_itemTxt( 'Open', 1, 'open'  );
+sd_itemTxt( 'Properties', 2, 'info'  );
+sd_menuEnd();
+</SCRIPT>
+
+
+</div>
+<div class="searchBut search-links" STYLE='height: 0px;'>
+
+</div>
+
+</div>
+<INPUT TYPE="hidden" NAME="func" VALUE="nickname.lookup">
+
+<SCRIPT TYPE="text/javascript" LANGUAGE="javascript">
+$(document).ready(function(){
+nicknameDefaultText = "Nickname";
+
+});
+</SCRIPT>
+
+</FORM>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+<script type="text/javascript">
+
+function performSearchDialog()
+{
+var performSearch = $( "#performSearch" );
+
+performSearch.css("position","absolute");
+
+
+if ( $(window).height() > 0 )
+{
+performSearch.css("top", (($(window).height() - performSearch.outerHeight()) / 2) + $(window).scrollTop() + "px");
+performSearch.css("left", (($(window).width() - performSearch.outerWidth()) / 2) + $(window).scrollLeft() + "px");
+}else{
+performSearch.css("top", (($(document).height() - performSearch.outerHeight()) / 2) + $(document).scrollTop() + "px");
+performSearch.css("left", (($(document).width() - performSearch.outerWidth()) / 2) + $(document).scrollLeft() + "px");
+}
+performSearch.show();
+
+
+
+
+if ( $.browser.msie )
+{
+
+setTimeout( function () { $( '#prgImgContainer' ).html( "<IMG SRC='/img/circleecm_progmeter40x40.gif' ALT='' BORDER='0'>" ); }, 300 );
+}
+}
+
+</script>
+
+<div id="performSearch" style="display:none;z-index:1000;">
+<TABLE WIDTH='150' BORDER='1' BORDERCOLOR='black' CELLPADDING='2' CELLSPACING='0' BGCOLOR='#ffffff'>
+<TR>
+<TD>
+<TABLE BORDER='0' CELLPADDING='0' CELLSPACING='0' WIDTH='100%'>
+<TR>
+<TD id="prgImgContainer" VALIGN='MIDDLE'><IMG SRC='/img/circleecm_progmeter40x40.gif' ID='prgImg' ALT='' BORDER='0'></TD><TD valign='middle' nowrap>&nbsp;<FONT COLOR='black' SIZE='2'>&nbsp;Searching...&nbsp;</FONT></TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</div>
+
+<div class="dropshadow-bottom"></div>
+
+<TABLE CELLSPACING="0" CELLPADDING="2" BORDER="0" WIDTH="100%">
+<TR>
+<TD WIDTH="100%">
+</TD>
+</TR>
+</TABLE>
+
+
+
+<DIV class="locationPageTitle">
+
+<DIV class="pageTitleIcon">
+<img src="/img/webreports/webreports_large.gif" width="32" height="32" border="0" alt="Run WebReport" title="Run WebReport"/>
+</DIV>
+<DIV class="pageTitleText">
+
+<H1 ID="?_?">
+
+Run WebReport:&nbsp;Отчет по задачам (+фильтры)
+
+</H1>
+</DIV>
+</DIV>
+<SCRIPT LANGUAGE="JavaScript1.2">
+function resetPopup()
+{
+}
+
+contentTable = true;
+
+
+$( "#discovery-mode-container" ).keypress( function( e ) {
+if ( e.keyCode == 13 ) {
+location.href="/otcs/cs.exe?func=personal.settings";
+}
+});
+
+</SCRIPT>
+</DIV>
+</TD>
+</TR>
+<TR>
+<TD  VALIGN="TOP" CLASS="pagebody" HEIGHT="100%">
+<TABLE CLASS="pageBody" WIDTH="100%" ALIGN="CENTER" CELLSPACING="0" CELLPADDING="11" BORDER="0">
+<TR>
+<TD VALIGN="TOP">
+<script type="text/javascript" src="/img//_sabris/FlexibleFilters/js/jquery.tokenize.js"></script>
+<script type="text/javascript" src="/img//_sabris/FlexibleFilters/js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="/img//_sabris/FlexibleFilters/css/jquery.tokenize.css" />
+<link rel="stylesheet" type="text/css" href="/img//_sabris/FlexibleFilters/css/main.css" />
+<script type="text/javascript">
+	var Common = new Object({
+		zGlobalUrl: '',
+		zGlobalMyUrl: '%2Fotcs%2Fcs%2Eexe%3Ffunc%3Dll%26objaction%3DRunReport%26objid%3D51692384%26objtype%3D141%26reqcacheid%3D12374880',
+		zSupportUrl: '/img/',
+		SaveSearch: 51649436,
+		AllowedPublic: 51593125,
+		CheckDataSize: 51657473,
+		DataSize: 100000,
+		ExcelReport: 51660395,
+		GetSearch: 51653307,
+		GetSearches: 51655062,
+		SubmitOnStart: 0,
+		MyID: 51692384,
+		SQL_Table: 'REPORT_Tasks',
+		Dictionaries: new Object({
+			scanTypes: [
+				new Object({ text: 'Оригинал', value: 'ОРГ' }),
+				new Object({ text: 'Копия', value: 'КОП' }),
+				new Object({ text: 'Копия с замечаниями', value: 'КОП_ЗАМ' })
+			],
+			actualTypes: [
+				new Object({ text: 'Да', value: 1 }),
+				new Object({ text: 'Нет', value: 0 })
+			],
+			statuses: [
+                new Object({ text: 'Назначен на группу HR', value: 'Назначен на группу HR' }),
+                new Object({ text: 'Не обработан HR', value: 'Не обработан HR' }),
+                new Object({ text: 'Назначен на группу', value: 'Назначен на группу' }),
+                new Object({ text: 'Не обработан', value: 'Не обработан' }),
+                new Object({ text: 'Отклонен HR', value: 'Отклонен HR' }),
+                new Object({ text: 'Отклонен', value: 'Отклонен' }),
+                new Object({ text: 'Принят с замечаниями', value: 'Принят с замечаниями' }),
+                new Object({ text: 'Принят', value: 'Принят' })
+			],
+			withouterp: [
+				new Object({ text: 'Нет', value: 0 }),
+				new Object({ text: 'Да', value: 1 })
+			],
+            scanProfiles: [
+                new Object({ text: 'ПРЕДВ_РЕГ_КОП',
+                    value: 'ПРЕДВ_РЕГ_КОП' }),
+                new Object({ text: 'ПРЕДВ_РЕГ_КОП_ЗАМ',
+                    value: 'ПРЕДВ_РЕГ_КОП_ЗАМ' }),
+                new Object({ text: 'ПРЕДВ_РЕГ_ОРГ',
+                    value: 'ПРЕДВ_РЕГ_ОРГ' }),
+                new Object({ text: 'БЕЗ_ПРЕДВ_РЕГ_КОП',
+                    value: 'БЕЗ_ПРЕДВ_РЕГ_КОП' }),
+                new Object({ text: 'БЕЗ_ПРЕДВ_РЕГ_КОП_ЗАМ',
+                    value: 'БЕЗ_ПРЕДВ_РЕГ_КОП_ЗАМ' }),
+                new Object({ text: 'БЕЗ_ПРЕДВ_РЕГ_ОРГ',
+                    value: 'БЕЗ_ПРЕДВ_РЕГ_ОРГ' })
+            ]
+		}),
+        statusProcessing: ["N'Назначен на группу'", "N'Назначен на группу HR'", "N'Не обработан'", "N'Не обработан HR'"],
+        statusDone: ["N'Принят'","N'Принят с замечаниями'","N'Отклонен'","N'Отклонен HR'"]
+	});
+	
+	$(function(){
+		$(".filter_button")
+			.button()
+			.click(function(event){
+				event.preventDefault();
+			});
+		
+		$( "#dialog-message" ).dialog({
+			modal: true,
+			autoOpen: false,
+			buttons: {
+				Ok: function() {
+					$(this).dialog( "close" );
+				}
+			}
+		});
+		
+		$('#rename-search').html('<br><table><tr><td><b>Имя поиска:</b>&nbsp;&nbsp;</td><td><input type="text" size="20" /></td></tr></table>');
+		$('#rename-search').dialog({
+			modal: true,
+			autoOpen: false,
+			buttons: {
+				Ok: function() {
+					var old_name = $("#Searches option:selected").text();
+					var new_name = $(this).find('input[type="text"]').val();
+					var rename = true;
+					$('#Searches').children().each(function(){
+						if(!$(this).attr('selected')){
+							if(new_name == $(this).val()){ rename = false; }
+						}
+					});
+					$(this).dialog("close");
+					$(this).find('input[type="text"]').val('');
+					if(rename){
+						if(new_name == ''){
+							msgBox('Пожалуйста, заполните имя поиска.');
+						} else {
+							doRename(old_name, new_name);
+						}
+					} else { msgBox('Поиск с таким именем уже существует.'); }
+				}
+			}
+		});
+			
+		$("#tabs").tabs({
+			collapsible: true,
+			active: 0,
+			activate: function( event, ui ) {
+				$( "#TAB" ).val(ui.newTab.index());
+			}
+		});
+		
+		$('.pageTitleText').replaceWith('<h1>Отчет по задачам</h1>');
+		$('.pageTitleIcon').remove();
+		
+
+		var obj_onload;
+		$.ajax({
+            type: "POST",
+            url: Common.zGlobalUrl != "" ? Common.zGlobalUrl : document.location.origin + document.location.pathname,
+			dataType: "json",
+			data:{
+				func: 'nickname.do',
+				nickname: "51653307",
+				action: "open",
+				SearchName: 'DEFAULT'
+			},
+			async: false,
+			cache: false,
+			success: function(response){
+				if(response.actualRows > 0){
+					$('#SOURCE_PARAM[value="' + response.myRows[0].SOURCETYPE + '"]').attr('checked', true);
+					obj_onload = new Object({
+						BARCODE: response.myRows[0].BARCODE,
+						BUSAREA: response.myRows[0].BUSAREA,
+						ORGANIZATIONDESC: response.myRows[0].ORGANIZATIONDESC,
+						ORIG_COPY: response.myRows[0].ORIG_COPY,
+						SCANSTATION: response.myRows[0].SCANSTATION,
+						FRONTOFFICE: response.myRows[0].FRONTOFFICE,
+						SCANUSER: response.myRows[0].SCANUSER,
+						SCANDATE: [response.myRows[0].SCANDATEFROM == null ? '': response.myRows[0].SCANDATEFROM, response.myRows[0].SCANDATETO == null ? '': response.myRows[0].SCANDATETO],
+						COURIER: response.myRows[0].COURIER,
+						SSCARRIVAL: [response.myRows[0].SSCARRIVALFROM == null ? '': response.myRows[0].SSCARRIVALFROM,response.myRows[0].SSCARRIVALTO == null ? '': response.myRows[0].SSCARRIVALTO],
+						SSCACCEPTANCE: [response.myRows[0].SSCACCEPTANCEFROM == null ? '': response.myRows[0].SSCACCEPTANCEFROM,response.myRows[0].SSCACCEPTANCETO == null ? '': response.myRows[0].SSCACCEPTANCETO],
+						SSCDEPARTURE: [response.myRows[0].SSCDEPARTUREFROM == null ? '': response.myRows[0].SSCDEPARTUREFROM,response.myRows[0].SSCDEPARTURETO == null ? '': response.myRows[0].SSCDEPARTURETO],
+						SSCUSER: response.myRows[0].SSCUSER,
+						SSCDURATIONALL: [response.myRows[0].SSCDURATIONALLFROM == null ? '': response.myRows[0].SSCDURATIONALLFROM,response.myRows[0].SSCDURATIONALLTO == null ? '': response.myRows[0].SSCDURATIONALLTO],
+						SSCCOMMENT: response.myRows[0].SSCCOMMENT,
+						REJECTEDSCANUSER: response.myRows[0].REJECTEDSCANUSER,
+						REJECTEDSCANDURATION: [response.myRows[0].REJECTEDSCANDURATIONFROM == null ? '': response.myRows[0].REJECTEDSCANDURATIONFROM, response.myRows[0].REJECTEDSCANDURATIONTO == null ? '': response.myRows[0].REJECTEDSCANDURATIONTO],
+						REJECTEDSCANDEPARTURE: [response.myRows[0].REJECTEDSCANDEPARTUREFROM == null ? '': response.myRows[0].REJECTEDSCANDEPARTUREFROM, response.myRows[0].REJECTEDSCANDEPARTURETO == null ? '': response.myRows[0].REJECTEDSCANDEPARTURETO],
+						STATUS: response.myRows[0].STATUS,
+						ACTUALDOCUMENT: response.myRows[0].ACTUALDOCUMENT,
+						WITHOUTERP: response.myRows[0].WITHOUTERP,
+						HRARRIVAL: [response.myRows[0].HRARRIVALFROM == null ? '': response.myRows[0].HRARRIVALFROM,response.myRows[0].HRARRIVALTO == null ? '': response.myRows[0].HRARRIVALTO],
+						HRACCEPTANCE: [response.myRows[0].HRACCEPTANCEFROM == null ? '': response.myRows[0].HRACCEPTANCEFROM,response.myRows[0].HRACCEPTANCETO == null ? '': response.myRows[0].HRACCEPTANCETO],
+						HRDEPARTURE: [response.myRows[0].HRDEPARTUREFROM == null ? '': response.myRows[0].HRDEPARTUREFROM,response.myRows[0].HRDEPARTURETO == null ? '': response.myRows[0].HRDEPARTURETO],
+						HRUSER: response.myRows[0].HRUSER,
+						HRDURATIONALL: [response.myRows[0].HRDURATIONALLFROM == null ? '': response.myRows[0].HRDURATIONALLFROM,response.myRows[0].HRDURATIONALLTO == null ? '': response.myRows[0].HRDURATIONALLTO],
+						ORDERED: response.myRows[0].ORDERED,
+						SELECTED: response.myRows[0].SELECTED,
+                        SCANPROFILE: response.myRows[0].SCANPROFILE,
+                        DOCTYPEDESC: response.myRows[0].DOCTYPEDESC
+					});	
+				}
+			}
+		});
+		
+		MapDataToView(obj_onload);
+		if(("0" == 1) && ('START' == 'START')) { doSearch(false); }
+		
+		$('#Add_Where').change(function(){
+			if($(this).val() != ''){ AddWhereItem($(this).find('option:selected').val(), undefined); }
+		});
+		
+		$("#Add_Order").change(function(){
+			if($(this).val() != ""){ AddOrderItem($(this).find("option:selected").val(), undefined); }
+		});
+		
+		$(".connected_sortable").sortable({
+			receive: function( event, ui ) {
+				var _item = ui.item;
+				if(_item.hasClass("state-grey")){
+					_item.switchClass("state-grey","ui-state-default",0);
+				} else {
+					_item.switchClass("ui-state-default","state-grey",0);
+				}
+				if($("#available_fields").children().length == 0){
+					$("#select_all").attr("checked",true);
+				} else {
+					$("#select_all").attr("checked",false);
+				}
+			},
+			connectWith: ".connected_sortable"
+		}).disableSelection();
+		
+		$("#select_all").click(function(){
+			if(this.checked){
+				if($("#available_fields").children().length > 0){
+					$("#available_fields").children().each(function(){
+						$(this).switchClass("state-grey","ui-state-default",0);
+						var current = $(this);
+						$("#selected_fields").append($(this));
+					});
+				}
+			} else {
+				if($("#selected_fields").children().length > 0){
+					$("#selected_fields").children().each(function(){
+						$(this).switchClass("ui-state-default","state-grey",0);
+						$("#available_fields").append($(this));
+					});
+				}
+			}
+		});
+		
+		$.ajax({
+            type: "POST",
+            url: Common.zGlobalUrl != "" ? Common.zGlobalUrl : document.location.origin + document.location.pathname,
+			dataType: "json",
+			data:{
+				func: 'nickname.do',
+				nickname: "51655062",
+				action: "open"
+			},
+			async: false,
+			cache: false,
+			success: function(response){
+				if(response.actualRows > 0){
+					for(var j = 0;j < response.actualRows; j++){
+						$('#Searches').append('<option public="' + response.myRows[j].PUBLIC + '" >' + response.myRows[j].SEARCH + '</option>');
+					}
+				}
+			}
+		});
+		
+		if("" != ""){
+			$('#Searches').children().each(function(){
+				if($(this).text() == ""){
+					$(this).attr('selected', 'selected');
+				}
+			});
+		}
+
+		if(CheckUserPermissions()){
+			$('#SAVED_SEARCHES').find('input[type="checkbox"]').attr('disabled', false);
+		}
+		
+		$('#tabs,#search_panel,#BrowseViewFrm,#BrowsePageRowPagingSectionCellTable').show();
+	});
+</script>
+<div id="tabs" style="display:none;position:inherit;">
+	<ul>
+		<li><a href="#tabs-1">Настройки фильтрации</a></li>
+		<li><a href="#tabs-2">Настройки сортировки</a></li>
+		<li><a href="#tabs-3">Выбор отображаемых полей</a></li>
+		<li><a href="#tabs-4">Сохраненные фильтры</a></li>
+	</ul>
+	
+	<div id="tabs-1">
+		<div id="WHERE">
+			<table width="100%">
+                <tr>
+                    <td width="30%" style="text-align:left;vertical-align:top;">
+                        <label for="Add_Where">Добавить фильтр:</label>&nbsp;
+                        <select id="Add_Where" name="Add_Where">
+                            <option value="">&nbsp;</option>
+                            <option value="BARCODE" DataType="string" Max_Length="20">Штрихкод</option>
+                            <option value="BUSAREA" DataType="autocomplete" DataSource="wrBusAreas" valueField="BUSAREA" textField="BUSAREA">Бизнес-область</option>
+                            <option value="ORGANIZATIONDESC" DataType="autocomplete" DataSource="wrOrganizations" valueField="ORGANISATIONDESC" textField="ORGANISATIONDESC">Юридическое лицо</option>
+                            <option value="ORIG_COPY" DataType="autocomplete" DataSource="scanTypes">Вид документа</option>
+                            <option value="SCANSTATION" DataType="string" Max_Length="50">Станция сканирования</option>
+                            <option value="FRONTOFFICE" DataType="autocomplete" DataSource="wrFrontoffices" valueField="FRONTOFFICE" textField="FRONTOFFICE">Фронт-офис</option>
+                            <option value="SCANUSER" DataType="autocomplete" DataSource="wrUsers" valueField="Name" textField="FullName">Оператор сканирования</option>
+                            <option value="SCANDATE" DataType="date">Отсканирован</option>
+                            <option value="COURIER" DataType="string" Max_Length="50">Ответственный в ФП</option>
+                            <option value="SSCARRIVAL" DataType="date">Поступил в ОЦО</option>
+                            <option value="SSCACCEPTANCE" DataType="date">Принят оператором ОЦО</option>
+                            <option value="SSCDEPARTURE" DataType="date">Обработан</option>
+                            <option value="SSCUSER" DataType="autocomplete" DataSource="wrUsers" valueField="Name" textField="FullName">Оператор ОЦО</option>
+                            <option value="SSCDURATIONALL" DataType="number">Длительность обработки ОЦО</option>
+                            <option value="SSCCOMMENT" DataType="string">Комметарий</option>
+                            <option value="REJECTEDSCANUSER" DataType="autocomplete" DataSource="wrUsers" valueField="Name" textField="FullName">Обработал отклоненный документ</option>
+                            <option value="REJECTEDSCANDURATION" DataType="number">Длительность обработки в ФО</option>
+                            <option value="REJECTEDSCANDEPARTURE" DataType="date">Принятие отклоненного документа</option>
+                            <option value="STATUS" DataType="autocomplete" DataSource="statuses">Статус</option>
+                            <option value="ACTUALDOCUMENT" DataType="autocomplete" DataSource="actualTypes">Актуальная версия</option>
+                            <option value="WITHOUTERP" DataType="autocomplete" DataSource="withouterp">Без привязки к 1С</option>
+                            <option value="HRARRIVAL" DataType="date">Поступил к HR</option>
+                            <option value="HRACCEPTANCE" DataType="date">Принят оператором HR</option>
+                            <option value="HRDEPARTURE" DataType="date">Обработан HR</option>
+                            <option value="HRUSER" DataType="autocomplete" DataSource="wrUsers" valueField="Name" textField="FullName">Оператор HR</option>
+                            <option value="HRDURATIONALL" DataType="number">Длительность обработки HR</option>
+                            <option value="SCANPROFILE" DataType="autocomplete" DataSource="scanProfiles">Профиль сканирования</option>
+                            <option value="DOCTYPEDESC" DataType="autocomplete" DataSource="wrDocTypes" valueField="DOCTYPEDESC" textField="DOCTYPEDESC">Тип документа</option>
+                        </select>
+                    </td>
+                </tr>
+				<tr>
+					<td width="70%">
+						<table id="Where_Items">
+							<tr>
+								<td><input type="checkbox" field_name="SOURCETYPE" checked disabled="disabled" /></td>
+								<td>Источник</td>
+								<td width="20%"></td>
+								<td>
+									<input type="radio" id="SOURCE_PARAM" name="SOURCE_PARAM" checked value="1">Документы в обработке&nbsp;&nbsp;&nbsp;
+									<input type="radio" id="SOURCE_PARAM" name="SOURCE_PARAM"  value="2">Обработанные документы&nbsp;&nbsp;&nbsp;
+									<input type="radio" id="SOURCE_PARAM" name="SOURCE_PARAM"  value="3">Оба
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div id="tabs-2">
+		<div id="ORDER">
+			<table width="100%">
+                <tr>
+                    <td width="30%" style="text-align:left;vertical-align:top;">
+                        <label for="Add_Order">Добавить сортировку:</label>&nbsp;
+                        <select id="Add_Order" name="Add_Order">
+                            <option value="">&nbsp;</option>
+                            <option value="BARCODE">Штрихкод</option>
+                            <option value="BUSAREA">Бизнес-область</option>
+                            <option value="ORGANIZATIONDESC">Юридическое лицо</option>
+                            <option value="ORIG_COPY">Вид документа</option>
+                            <option value="SCANSTATION">Станция сканирования</option>
+                            <option value="FRONTOFFICE">Фронт-офис</option>
+                            <option value="SCANUSER">Оператор сканирования</option>
+                            <option value="SCANDATE">Отсканирован</option>
+                            <option value="COURIER">Ответственный в ФП</option>
+                            <option value="SSCARRIVAL">Поступил в ОЦО</option>
+                            <option value="SSCACCEPTANCE">Принят оператором ОЦО</option>
+                            <option value="SSCDEPARTURE">Обработан</option>
+                            <option value="SSCUSER">Оператор ОЦО</option>
+                            <option value="SSCDURATIONALL">Длительность обработки ОЦО</option>
+                            <option value="SSCCOMMENT">Комметарий</option>
+                            <option value="REJECTEDSCANUSER">Обработал отклоненный документ</option>
+                            <option value="REJECTEDSCANDURATION">Длительность обработки в ФО</option>
+                            <option value="REJECTEDSCANDEPARTURE">Принятие отклоненного документа</option>
+                            <option value="TECHNICALSTATUS">Технический статус</option>
+                            <option value="STATUS">Статус</option>
+                            <option value="ACTUALDOCUMENT">Актуальная версия</option>
+                            <option value="WITHOUTERP">Без привязки к 1С</option>
+                            <option value="HRARRIVAL">Поступил к HR</option>
+                            <option value="HRACCEPTANCE">Принят оператором HR</option>
+                            <option value="HRDEPARTURE">Обработан HR</option>
+                            <option value="HRUSER">Оператор HR</option>
+                            <option value="HRDURATIONALL">Длительность обработки HR</option>
+                            <option value="SCANPROFILE">Профиль сканирования</option>
+                            <option value="DOCTYPEDESC">Тип документа</option>
+                        </select>
+                    </td>
+                </tr>
+				<tr>
+					<td width="70%">
+						<table id="Order_Items">
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div id="tabs-3">
+		<div id="SELECT">
+			<table>
+				<tr>
+					<td>
+						<input type="checkbox" id="select_all" name="select_all"/>
+					</td>
+					<td style="text-align:left;"><h4>Выбрать все</h4></td>
+				</tr>
+			</table>
+			<table style="margin-top:-1%;">
+				<tr>
+					<td><h4>Доступные поля:</h4></td>
+					<td><h4>Отображаемые поля:</h4></td>
+				</tr>
+				<tr>
+					<td style="vertical-align:top;">
+						<ul id="available_fields" class="connected_sortable">
+							<li class='state-grey'>Поступил в ОЦО</li>
+							<li class='state-grey'>Принят оператором ОЦО</li>
+							<li class='state-grey'>Обработан</li>
+							<li class='state-grey'>Оператор ОЦО</li>
+							<li class='state-grey'>Длительность обработки ОЦО</li>
+							<li class='state-grey'>Комметарий</li>
+							<li class='state-grey'>Обработал отклоненный документ</li>
+							<li class='state-grey'>Длительность обработки в ФО</li>
+							<li class='state-grey'>Принятие отклоненного документа</li>
+                            <li class='state-grey'>Технический статус</li>
+							<li class='state-grey'>Статус</li>
+							<li class='state-grey'>Актуальная версия</li>
+							<li class='state-grey'>Поступил к HR</li>
+							<li class='state-grey'>Принят оператором HR</li>
+                            <li class='state-grey'>Профиль сканирования</li>
+                            <li class='state-grey'>Тип документа</li>
+						</ul>
+					</td>
+					<td style="vertical-align:top;">
+						<ul id="selected_fields" class="connected_sortable">
+							<li class='ui-state-default'>Штрихкод</li>
+							<li class='ui-state-default'>Бизнес-область</li>
+							<li class='ui-state-default'>Юридическое лицо</li>
+							<li class='ui-state-default'>Вид документа</li>
+							<li class='ui-state-default'>Станция сканирования</li>
+							<li class='ui-state-default'>Фронт-офис</li>
+							<li class='ui-state-default'>Оператор сканирования</li>
+							<li class='ui-state-default'>Отсканирован</li>
+							<li class='ui-state-default'>Ответственный в ФП</li>
+							<li class='ui-state-default'>Без привязки к 1С</li>
+							<li class='ui-state-default'>Обработан HR</li>
+							<li class='ui-state-default'>Оператор HR</li>
+							<li class='ui-state-default'>Длительность обработки HR</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<div id="tabs-4">
+		<div id="SAVED_SEARCHES">
+			<table>
+				<tr>
+					<td>
+						<h4>Сохраненные поиски:</h4>
+					</td>
+					<td width="10px">
+					</td>
+					<td>
+						<select id="Searches">
+						</select>
+					</td>
+					<td width="10px">
+					</td>
+					<td>
+						<input type="button" class='filter_button' onclick="ApplySearch();" value="Применить" />
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>
+						<div>
+							<h4 style="display: inline;">Имя поиска:</h4>&nbsp;&nbsp;
+							<input type="text" maxlength="250" size="35" />
+						</div>
+						<br>
+						<div>
+							<h4 style="display: inline;">Публичный:</h4>&nbsp;&nbsp;
+							<input type="checkbox" disabled="disabled" />
+						</div>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<table>
+				<tr>
+					<td>
+						<input type="button" class='filter_button' value="Сохранить поиск" onclick="doSave('Save');" />
+					</td>
+					<td>
+						<input type="button" class='filter_button' value="Удалить поиск" onclick="doDelete();" />
+					</td>
+					<td>
+						<input type="button" class='filter_button' value="Изменить поиск" onclick="doSave('Change');" />
+					</td>
+					<td>
+						<input type="button" class='filter_button' value="Переименовать поиск" onclick="$('#rename-search').dialog('open');" />
+					</td>
+				</tr>	
+			</table>
+		</div>
+	</div>
+</div>
+<br>
+<div id="search_panel" style="display:none;">
+	<table>
+		<tr>
+			<td>
+				<input type="button" class='filter_button' value="Поиск" onclick="doSearch(true);" />
+			</td>
+			<td>
+				<input type="button" class='filter_button' value="Очистить" onclick="doClean();"/>
+			</td>
+			<td>
+				<input type="button" class='filter_button' value="Выгрузить в Excel" onclick="doExcel();"/>
+			</td>
+			<td>
+				<input type="button" class='filter_button' value="Закрыть" onclick="doClose();"/>
+			</td>
+		</tr>
+	</table>
+</div>
+<br>
+<form name="BrowseViewFrm" id="BrowseViewFrm" enctype="multipart/form-data" method="POST" style="display:none;">
+	<INPUT TYPE="HIDDEN" NAME="func" VALUE="ll">
+<INPUT TYPE="HIDDEN" NAME="objId" VALUE="51692384">
+<INPUT TYPE="HIDDEN" NAME="objAction" VALUE="RunReport">
+
+	<input type="hidden" name="nextUrl" id="nextUrl" value="/otcs/cs.exe?func=ll&objaction=RunReport&objid=51692384&objtype=141&reqcacheid=12374880">
+	
+		<input type="hidden" name="originalNextURL" id="originalNextURL" value="/otcs/cs.exe?func=llworkspace"/>
+	
+	<input type="hidden" name="MODE" id="MODE" value="RUN"/>
+	
+		<input type="hidden" name="PAGESIZE" id="PAGESIZE" value="50"/>
+		<input type="hidden" name="STARTROW" id="STARTROW" value="1"/>
+	
+	
+	<input type="hidden" name="SOURCETYPE" id="SOURCETYPE" class="SEARCH_PARAMETRS" value="1">
+	<input type="hidden" name="BARCODE" id="BARCODE" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="BUSAREA" id="BUSAREA" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="ORGANIZATIONDESC" id="ORGANIZATIONDESC" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="ORIG_COPY" id="ORIG_COPY" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SCANSTATION" id="SCANSTATION" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="FRONTOFFICE" id="FRONTOFFICE" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SCANUSER" id="SCANUSER" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SCANDATEFROM" id="SCANDATEFROM" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SCANDATETO" id="SCANDATETO" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="COURIER" id="COURIER" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SSCARRIVALFROM" id="SSCARRIVALFROM" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SSCARRIVALTO" id="SSCARRIVALTO" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SSCACCEPTANCEFROM" id="SSCACCEPTANCEFROM" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SSCACCEPTANCETO" id="SSCACCEPTANCETO" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SSCDEPARTUREFROM" id="SSCDEPARTUREFROM" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SSCDEPARTURETO" id="SSCDEPARTURETO" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SSCUSER" id="SSCUSER" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SSCDURATIONALLFROM" id="SSCDURATIONALLFROM" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SSCDURATIONALLTO" id="SSCDURATIONALLTO" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SSCCOMMENT" id="SSCCOMMENT" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="REJECTEDSCANUSER" id="REJECTEDSCANUSER" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="REJECTEDSCANDURATIONFROM" id="REJECTEDSCANDURATIONFROM" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="REJECTEDSCANDURATIONTO" id="REJECTEDSCANDURATIONTO" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="REJECTEDSCANDEPARTUREFROM" id="REJECTEDSCANDEPARTUREFROM" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="REJECTEDSCANDEPARTURETO" id="REJECTEDSCANDEPARTURETO" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="STATUS" id="STATUS" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="ACTUALDOCUMENT" id="ACTUALDOCUMENT" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="WITHOUTERP" id="WITHOUTERP" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="HRARRIVALFROM" id="HRARRIVALFROM" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="HRARRIVALTO" id="HRARRIVALTO" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="HRACCEPTANCEFROM" id="HRACCEPTANCEFROM" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="HRACCEPTANCETO" id="HRACCEPTANCETO" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="HRDEPARTUREFROM" id="HRDEPARTUREFROM" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="HRDEPARTURETO" id="HRDEPARTURETO" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="HRUSER" id="HRUSER" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="HRDURATIONALLFROM" id="HRDURATIONALLFROM" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="HRDURATIONALLTO" id="HRDURATIONALLTO" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="ORDERED" id="ORDERED" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="SELECTED" id="SELECTED" class="SEARCH_PARAMETRS" value="">
+	<input type="hidden" name="TAB" id="TAB" class="SEARCH_PARAMETRS" value="0">
+	<input type="hidden" name="SEARCH" id="SEARCH" value="">
+	<input type="hidden" name="HIGHLIGHTED" id="HIGHLIGHTED" value="">
+    <input type="hidden" name="SCANPROFILE" id="SCANPROFILE" class="SEARCH_PARAMETRS" value="">
+    <input type="hidden" name="DOCTYPEDESC" id="DOCTYPEDESC" class="SEARCH_PARAMETRS" value="">
+
+	
+</form>
+<div id="dialog-message">
+</div>
+<div id="rename-search">
+</div>
+
+
+
+<SCRIPT LANGUAGE="JavaScript1.2">
+if ( window.contentTable )
+{
+if ( contentTable )
+{
+document.write( '</TD></TR></TABLE></TD></TR><TR><TD VALIGN="BOTTOM">' )
+}
+}
+</SCRIPT>
+
+
+<div id="footer" class="csx">
+<span class="username">TECH_ZAB_VM</span>
+<span class="date">31/05/2016</span>
+<p class="copyright">
+OpenText Content Server 10.5 Service Pack 1. Copyright &copy; 1995 - 2015 Open Text SA and/or Open Text ULC.
+</p>
+</div>
+<SCRIPT LANGUAGE="JavaScript">
+if ( window.contentTable )
+{
+if ( contentTable )
+{
+document.write( '</TD></TR></TABLE>' )
+}
+}
+</SCRIPT>
+
+
+</TD>
+
+</TR>
+
+</TABLE>
+
+
+<IFRAME ID="HideSelect" SRC="/img/spacer.gif" TITLE="hidden frame" SCROLLING="no" FRAMEBORDER="0"
+STYLE="position:absolute; top: 0px; left:0px; display:none;">
+</IFRAME>
+
+<DIV ID="HideSelectDiv" CLASS="menuItem" STYLE="position:absolute; z-index: 1; display:none; visibility:hidden">
+<IMG SRC="/img/spacer.gif" ALT="" WIDTH="1" HEIGHT="1">
+</DIV>
+</BODY>
+
+</HTML>
+��\�ʱ           WMbE<�i�       �    :http://mow03-opt01/otcs/cs.exe?func=ll&objId=51692384&objAction=RunReport&viewType=1&nexturl=%2Fotcs%2Fcs%2Eexe%3Ffunc%3Dllworkspace request-method GET response-head HTTP/1.1 200 OK
+Cache-Control: no-cache
+Content-Type: text/html;charset=UTF-8
+Server: Microsoft-IIS/8.5
+X-Frame-Options: SAMEORIGIN
+X-UA-Compatible: IE=edge
+Persistent-Auth: true
+X-Powered-By: ASP.NET
+Date: Tue, 31 May 2016 10:06:58 GMT
+Content-Length: 59571
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 41 predictor::http://mow03-opt01/img/style/screen.css?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/style/jquery-ui-1.9.2.custom.min.css 1,1,0,0 predictor::http://mow03-opt01/img/core/jquery-1.7.2.min.js 1,1,0,0 predictor::http://mow03-opt01/img/core/jquery-ui-1.9.2.custom.min.js 1,1,0,0 predictor::http://mow03-opt01/img/core/ajax_dhtml_util.js?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/menu_en_US.js?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/menu.js?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/webnode/browse.js?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/core/otfunc_en_US.js?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/core/otfunc.css?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/core/otfunc.js?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/appearances/custom.css?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/appearances/custom.js?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/webnode/browsecoretable_en_US.js?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/checkall.js?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/websbroker/searchbar.js?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/websbroker/websbroker_en_US.js?v=1747 1,1,0,0 predictor::http://mow03-opt01/img/circleecm_progmeter40x40.gif 1,1,0,0 predictor::http://mow03-opt01/img/webreports/webreports_large.gif 1,1,0,0 predictor::http://mow03-opt01/img//_sabris/FlexibleFilters/js/jquery.tokenize.js 1,1,0,0 predictor::http://mow03-opt01/img//_sabris/FlexibleFilters/js/main.js 1,1,0,0 predictor::http://mow03-opt01/img//_sabris/FlexibleFilters/css/jquery.tokenize.css 1,1,0,0 predictor::http://mow03-opt01/img//_sabris/FlexibleFilters/css/main.css 1,1,0,0 predictor::http://mow03-opt01/img/spacer.gif 1,1,0,0 predictor::http://mow03-opt01/img/style/images/bg_header1x43.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/banner_right_ecmsuite320x43.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/logo_otcs250x43.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/menu_background_sprite.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/menu_separator.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/actions_sprite.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/help16_b24.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/search_small16_dim.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/panel_buttons_sprite.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/shadow_bottom_b24.png 1,1,0,0 predictor::http://mow03-opt01/img/datepicker.gif 1,1,0,0 predictor::http://mow03-opt01/img/style/images/ui-bg_flat_100_ffffff_40x100.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/ui-bg_flat_100_0072aa_40x100.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/ui-bg_glass_50_e9f5fb_1x400.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/ui-bg_flat_80_fefefe_40x100.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/ui-bg_flat_100_faf1c9_40x100.png 1,1,0,0 predictor::http://mow03-opt01/img/style/images/shadow_right_b24.png 1,1,0,0   �
