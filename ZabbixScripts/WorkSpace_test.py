@@ -1,13 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from selenium import webdriver
-import time, datetime, subprocess, sys, re
+import datetime
+import subprocess
+import time
+
 from pyvirtualdisplay import Display
+from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
 
 LogFile = '/usr/lib/zabbix/externalscripts/WorkSpace_test.log'
 
