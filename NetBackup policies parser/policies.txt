@@ -448,7 +448,7 @@ Policy Info:        (none defined)
 Policy Name:       VMware_MOW03-BAD01DL
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -479,13 +479,13 @@ Policy Name:       VMware_MOW03-BAD01DL
 
   Schedule:              Full
     Type:                Full Backup
-    Frequency:           every 1 day
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     3 (1 month)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -506,7 +506,7 @@ Policy Name:       VMware_MOW03-BAD01DL
 Policy Name:       VMware_MOW03-BAP01L
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -537,13 +537,13 @@ Policy Name:       VMware_MOW03-BAP01L
 
   Schedule:              Full
     Type:                Full Backup
-    Frequency:           every 1 day
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     3 (1 month)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -561,62 +561,10 @@ Policy Name:       VMware_MOW03-BAP01L
 
 ------------------------------------------------------------
 
-Policy Name:       VMware_MOW03-BAP55L
-
-  Policy Type:         VMware
-  Active:              yes
-  Effective date:      04/07/2016 13:54:45
-  File Restore Raw:    yes
-  Application Consistent:    yes
-  Block Incremental:   yes
-  Mult. Data Streams:  no
-  Client Encrypt:      no
-  Checkpoint:          no
-  Policy Priority:     0
-  Max Jobs/Policy:     Unlimited
-  Disaster Recovery:   0
-  Collect BMR info:    no
-  Residence:           mow03-back09-hcart2-robot-tld-3
-  Volume Pool:         NetBackup
-  Server Group:        *ANY*
-  Keyword:             (none specified)
-  Data Classification:       Gold
-  Residence is Storage Lifecycle Policy:    no
-  Application Discovery:      yes
-  Discovery Lifetime:      4838400 seconds
-  ASC Application and attributes: (none defined)
-
-  Granular Restore Info:  no
-  Ignore Client Direct:  no
-  Use Accelerator:  no
-  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
-
-  Include:  vmware:/?filter=VMDNSName Equal "mow03-bap55l"
-
-  Schedule:              Full
-    Type:                Full Backup
-    Frequency:           every 14 days
-     Excluded Dates----------
-        No specific exclude dates entered
-        No exclude days of week entered
-    PFI Recovery:        0
-    Maximum MPX:         1
-    Retention Level:     4 (2 months)
-    Number Copies:       1
-    Fail on Error:       0
-    Residence:           (specific storage unit not required)
-    Volume Pool:         (same as policy volume pool)
-    Server Group:        (same as specified for policy)
-    Residence is Storage Lifecycle Policy:         0
-    Daily Windows:
-          вторник    10:12:30  -->  вторник    15:55:00
-
-------------------------------------------------------------
-
 Policy Name:       VMware_MOW03-CTR01
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -653,7 +601,7 @@ Policy Name:       VMware_MOW03-CTR01
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     3 (1 month)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -674,7 +622,7 @@ Policy Name:       VMware_MOW03-CTR01
 Policy Name:       VMware_MOW03-CTR02
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -711,7 +659,7 @@ Policy Name:       VMware_MOW03-CTR02
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     3 (1 month)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -732,7 +680,7 @@ Policy Name:       VMware_MOW03-CTR02
 Policy Name:       VMware_MOW03-EAD01DL
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -763,13 +711,13 @@ Policy Name:       VMware_MOW03-EAD01DL
 
   Schedule:              Full
     Type:                Full Backup
-    Frequency:           every 1 day
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     0 (1 week)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -790,7 +738,7 @@ Policy Name:       VMware_MOW03-EAD01DL
 Policy Name:       VMware_MOW03-EAP01L
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -848,7 +796,7 @@ Policy Name:       VMware_MOW03-EAP01L
 Policy Name:       VMware_MOW03-MAP01L
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -879,13 +827,13 @@ Policy Name:       VMware_MOW03-MAP01L
 
   Schedule:              Full
     Type:                Full Backup
-    Frequency:           every 1 day
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     0 (1 week)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -903,62 +851,10 @@ Policy Name:       VMware_MOW03-MAP01L
 
 ------------------------------------------------------------
 
-Policy Name:       VMware_MOW03-MAP55L
-
-  Policy Type:         VMware
-  Active:              yes
-  Effective date:      04/07/2016 13:54:45
-  File Restore Raw:    yes
-  Application Consistent:    yes
-  Block Incremental:   yes
-  Mult. Data Streams:  no
-  Client Encrypt:      no
-  Checkpoint:          no
-  Policy Priority:     0
-  Max Jobs/Policy:     Unlimited
-  Disaster Recovery:   0
-  Collect BMR info:    no
-  Residence:           mow03-back09-hcart2-robot-tld-3
-  Volume Pool:         NetBackup
-  Server Group:        *ANY*
-  Keyword:             (none specified)
-  Data Classification:       Gold
-  Residence is Storage Lifecycle Policy:    no
-  Application Discovery:      yes
-  Discovery Lifetime:      28800 seconds
-  ASC Application and attributes: (none defined)
-
-  Granular Restore Info:  no
-  Ignore Client Direct:  no
-  Use Accelerator:  no
-  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
-
-  Include:  vmware:/?filter=VMDNSName Equal "mow03-map55l"
-
-  Schedule:              Full
-    Type:                Full Backup
-    Frequency:           every 14 days
-     Excluded Dates----------
-        No specific exclude dates entered
-        No exclude days of week entered
-    PFI Recovery:        0
-    Maximum MPX:         1
-    Retention Level:     4 (2 months)
-    Number Copies:       1
-    Fail on Error:       0
-    Residence:           (specific storage unit not required)
-    Volume Pool:         (same as policy volume pool)
-    Server Group:        (same as specified for policy)
-    Residence is Storage Lifecycle Policy:         0
-    Daily Windows:
-          вторник    19:02:30  -->  вторник    23:57:30
-
-------------------------------------------------------------
-
 Policy Name:       VMware_MOW03-PIP01L
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -989,13 +885,13 @@ Policy Name:       VMware_MOW03-PIP01L
 
   Schedule:              Full
     Type:                Full Backup
-    Frequency:           every 1 day
+    Frequency:           every 7 days
      Excluded Dates----------
       EXCLUDE DATE 0 - 06/09/2016
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     0 (1 week)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -1003,20 +899,14 @@ Policy Name:       VMware_MOW03-PIP01L
     Server Group:        (same as specified for policy)
     Residence is Storage Lifecycle Policy:         0
     Daily Windows:
-          воскресен  04:25:00  -->  воскресен  12:25:00
-          понедельн  04:25:00  -->  понедельн  12:25:00
-          вторник    04:25:00  -->  вторник    12:25:00
-          среда      04:25:00  -->  среда      12:25:00
-          четверг    04:25:00  -->  четверг    12:25:00
-          пятница    04:25:00  -->  пятница    12:25:00
-          суббота    04:25:00  -->  суббота    12:25:00
+          вторник    00:30:00  -->  вторник    23:47:30
 
 ------------------------------------------------------------
 
 Policy Name:       VMware_MOW03-SAP98TL
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1104,7 +994,7 @@ Policy Name:       VMware_MOW03-SAP98TL
 Policy Name:       VMware_MOW03-SAP99TL
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1191,7 +1081,7 @@ Policy Name:       VMware_MOW03-SAP99TL
 Policy Name:       VMware_MOW03-SMP01L
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1222,13 +1112,13 @@ Policy Name:       VMware_MOW03-SMP01L
 
   Schedule:              Full
     Type:                Full Backup
-    Frequency:           every 1 day
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     0 (1 week)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -1249,7 +1139,7 @@ Policy Name:       VMware_MOW03-SMP01L
 Policy Name:       VMware_MOW03-STOR02
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1286,7 +1176,7 @@ Policy Name:       VMware_MOW03-STOR02
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     1 (2 weeks)
+    Retention Level:     0 (1 week)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -1307,7 +1197,7 @@ Policy Name:       VMware_MOW03-STOR02
 Policy Name:       VMware_MOW03-WIKI01
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1338,48 +1228,13 @@ Policy Name:       VMware_MOW03-WIKI01
 
   Schedule:              Full
     Type:                Full Backup
-    Calendar sched: Enabled
-     Included Dates-----------
-        Friday, Week 2
-        Friday, Week 4
+    Frequency:           every 14 days
      Excluded Dates----------
         No specific exclude dates entered
-        Sunday, Week 1 excluded
-        Monday, Week 1 excluded
-        Tuesday, Week 1 excluded
-        Wednesday, Week 1 excluded
-        Thursday, Week 1 excluded
-        Friday, Week 1 excluded
-        Saturday, Week 1 excluded
-        Sunday, Week 2 excluded
-        Monday, Week 2 excluded
-        Tuesday, Week 2 excluded
-        Wednesday, Week 2 excluded
-        Thursday, Week 2 excluded
-        Saturday, Week 2 excluded
-        Sunday, Week 3 excluded
-        Monday, Week 3 excluded
-        Tuesday, Week 3 excluded
-        Wednesday, Week 3 excluded
-        Thursday, Week 3 excluded
-        Friday, Week 3 excluded
-        Saturday, Week 3 excluded
-        Sunday, Week 4 excluded
-        Monday, Week 4 excluded
-        Tuesday, Week 4 excluded
-        Wednesday, Week 4 excluded
-        Thursday, Week 4 excluded
-        Saturday, Week 4 excluded
-        Sunday, Week 5 excluded
-        Monday, Week 5 excluded
-        Tuesday, Week 5 excluded
-        Wednesday, Week 5 excluded
-        Thursday, Week 5 excluded
-        Friday, Week 5 excluded
-        Saturday, Week 5 excluded
+        No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     4 (2 months)
+    Retention Level:     3 (1 month)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -1394,7 +1249,7 @@ Policy Name:       VMware_MOW03-WIKI01
 Policy Name:       VMware_MOW03-oebs01dl
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1425,6 +1280,412 @@ Policy Name:       VMware_MOW03-oebs01dl
 
   Schedule:              Full
     Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:57:30  -->  воскресен  22:32:30
+          понедельн  03:57:30  -->  понедельн  22:32:30
+          вторник    03:57:30  -->  вторник    22:32:30
+          среда      03:57:30  -->  среда      22:32:30
+          четверг    03:57:30  -->  четверг    22:32:30
+          пятница    03:57:30  -->  пятница    22:32:30
+          суббота    03:57:30  -->  суббота    22:32:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-1cap06
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-1CAP06"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-1cap08
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-1CAP08"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-1cap11
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-1CAP11"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-1cap13
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-1CAP13"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-1cap15
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-1CAP15"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-1cap18
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-1CAP18"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-1cfs01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-1CFS01C"
+
+  Schedule:              Full
+    Type:                Full Backup
     Frequency:           every 1 day
      Excluded Dates----------
         No specific exclude dates entered
@@ -1439,13 +1700,194 @@ Policy Name:       VMware_MOW03-oebs01dl
     Server Group:        (same as specified for policy)
     Residence is Storage Lifecycle Policy:         0
     Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-1cfs02
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-1CFS02"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 1 day
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     0 (1 week)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-1cit01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-1CIT01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-1czp01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-1CZP01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
 
 ------------------------------------------------------------
 
 Policy Name:       VMware_mow03-SAPT01
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1482,7 +1924,7 @@ Policy Name:       VMware_mow03-SAPT01
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     3 (1 month)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -1494,10 +1936,880 @@ Policy Name:       VMware_mow03-SAPT01
 
 ------------------------------------------------------------
 
+Policy Name:       VMware_mow03-casx01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-CASX01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-csb02
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-CSB02"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 1 day
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     0 (1 week)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-csb04
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-CSB04"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 1 day
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     0 (1 week)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  01:40:00  -->  воскресен  09:20:00
+          понедельн  01:40:00  -->  понедельн  09:20:00
+          вторник    01:40:00  -->  вторник    09:20:00
+          среда      01:40:00  -->  среда      09:20:00
+          четверг    01:40:00  -->  четверг    09:20:00
+          пятница    01:40:00  -->  пятница    09:20:00
+          суббота    01:40:00  -->  суббота    09:20:00
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-csb06
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-CSB06"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 1 day
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     0 (1 week)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  01:37:30  -->  воскресен  09:27:30
+          понедельн  01:37:30  -->  понедельн  09:27:30
+          вторник    01:37:30  -->  вторник    09:27:30
+          среда      01:37:30  -->  среда      09:27:30
+          четверг    01:37:30  -->  четверг    09:27:30
+          пятница    01:37:30  -->  пятница    09:27:30
+          суббота    01:37:30  -->  суббота    09:27:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-csb10
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-CSB10"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 1 day
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     0 (1 week)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:47:30  -->  воскресен  09:52:30
+          понедельн  03:47:30  -->  понедельн  09:52:30
+          вторник    03:47:30  -->  вторник    09:52:30
+          среда      03:47:30  -->  среда      09:52:30
+          четверг    03:47:30  -->  четверг    09:52:30
+          пятница    03:47:30  -->  пятница    09:52:30
+          суббота    03:47:30  -->  суббота    09:52:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ctx01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-CTX01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ctx02
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-CTX02"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ctx05
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-CTX05"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ctx07
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-CTX07"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ctx11t
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-CTX11T"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ctx13
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-CTX13"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ctx15
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-CTX15"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-dhcp01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-DHCP01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-dhcp01c
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-DHCP01C"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-edge01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-EDGE01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
 Policy Name:       VMware_mow03-ejp01l
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1528,13 +2840,13 @@ Policy Name:       VMware_mow03-ejp01l
 
   Schedule:              Full
     Type:                Full Backup
-    Frequency:           every 1 day
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     0 (1 week)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -1552,10 +2864,68 @@ Policy Name:       VMware_mow03-ejp01l
 
 ------------------------------------------------------------
 
+Policy Name:       VMware_mow03-ex1c01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-EX1C01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 1 day
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     0 (1 week)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
 Policy Name:       VMware_mow03-hyp01
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1586,47 +2956,13 @@ Policy Name:       VMware_mow03-hyp01
 
   Schedule:              Full
     Type:                Full Backup
-    Calendar sched: Enabled
-      Allowed to retry after run day
-     Included Dates-----------
-         No days of week entered
-        Day 1 of month
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
-        Day 2 of month excluded
-        Day 3 of month excluded
-        Day 4 of month excluded
-        Day 5 of month excluded
-        Day 6 of month excluded
-        Day 7 of month excluded
-        Day 8 of month excluded
-        Day 9 of month excluded
-        Day 10 of month excluded
-        Day 11 of month excluded
-        Day 12 of month excluded
-        Day 13 of month excluded
-        Day 14 of month excluded
-        Day 15 of month excluded
-        Day 16 of month excluded
-        Day 17 of month excluded
-        Day 18 of month excluded
-        Day 19 of month excluded
-        Day 20 of month excluded
-        Day 21 of month excluded
-        Day 22 of month excluded
-        Day 23 of month excluded
-        Day 24 of month excluded
-        Day 25 of month excluded
-        Day 26 of month excluded
-        Day 27 of month excluded
-        Day 28 of month excluded
-        Day 29 of month excluded
-        Day 30 of month excluded
-        Day 31 of month excluded
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     5 (3 months)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -1647,7 +2983,7 @@ Policy Name:       VMware_mow03-hyp01
 Policy Name:       VMware_mow03-hyp01l
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1678,47 +3014,13 @@ Policy Name:       VMware_mow03-hyp01l
 
   Schedule:              Full
     Type:                Full Backup
-    Calendar sched: Enabled
-      Allowed to retry after run day
-     Included Dates-----------
-         No days of week entered
-        Day 1 of month
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
-        Day 2 of month excluded
-        Day 3 of month excluded
-        Day 4 of month excluded
-        Day 5 of month excluded
-        Day 6 of month excluded
-        Day 7 of month excluded
-        Day 8 of month excluded
-        Day 9 of month excluded
-        Day 10 of month excluded
-        Day 11 of month excluded
-        Day 12 of month excluded
-        Day 13 of month excluded
-        Day 14 of month excluded
-        Day 15 of month excluded
-        Day 16 of month excluded
-        Day 17 of month excluded
-        Day 18 of month excluded
-        Day 19 of month excluded
-        Day 20 of month excluded
-        Day 21 of month excluded
-        Day 22 of month excluded
-        Day 23 of month excluded
-        Day 24 of month excluded
-        Day 25 of month excluded
-        Day 26 of month excluded
-        Day 27 of month excluded
-        Day 28 of month excluded
-        Day 29 of month excluded
-        Day 30 of month excluded
-        Day 31 of month excluded
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     5 (3 months)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -1736,10 +3038,184 @@ Policy Name:       VMware_mow03-hyp01l
 
 ------------------------------------------------------------
 
+Policy Name:       VMware_mow03-is1c01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-IS1C01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-key01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-KEY01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-kitl01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-KITL01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 1 day
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     0 (1 week)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  02:30:00  -->  воскресен  09:27:30
+          понедельн  02:30:00  -->  понедельн  09:27:30
+          вторник    02:30:00  -->  вторник    09:27:30
+          среда      02:30:00  -->  среда      09:27:30
+          четверг    02:30:00  -->  четверг    09:27:30
+          пятница    02:30:00  -->  пятница    09:27:30
+          суббота    02:30:00  -->  суббота    09:27:30
+
+------------------------------------------------------------
+
 Policy Name:       VMware_mow03-mrls01
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1770,48 +3246,13 @@ Policy Name:       VMware_mow03-mrls01
 
   Schedule:              Full
     Type:                Full Backup
-    Calendar sched: Enabled
-     Included Dates-----------
-        Wednesday, Week 1
-        Wednesday, Week 3
+    Frequency:           every 14 days
      Excluded Dates----------
         No specific exclude dates entered
-        Sunday, Week 1 excluded
-        Monday, Week 1 excluded
-        Tuesday, Week 1 excluded
-        Thursday, Week 1 excluded
-        Friday, Week 1 excluded
-        Saturday, Week 1 excluded
-        Sunday, Week 2 excluded
-        Monday, Week 2 excluded
-        Tuesday, Week 2 excluded
-        Wednesday, Week 2 excluded
-        Thursday, Week 2 excluded
-        Friday, Week 2 excluded
-        Saturday, Week 2 excluded
-        Sunday, Week 3 excluded
-        Monday, Week 3 excluded
-        Tuesday, Week 3 excluded
-        Thursday, Week 3 excluded
-        Friday, Week 3 excluded
-        Saturday, Week 3 excluded
-        Sunday, Week 4 excluded
-        Monday, Week 4 excluded
-        Tuesday, Week 4 excluded
-        Wednesday, Week 4 excluded
-        Thursday, Week 4 excluded
-        Friday, Week 4 excluded
-        Saturday, Week 4 excluded
-        Sunday, Week 5 excluded
-        Monday, Week 5 excluded
-        Tuesday, Week 5 excluded
-        Wednesday, Week 5 excluded
-        Thursday, Week 5 excluded
-        Friday, Week 5 excluded
-        Saturday, Week 5 excluded
+        No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     4 (2 months)
+    Retention Level:     3 (1 month)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -1832,7 +3273,7 @@ Policy Name:       VMware_mow03-mrls01
 Policy Name:       VMware_mow03-mrls03
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1863,48 +3304,13 @@ Policy Name:       VMware_mow03-mrls03
 
   Schedule:              Full
     Type:                Full Backup
-    Calendar sched: Enabled
-     Included Dates-----------
-        Thursday, Week 1
-        Thursday, Week 3
+    Frequency:           every 14 days
      Excluded Dates----------
         No specific exclude dates entered
-        Sunday, Week 1 excluded
-        Monday, Week 1 excluded
-        Tuesday, Week 1 excluded
-        Wednesday, Week 1 excluded
-        Friday, Week 1 excluded
-        Saturday, Week 1 excluded
-        Sunday, Week 2 excluded
-        Monday, Week 2 excluded
-        Tuesday, Week 2 excluded
-        Wednesday, Week 2 excluded
-        Thursday, Week 2 excluded
-        Friday, Week 2 excluded
-        Saturday, Week 2 excluded
-        Sunday, Week 3 excluded
-        Monday, Week 3 excluded
-        Tuesday, Week 3 excluded
-        Wednesday, Week 3 excluded
-        Friday, Week 3 excluded
-        Saturday, Week 3 excluded
-        Sunday, Week 4 excluded
-        Monday, Week 4 excluded
-        Tuesday, Week 4 excluded
-        Wednesday, Week 4 excluded
-        Thursday, Week 4 excluded
-        Friday, Week 4 excluded
-        Saturday, Week 4 excluded
-        Sunday, Week 5 excluded
-        Monday, Week 5 excluded
-        Tuesday, Week 5 excluded
-        Wednesday, Week 5 excluded
-        Thursday, Week 5 excluded
-        Friday, Week 5 excluded
-        Saturday, Week 5 excluded
+        No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     4 (2 months)
+    Retention Level:     3 (1 month)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -1922,10 +3328,68 @@ Policy Name:       VMware_mow03-mrls03
 
 ------------------------------------------------------------
 
+Policy Name:       VMware_mow03-mx01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-MX01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
 Policy Name:       VMware_mow03-navi01
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -1962,7 +3426,7 @@ Policy Name:       VMware_mow03-navi01
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     3 (1 month)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -1980,10 +3444,532 @@ Policy Name:       VMware_mow03-navi01
 
 ------------------------------------------------------------
 
+Policy Name:       VMware_mow03-opt01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-OPT01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:52:30  -->  воскресен  13:27:30
+          понедельн  03:52:30  -->  понедельн  13:27:30
+          вторник    03:52:30  -->  вторник    13:27:30
+          среда      03:52:30  -->  среда      13:27:30
+          четверг    03:52:30  -->  четверг    13:27:30
+          пятница    03:52:30  -->  пятница    13:27:30
+          суббота    03:52:30  -->  суббота    13:27:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-opt02
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-OPT02"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  00:05:00  -->  воскресен  23:45:00
+          понедельн  00:05:00  -->  понедельн  23:45:00
+          вторник    00:05:00  -->  вторник    23:45:00
+          среда      00:05:00  -->  среда      23:45:00
+          четверг    00:05:00  -->  четверг    23:45:00
+          пятница    00:05:00  -->  пятница    23:45:00
+          суббота    00:05:00  -->  суббота    23:45:00
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ps01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-PS01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ptap01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-PTAP01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ptap09
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-PTAP09"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ptap15
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-PTAP15"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ptap16
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-PTAP16"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-ptap19
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-PTAP19"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_mow03-repo01
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "MOW03-REPO01"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 1 day
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     0 (1 week)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
 Policy Name:       VMware_mow03-sbo01
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -2020,7 +4006,7 @@ Policy Name:       VMware_mow03-sbo01
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     3 (1 month)
+    Retention Level:     0 (1 week)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -2041,7 +4027,7 @@ Policy Name:       VMware_mow03-sbo01
 Policy Name:       VMware_mow03-sbo01d
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -2072,13 +4058,13 @@ Policy Name:       VMware_mow03-sbo01d
 
   Schedule:              Full
     Type:                Full Backup
-    Frequency:           every 1 day
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     3 (1 month)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -2086,13 +4072,20 @@ Policy Name:       VMware_mow03-sbo01d
     Server Group:        (same as specified for policy)
     Residence is Storage Lifecycle Policy:         0
     Daily Windows:
+          воскресен  04:55:00  -->  воскресен  23:20:00
+          понедельн  04:55:00  -->  понедельн  23:20:00
+          вторник    04:55:00  -->  вторник    23:20:00
+          среда      04:55:00  -->  среда      23:20:00
+          четверг    04:55:00  -->  четверг    23:20:00
+          пятница    04:55:00  -->  пятница    23:20:00
+          суббота    04:55:00  -->  суббота    23:20:00
 
 ------------------------------------------------------------
 
 Policy Name:       VMware_mow03-smd01dl
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -2123,13 +4116,13 @@ Policy Name:       VMware_mow03-smd01dl
 
   Schedule:              Full
     Type:                Full Backup
-    Frequency:           every 1 day
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     0 (1 week)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -2150,7 +4143,7 @@ Policy Name:       VMware_mow03-smd01dl
 Policy Name:       VMware_mow03-wdp01l
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -2208,7 +4201,7 @@ Policy Name:       VMware_mow03-wdp01l
 Policy Name:       VMware_mow03-wdp02l
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -2239,13 +4232,13 @@ Policy Name:       VMware_mow03-wdp02l
 
   Schedule:              Full
     Type:                Full Backup
-    Frequency:           every 1 day
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     0 (1 week)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -2266,7 +4259,7 @@ Policy Name:       VMware_mow03-wdp02l
 Policy Name:       VMware_mow03-wpb01
 
   Policy Type:         VMware
-  Active:              yes
+  Active:              no
   Effective date:      04/07/2016 13:54:45
   File Restore Raw:    yes
   Application Consistent:    yes
@@ -2297,13 +4290,13 @@ Policy Name:       VMware_mow03-wpb01
 
   Schedule:              Full
     Type:                Full Backup
-    Frequency:           every 1 day
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     0 (1 week)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -2321,7 +4314,7 @@ Policy Name:       VMware_mow03-wpb01
 
 ------------------------------------------------------------
 
-Policy Name:       VMware_server_16_32_5Y
+Policy Name:       VMware_server-16-01
 
   Policy Type:         VMware
   Active:              no
@@ -2336,8 +4329,8 @@ Policy Name:       VMware_server_16_32_5Y
   Max Jobs/Policy:     Unlimited
   Disaster Recovery:   0
   Collect BMR info:    no
-  Residence:           mow03-back02-hcart2-robot-tld-0
-  Volume Pool:         5y_pool
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
   Server Group:        *ANY*
   Keyword:             (none specified)
   Data Classification:       Gold
@@ -2349,21 +4342,19 @@ Policy Name:       VMware_server_16_32_5Y
   Granular Restore Info:  no
   Ignore Client Direct:  no
   Use Accelerator:  no
-  HW/OS/Client:  VMware        VMware        mow03-back02.cherkizovsky.net
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
 
-  Include:  vmware:/?filter=VMDNSName Equal "mow03-tmon01l.cherkizovsky.net"
+  Include:  vmware:/?filter=Displayname Equal "SERVER-16-01-NEW"
 
   Schedule:              Full
     Type:                Full Backup
-    Calendar sched: Enabled
-     Included Dates-----------
-         No days of week entered
+    Frequency:           every 7 days
      Excluded Dates----------
         No specific exclude dates entered
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     10 (5 years)
+    Retention Level:     15 (15 days)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
@@ -2371,6 +4362,129 @@ Policy Name:       VMware_server_16_32_5Y
     Server Group:        (same as specified for policy)
     Residence is Storage Lifecycle Policy:         0
     Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_server-16-56
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "SERVER-16-56.cherkizovsky.net"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
+
+------------------------------------------------------------
+
+Policy Name:       VMware_server-16-70
+
+  Policy Type:         VMware
+  Active:              no
+  Effective date:      04/07/2016 13:54:45
+  File Restore Raw:    yes
+  Application Consistent:    yes
+  Block Incremental:   yes
+  Mult. Data Streams:  no
+  Client Encrypt:      no
+  Checkpoint:          no
+  Policy Priority:     0
+  Max Jobs/Policy:     Unlimited
+  Disaster Recovery:   0
+  Collect BMR info:    no
+  Residence:           mow03-back09-hcart2-robot-tld-3
+  Volume Pool:         NetBackup
+  Server Group:        *ANY*
+  Keyword:             (none specified)
+  Data Classification:       Gold
+  Residence is Storage Lifecycle Policy:    no
+  Application Discovery:      yes
+  Discovery Lifetime:      28800 seconds
+  ASC Application and attributes: (none defined)
+
+  Granular Restore Info:  no
+  Ignore Client Direct:  no
+  Use Accelerator:  no
+  HW/OS/Client:  VMware        VMware        mow03-back09.cherkizovsky.net
+
+  Include:  vmware:/?filter=Displayname Equal "server-16-70"
+
+  Schedule:              Full
+    Type:                Full Backup
+    Frequency:           every 7 days
+     Excluded Dates----------
+        No specific exclude dates entered
+        No exclude days of week entered
+    PFI Recovery:        0
+    Maximum MPX:         1
+    Retention Level:     15 (15 days)
+    Number Copies:       1
+    Fail on Error:       0
+    Residence:           (specific storage unit not required)
+    Volume Pool:         (same as policy volume pool)
+    Server Group:        (same as specified for policy)
+    Residence is Storage Lifecycle Policy:         0
+    Daily Windows:
+          воскресен  03:02:30  -->  воскресен  11:57:30
+          понедельн  03:02:30  -->  понедельн  11:57:30
+          вторник    03:02:30  -->  вторник    11:57:30
+          среда      03:02:30  -->  среда      11:57:30
+          четверг    03:02:30  -->  четверг    11:57:30
+          пятница    03:02:30  -->  пятница    11:57:30
+          суббота    03:02:30  -->  суббота    11:57:30
 
 ------------------------------------------------------------
 
@@ -2475,7 +4589,7 @@ Policy Name:       mow02-fs01
     Server Group:        (same as specified for policy)
     Residence is Storage Lifecycle Policy:         0
     Daily Windows:
-          четверг    13:57:30  -->  четверг    21:57:30
+          понедельн  15:35:00  -->  понедельн  23:15:00
 
 ------------------------------------------------------------
 
@@ -8751,7 +10865,7 @@ Policy Name:       test_VMware_mow03-csb11
         No exclude days of week entered
     PFI Recovery:        0
     Maximum MPX:         1
-    Retention Level:     5 (3 months)
+    Retention Level:     0 (1 week)
     Number Copies:       1
     Fail on Error:       0
     Residence:           (specific storage unit not required)
