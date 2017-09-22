@@ -68,7 +68,8 @@ for Server in SQL_Servers:
         #	ConnectStr = 'DRIVER='+SQL_Data['Driver']+';SERVER='+SQL_Data['Server']+';DATABASE=master;UID='+SQL_Data['Sql_User']+';PWD='+SQL_Data['Password']
         SQL_connect = pyodbc.connect(ConnectStr + ';Trusted_Connection=yes')
         Connect = True
-            print Server
+    except Exception, e:
+        print Server
         print type(e), e
         print '_________'
     if not Connect:
