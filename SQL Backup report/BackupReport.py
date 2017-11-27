@@ -1,11 +1,15 @@
 import pyodbc
 import openpyxl
 from openpyxl import Workbook
-from openpyxl.styles import Color, PatternFill, Font, Border
+from openpyxl.styles import Color, PatternFill, Font, Border,  Side, Alignment, Protection, Font
 from openpyxl.styles import colors
 from openpyxl.cell import Cell
 from math import ceil
 import time
+
+
+thin = Side(border_style="thin", color="000000")
+double = Side(border_style="double", color="ff0000")
 
 ROW = 4
 Monday = ['C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
@@ -29,15 +33,15 @@ Saturday = ['II', 'IJ', 'IK', 'IL', 'IM', 'IN', 'IO', 'IP', 'IQ', 'IR', 'IS', 'I
 Sunday = ['KE', 'KF', 'KG', 'KH', 'KI', 'KJ', 'KK', 'KL', 'KM', 'KN', 'KO', 'KP', 'KQ', 'KR', 'KS', 'KT', 'KU', 'KV', 'KW', 'KX', 'KY', 'KZ', 'LA', 'LB', 'LC', 'LD',
             'LE', 'LF', 'LG', 'LH', 'LI', 'LJ', 'LK', 'LL', 'LM', 'LN', 'LO', 'LP', 'LQ', 'LR', 'LS', 'LT', 'LU', 'LV', 'LW', 'LX', 'LY', 'LZ']
 Server_Job_List = []
-SQL_Request = '''
-SELECT
-     [sJOB].[name] AS [JobName],
+SQL_Request = '''SELECT
+     [sJSTEP].[step_name] AS [JobName],
      [freq_interval],
-	 [active_start_time],
-	 STUFF(RIGHT('000000' + CAST([active_start_time] AS VARCHAR(6)), 6), 3, 0,'')
+	 
+	 STUFF(RIGHT('000000' + CAST([last_run_time] AS VARCHAR(6)), 6), 3, 0,'')
 	   as [Start_Time],
 	STUFF(RIGHT('000000' + CAST([last_run_duration] AS VARCHAR(6)), 6), 3, 0,'')
-	 as [last_run_duration]
+	 as [last_run_duration],
+	 [last_run_date]
 
 FROM
     [msdb].[dbo].[sysjobs] AS [sJOB]
@@ -49,7 +53,7 @@ FROM
         ON [sJOBSCH].[schedule_id] = [sSCH].[schedule_id]
 	LEFT JOIN [msdb].[dbo].[sysjobsteps] AS [sJSTEP]
 		ON [sJOB].[job_id] = [sJSTEP].[job_id]
-WHERE (sJOB.name LIKE 'Backup_FULL' OR sJOB.name LIKE 'Backup_DIFF' OR sJOB.name LIKE 'Index_Maintenance') AND [sJSTEP].[step_id] = 1
+WHERE (sJOB.name LIKE 'Backup_FULL' OR sJOB.name LIKE 'Backup_DIFF' OR sJOB.name LIKE 'Index_Maintenance' AND step_name NOT LIKE 'Free Proc Cache') 
 '''
 
 
@@ -90,6 +94,7 @@ for Server in SQL_Servers:
         Job['freq_interval'] = row.freq_interval
         Job['Start_Time'] = row.Start_Time
         Job['last_run_duration'] = row.last_run_duration
+        Job['last_run_date']= row.last_run_date
         row = cursor.fetchone()
         Server_Job_List.append(Job)
 
@@ -98,18 +103,27 @@ xfile = openpyxl.load_workbook('report_template.xlsx')
 sheet = xfile.get_sheet_by_name('report')
 
 for Job in Server_Job_List:
-    if Job['JobName'] == 'Backup_FULL':
+    if Job['JobName'] == 'Backup_full':
         Fill = PatternFill(start_color='FF00FF00',
                       end_color='FF00FF00',
                       fill_type='solid')
-    elif Job['JobName'] == 'Backup_DIFF':
+
+    elif Job['JobName'] == 'Backup_diff':
         Fill = PatternFill(start_color='AAFF8000',
                       end_color='AAFF8000',
                       fill_type='solid')
-    elif Job['JobName'] == 'Index_Maintenance':
-        Fill = PatternFill(start_color='00CCFF',
-                      end_color='00CCFF',
+
+    elif Job['JobName'] == 'Rebuild Indexes & Stats':
+        Fill = PatternFill(start_color='F4A742',
+                      end_color='F4A742',
                       fill_type='solid')
+
+    elif Job['JobName'] == 'IntegrityCheck':
+        Fill = PatternFill(start_color='00CCFF',
+                           end_color='00CCFF',
+                           fill_type='solid')
+        
+
 
     print Job['Server'], Job['JobName'], Job['freq_interval']
     if Job['freq_interval'] & 2:
@@ -149,11 +163,13 @@ for Job in Server_Job_List:
             if int(PointStart+i) > 47:
                 sheet[(Wednesday[int(PointStart1+ii)]+str(ROW))] = ''
                 sheet[(Wednesday[int(PointStart1+ii)]+str(ROW))].fill = Fill
+
                 i+=1
                 ii+=1
             else:
                 sheet[(Tuesday[int(PointStart+i)]+str(ROW))] = ''
                 sheet[(Tuesday[int(PointStart+i)]+str(ROW))].fill = Fill
+
                 i+=1
     if Job['freq_interval'] & 8:
         sheet[('A'+str(ROW))] = Job['Server']
@@ -169,11 +185,13 @@ for Job in Server_Job_List:
             if int(PointStart+i) > 47:
                 sheet[(Thursday[int(PointStart1+ii)]+str(ROW))] = ''
                 sheet[(Thursday[int(PointStart1+ii)]+str(ROW))].fill = Fill
+
                 i+=1
                 ii+=1
             else:
                 sheet[(Wednesday[int(PointStart+i)]+str(ROW))] = ''
                 sheet[(Wednesday[int(PointStart+i)]+str(ROW))].fill = Fill
+
                 i+=1
     if Job['freq_interval'] & 16:
         sheet[('A'+str(ROW))] = Job['Server']
@@ -189,11 +207,13 @@ for Job in Server_Job_List:
             if int(PointStart+i) > 47:
                 sheet[(Friday[int(PointStart1+ii)]+str(ROW))] = ''
                 sheet[(Friday[int(PointStart1+ii)]+str(ROW))].fill = Fill
+
                 i+=1
                 ii+=1
             else:
                 sheet[(Thursday[int(PointStart+i)]+str(ROW))] = ''
                 sheet[(Thursday[int(PointStart+i)]+str(ROW))].fill = Fill
+
                 i+=1
     if Job['freq_interval'] & 32:
         sheet[('A'+str(ROW))] = Job['Server']
@@ -209,11 +229,13 @@ for Job in Server_Job_List:
             if int(PointStart+i) > 47:
                 sheet[(Saturday[int(PointStart1+ii)]+str(ROW))] = ''
                 sheet[(Saturday[int(PointStart1+ii)]+str(ROW))].fill = Fill
+
                 i+=1
                 ii+=1
             else:
                 sheet[(Friday[int(PointStart+i)]+str(ROW))] = ''
                 sheet[(Friday[int(PointStart+i)]+str(ROW))].fill = Fill
+
                 i+=1
     if Job['freq_interval'] & 64:
         sheet[('A'+str(ROW))] = Job['Server']
@@ -229,11 +251,13 @@ for Job in Server_Job_List:
             if int(PointStart+i) > 47:
                 sheet[(Sunday[int(PointStart1+ii)]+str(ROW))] = ''
                 sheet[(Sunday[int(PointStart1+ii)]+str(ROW))].fill = Fill
+
                 i+=1
                 ii+=1
             else:
                 sheet[(Saturday[int(PointStart+i)]+str(ROW))] = ''
                 sheet[(Saturday[int(PointStart+i)]+str(ROW))].fill = Fill
+
                 i+=1
     if Job['freq_interval'] & 1:
         sheet[('A'+str(ROW))] = Job['Server']
@@ -249,11 +273,13 @@ for Job in Server_Job_List:
             if int(PointStart+i) > 47:
                 sheet[(Monday[int(PointStart1+ii)]+str(ROW))] = ''
                 sheet[(Monday[int(PointStart1+ii)]+str(ROW))].fill = Fill
+
                 i+=1
                 ii+=1
             else:
                 sheet[(Sunday[int(PointStart+i)]+str(ROW))] = ''
                 sheet[(Sunday[int(PointStart+i)]+str(ROW))].fill = Fill
+
                 i+=1
     ROW += 1
 
