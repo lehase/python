@@ -23,3 +23,19 @@ FROM (SELECT T2.Fld34226RRef AS Fld34226RRef, T2.Fld34223_TYPE AS Fld34223_TYPE,
             HAVING (CAST(CAST(SUM(CASE WHEN T6._RecordKind = @P22 THEN -T6._Fld34229 ELSE T6._Fld34229 END) AS NUMERIC(27, 8)) AS NUMERIC(27, 2))) <> @P23 OR (CAST(CAST(SUM(CASE WHEN T6._RecordKind = @P24 THEN -T6._Fld34228 ELSE T6._Fld34228 END) AS NUMERIC(26, 8)) AS NUMERIC(27, 3))) <> @P25) T2
     GROUP BY T2.Fld34226RRef, T2.Fld34223_TYPE, T2.Fld34223_RTRef, T2.Fld34223_RRRef, T2.Fld34222RRef, T2.Fld34225RRef, T2.Fld34219RRef, T2.Fld34224RRef, T2.Fld34221RRef, T2.Fld34220RRef
     HAVING (CAST(SUM(T2.Fld34229Balance_) AS NUMERIC(38, 8))) <> @P26 OR (CAST(SUM(T2.Fld34228Balance_) AS NUMERIC(38, 8))) <> @P27) T1
+
+
+
+USE [td82] -- replace your dbname
+GO
+SELECT
+    DB_NAME() as DatabaseName,
+    t.Name AS TableName,
+    p.rows AS RowCounts,
+    CAST(ROUND((SUM(a.used_pages) / 128.00), 2) AS NUMERIC(36, 2)) AS Used_MB
+FROM sys.tables t
+    INNER JOIN sys.indexes i ON t.OBJECT_ID = i.object_id
+    INNER JOIN sys.partitions p ON i.object_id = p.OBJECT_ID AND i.index_id = p.index_id
+    INNER JOIN sys.allocation_units a ON p.partition_id = a.container_id
+WHERE t.name = '_InfoRg18426'
+GROUP BY t.Name, p.Rows

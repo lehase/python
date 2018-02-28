@@ -1,0 +1,1392 @@
+<ShowPlanXML xmlns="http://schemas.microsoft.com/sqlserver/2004/07/showplan" Version="1.5" Build="11.0.7001.0">
+  <BatchSequence>
+    <Batch>
+      <Statements>
+        <StmtSimple StatementText="(@P1 varbinary(16),@P2 varbinary(16),@P3 varbinary(16),@P4 varbinary(16),@P5 varbinary(4),@P6 varbinary(16),@P7 varbinary(16),@P8 varbinary(16),@P9 varbinary(16))SELECT&#xA;MIN(ISNULL(T1.SDBL_RLS_SIGNAL_,0x01)),&#xA;CAST(SUM(T1.Q_001_F_000_) AS NUMERIC(24, 8)),&#xA;CAST(SUM(ISNULL(CAST(T1.Q_001_F_001_ AS NUMERIC(22, 3)),0.0)) AS NUMERIC(33, 8))&#xA;FROM (SELECT&#xA;0x01 AS SDBL_RLS_SIGNAL_,&#xA;CAST(COUNT(DISTINCT T2._Document775_IDRRef) AS NUMERIC(10)) AS Q_001_F_000_,&#xA;CAST(CAST(SUM(T2._Fld20949) AS NUMERIC(26, 8)) AS NUMERIC(22, 3)) AS Q_001_F_001_&#xA;FROM _Document775_VT20943 T2 WITH(NOLOCK)&#xA;LEFT OUTER JOIN _Document775 T3 WITH(NOLOCK)&#xA;ON T2._Document775_IDRRef = T3._IDRRef&#xA;WHERE (T3._Posted = 0x01) AND (T2._Fld38326RRef = @P1)&#xA;UNION ALL SELECT&#xA;0x01 AS SDBL_RLS_SIGNAL_,&#xA;CAST(COUNT(DISTINCT T4._Document775_IDRRef) AS NUMERIC(10)),&#xA;CAST(CAST(SUM(T4._Fld20949) AS NUMERIC(26, 8)) AS NUMERIC(22, 3))&#xA;FROM _Document775_VT20943 T4 WITH(NOLOCK)&#xA;LEFT OUTER JOIN _Document775 T5 WITH(NOLOCK)&#xA;ON T4._Document775_IDRRef = T5._IDRRef&#xA;WHERE (T5._Posted = 0x01) AND (T5._Fld20901RRef = @P2) AND ((T4._Fld38326RRef = @P3) OR (0x08 = 0x01))&#xA;UNION ALL SELECT&#xA;MIN(T6.SDBL_RLS_SIGNAL_) AS SDBL_RLS_SIGNAL_,&#xA;CAST(COUNT(DISTINCT T6.IDRRef) AS NUMERIC(10)),&#xA;CAST(SUM((T6.Fld20132_ - T6.Fld20133_)) AS NUMERIC(27, 8))&#xA;FROM (SELECT&#xA;CASE WHEN (EXISTS(SELECT&#xA;1&#xA;FROM (SELECT 1 AS SDBL_DUMMY) SDBL_DUAL&#xA;LEFT OUTER JOIN (SELECT DISTINCT&#xA;0x01 AS SDBL_RLS_SIGNAL_,&#xA;T9._Reference90_IDRRef AS Q_001_F_000RRef&#xA;FROM _Reference90_VT2496 T9 WITH(NOLOCK)&#xA;WHERE (T9._Fld2498RRef = @P4)) T8&#xA;ON 1=1&#xA;WHERE (NOT ((T8.Q_001_F_000RRef IS NULL))) AND (NOT ((EXISTS(SELECT&#xA;1.0 AS Q_002_F_000_&#xA;FROM _InfoRg29219 T10 WITH(NOLOCK)&#xA;LEFT OUTER JOIN _InfoRg29305 T11 WITH(NOLOCK)&#xA;ON (((((T11._Fld29306_TYPE = 0x08 AND T11._Fld29306_RTRef = @P5 AND T11._Fld29306_RRRef = T7._Fld20117RRef) AND (T11._Fld29307RRef = T10._Fld29221RRef)) AND (T11._Fld29308RRef = @P6)) AND (T11._Fld29309RRef = T8.Q_001_F_000RRef)) AND (T11._Fld29313 = 0x01))&#xA;WHERE (T10._Fld29220RRef = T8.Q_001_F_000RRef) AND (T10._Fld29221RRef IN (@P7)) AND T11._Fld29306_TYPE IS NULL AND T11._Fld29306_RTRef IS NULL AND T11._Fld29306_RRRef IS NULL)))))) THEN 0x01 ELSE 0x00 END AS SDBL_RLS_SIGNAL_,&#xA;T7._IDRRef AS IDRRef,&#xA;T7._Fld20117RRef AS Fld20117RRef,&#xA;T7._Fld20132 AS Fld20132_,&#xA;T7._Fld20133 AS Fld20133_,&#xA;T7._Fld20140RRef AS Fld20140RRef&#xA;FROM _Document753 T7 WITH(NOLOCK)&#xA;WHERE T7._Fld20140RRef = @P8) T6&#xA;LEFT OUTER JOIN _Document753 T12 WITH(NOLOCK)&#xA;ON T6.IDRRef = T12._IDRRef&#xA;WHERE (T12._Posted = 0x01) AND (T6.Fld20140RRef = @P9)) T1" StatementId="1" StatementCompId="1" StatementType="SELECT" RetrievedFromCache="true" StatementSubTreeCost="14.0692" StatementEstRows="1" StatementOptmLevel="FULL" QueryHash="0x834A5DB997C5D97F" QueryPlanHash="0x9F11D8AA38F80EC0">
+          <StatementSetOptions QUOTED_IDENTIFIER="true" ARITHABORT="false" CONCAT_NULL_YIELDS_NULL="true" ANSI_NULLS="true" ANSI_PADDING="true" ANSI_WARNINGS="true" NUMERIC_ROUNDABORT="false" />
+          <QueryPlan NonParallelPlanReason="MaxDOPSetToOne" CachedPlanSize="152" CompileTime="73" CompileCPU="73" CompileMemory="2432">
+            <MissingIndexes>
+              <MissingIndexGroup Impact="44.342">
+                <MissingIndex Database="[cher3]" Schema="[dbo]" Table="[_Document775]">
+                  <ColumnGroup Usage="EQUALITY">
+                    <Column Name="[_Posted]" ColumnId="7" />
+                    <Column Name="[_Fld20901RRef]" ColumnId="40" />
+                  </ColumnGroup>
+                </MissingIndex> 
+              </MissingIndexGroup>
+              <MissingIndexGroup Impact="54.3803">
+                <MissingIndex Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]">
+                  <ColumnGroup Usage="EQUALITY">
+                    <Column Name="[_Fld38326RRef]" ColumnId="42" />
+                  </ColumnGroup>
+                </MissingIndex>
+              </MissingIndexGroup>
+            </MissingIndexes>
+            <MemoryGrantInfo SerialRequiredMemory="0" SerialDesiredMemory="0" />
+            <OptimizerHardwareDependentProperties EstimatedAvailableMemoryGrant="377600" EstimatedPagesCached="377600" EstimatedAvailableDegreeOfParallelism="1" />
+            <RelOp NodeId="0" PhysicalOp="Compute Scalar" LogicalOp="Compute Scalar" EstimateRows="1" EstimateIO="0" EstimateCPU="1e-007" AvgRowSize="41" EstimatedTotalSubtreeCost="14.0692" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+              <OutputList>
+                <ColumnReference Column="Expr1042" />
+                <ColumnReference Column="Expr1045" />
+                <ColumnReference Column="Expr1046" />
+              </OutputList>
+              <ComputeScalar>
+                <DefinedValues>
+                  <DefinedValue>
+                    <ColumnReference Column="Expr1045" />
+                    <ScalarOperator ScalarString="CONVERT(numeric(24,8),[Expr1043],0)">
+                      <Convert DataType="numeric" Precision="24" Scale="8" Style="0" Implicit="0">
+                        <ScalarOperator>
+                          <Identifier>
+                            <ColumnReference Column="Expr1043" />
+                          </Identifier>
+                        </ScalarOperator>
+                      </Convert>
+                    </ScalarOperator>
+                  </DefinedValue>
+                  <DefinedValue>
+                    <ColumnReference Column="Expr1046" />
+                    <ScalarOperator ScalarString="CONVERT(numeric(33,8),[Expr1044],0)">
+                      <Convert DataType="numeric" Precision="33" Scale="8" Style="0" Implicit="0">
+                        <ScalarOperator>
+                          <Identifier>
+                            <ColumnReference Column="Expr1044" />
+                          </Identifier>
+                        </ScalarOperator>
+                      </Convert>
+                    </ScalarOperator>
+                  </DefinedValue>
+                </DefinedValues>
+                <RelOp NodeId="1" PhysicalOp="Compute Scalar" LogicalOp="Compute Scalar" EstimateRows="1" EstimateIO="0" EstimateCPU="2.3e-006" AvgRowSize="45" EstimatedTotalSubtreeCost="14.0692" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                  <OutputList>
+                    <ColumnReference Column="Expr1042" />
+                    <ColumnReference Column="Expr1043" />
+                    <ColumnReference Column="Expr1044" />
+                  </OutputList>
+                  <ComputeScalar>
+                    <DefinedValues>
+                      <DefinedValue>
+                        <ColumnReference Column="Expr1043" />
+                        <ScalarOperator ScalarString="CASE WHEN [Expr1090]=(0) THEN NULL ELSE [Expr1091] END">
+                          <IF>
+                            <Condition>
+                              <ScalarOperator>
+                                <Compare CompareOp="EQ">
+                                  <ScalarOperator>
+                                    <Identifier>
+                                      <ColumnReference Column="Expr1090" />
+                                    </Identifier>
+                                  </ScalarOperator>
+                                  <ScalarOperator>
+                                    <Const ConstValue="(0)" />
+                                  </ScalarOperator>
+                                </Compare>
+                              </ScalarOperator>
+                            </Condition>
+                            <Then>
+                              <ScalarOperator>
+                                <Const ConstValue="NULL" />
+                              </ScalarOperator>
+                            </Then>
+                            <Else>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Column="Expr1091" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Else>
+                          </IF>
+                        </ScalarOperator>
+                      </DefinedValue>
+                      <DefinedValue>
+                        <ColumnReference Column="Expr1044" />
+                        <ScalarOperator ScalarString="CASE WHEN [Expr1092]=(0) THEN NULL ELSE [Expr1093] END">
+                          <IF>
+                            <Condition>
+                              <ScalarOperator>
+                                <Compare CompareOp="EQ">
+                                  <ScalarOperator>
+                                    <Identifier>
+                                      <ColumnReference Column="Expr1092" />
+                                    </Identifier>
+                                  </ScalarOperator>
+                                  <ScalarOperator>
+                                    <Const ConstValue="(0)" />
+                                  </ScalarOperator>
+                                </Compare>
+                              </ScalarOperator>
+                            </Condition>
+                            <Then>
+                              <ScalarOperator>
+                                <Const ConstValue="NULL" />
+                              </ScalarOperator>
+                            </Then>
+                            <Else>
+                              <ScalarOperator>
+                                <Identifier>
+                                  <ColumnReference Column="Expr1093" />
+                                </Identifier>
+                              </ScalarOperator>
+                            </Else>
+                          </IF>
+                        </ScalarOperator>
+                      </DefinedValue>
+                    </DefinedValues>
+                    <RelOp NodeId="2" PhysicalOp="Stream Aggregate" LogicalOp="Aggregate" EstimateRows="1" EstimateIO="0" EstimateCPU="2.3e-006" AvgRowSize="45" EstimatedTotalSubtreeCost="14.0692" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                      <OutputList>
+                        <ColumnReference Column="Expr1042" />
+                        <ColumnReference Column="Expr1090" />
+                        <ColumnReference Column="Expr1091" />
+                        <ColumnReference Column="Expr1092" />
+                        <ColumnReference Column="Expr1093" />
+                      </OutputList>
+                      <StreamAggregate>
+                        <DefinedValues>
+                          <DefinedValue>
+                            <ColumnReference Column="Expr1092" />
+                            <ScalarOperator ScalarString="Count(*)">
+                              <Aggregate AggType="countstar" Distinct="0" />
+                            </ScalarOperator>
+                          </DefinedValue>
+                          <DefinedValue>
+                            <ColumnReference Column="Expr1042" />
+                            <ScalarOperator ScalarString="MIN(isnull([Union1039],0x01))">
+                              <Aggregate Distinct="0" AggType="MIN">
+                                <ScalarOperator>
+                                  <Intrinsic FunctionName="isnull">
+                                    <ScalarOperator>
+                                      <Identifier>
+                                        <ColumnReference Column="Union1039" />
+                                      </Identifier>
+                                    </ScalarOperator>
+                                    <ScalarOperator>
+                                      <Const ConstValue="0x01" />
+                                    </ScalarOperator>
+                                  </Intrinsic>
+                                </ScalarOperator>
+                              </Aggregate>
+                            </ScalarOperator>
+                          </DefinedValue>
+                          <DefinedValue>
+                            <ColumnReference Column="Expr1090" />
+                            <ScalarOperator ScalarString="COUNT_BIG([Union1040])">
+                              <Aggregate Distinct="0" AggType="COUNT_BIG">
+                                <ScalarOperator>
+                                  <Identifier>
+                                    <ColumnReference Column="Union1040" />
+                                  </Identifier>
+                                </ScalarOperator>
+                              </Aggregate>
+                            </ScalarOperator>
+                          </DefinedValue>
+                          <DefinedValue>
+                            <ColumnReference Column="Expr1091" />
+                            <ScalarOperator ScalarString="SUM([Union1040])">
+                              <Aggregate Distinct="0" AggType="SUM">
+                                <ScalarOperator>
+                                  <Identifier>
+                                    <ColumnReference Column="Union1040" />
+                                  </Identifier>
+                                </ScalarOperator>
+                              </Aggregate>
+                            </ScalarOperator>
+                          </DefinedValue>
+                          <DefinedValue>
+                            <ColumnReference Column="Expr1093" />
+                            <ScalarOperator ScalarString="SUM(isnull(CONVERT(numeric(22,3),[Union1041],0),(0.000)))">
+                              <Aggregate Distinct="0" AggType="SUM">
+                                <ScalarOperator>
+                                  <Intrinsic FunctionName="isnull">
+                                    <ScalarOperator>
+                                      <Convert DataType="numeric" Precision="22" Scale="3" Style="0" Implicit="0">
+                                        <ScalarOperator>
+                                          <Identifier>
+                                            <ColumnReference Column="Union1041" />
+                                          </Identifier>
+                                        </ScalarOperator>
+                                      </Convert>
+                                    </ScalarOperator>
+                                    <ScalarOperator>
+                                      <Const ConstValue="(0.000)" />
+                                    </ScalarOperator>
+                                  </Intrinsic>
+                                </ScalarOperator>
+                              </Aggregate>
+                            </ScalarOperator>
+                          </DefinedValue>
+                        </DefinedValues>
+                        <RelOp NodeId="3" PhysicalOp="Concatenation" LogicalOp="Concatenation" EstimateRows="3" EstimateIO="0" EstimateCPU="3e-007" AvgRowSize="33" EstimatedTotalSubtreeCost="14.0692" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                          <OutputList>
+                            <ColumnReference Column="Union1039" />
+                            <ColumnReference Column="Union1040" />
+                            <ColumnReference Column="Union1041" />
+                          </OutputList>
+                          <Concat>
+                            <DefinedValues>
+                              <DefinedValue>
+                                <ColumnReference Column="Union1039" />
+                                <ColumnReference Column="Expr1006" />
+                                <ColumnReference Column="Expr1015" />
+                                <ColumnReference Column="Expr1034" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Column="Union1040" />
+                                <ColumnReference Column="Expr1007" />
+                                <ColumnReference Column="Expr1016" />
+                                <ColumnReference Column="Expr1037" />
+                              </DefinedValue>
+                              <DefinedValue>
+                                <ColumnReference Column="Union1041" />
+                                <ColumnReference Column="Expr1008" />
+                                <ColumnReference Column="Expr1017" />
+                                <ColumnReference Column="Expr1038" />
+                              </DefinedValue>
+                            </DefinedValues>
+                            <RelOp NodeId="4" PhysicalOp="Compute Scalar" LogicalOp="Compute Scalar" EstimateRows="1" EstimateIO="0" EstimateCPU="1e-007" AvgRowSize="33" EstimatedTotalSubtreeCost="7.6982" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                              <OutputList>
+                                <ColumnReference Column="Expr1006" />
+                                <ColumnReference Column="Expr1007" />
+                                <ColumnReference Column="Expr1008" />
+                              </OutputList>
+                              <ComputeScalar>
+                                <DefinedValues>
+                                  <DefinedValue>
+                                    <ColumnReference Column="Expr1006" />
+                                    <ScalarOperator ScalarString="0x01">
+                                      <Const ConstValue="0x01" />
+                                    </ScalarOperator>
+                                  </DefinedValue>
+                                  <DefinedValue>
+                                    <ColumnReference Column="Expr1007" />
+                                    <ScalarOperator ScalarString="CONVERT(numeric(10,0),[Expr1004],0)">
+                                      <Convert DataType="numeric" Precision="10" Scale="0" Style="0" Implicit="0">
+                                        <ScalarOperator>
+                                          <Identifier>
+                                            <ColumnReference Column="Expr1004" />
+                                          </Identifier>
+                                        </ScalarOperator>
+                                      </Convert>
+                                    </ScalarOperator>
+                                  </DefinedValue>
+                                  <DefinedValue>
+                                    <ColumnReference Column="Expr1008" />
+                                    <ScalarOperator ScalarString="CONVERT_IMPLICIT(numeric(27,8),CONVERT(numeric(22,3),CONVERT(numeric(26,8),[Expr1005],0),0),0)">
+                                      <Convert DataType="numeric" Precision="27" Scale="8" Style="0" Implicit="1">
+                                        <ScalarOperator>
+                                          <Convert DataType="numeric" Precision="22" Scale="3" Style="0" Implicit="0">
+                                            <ScalarOperator>
+                                              <Convert DataType="numeric" Precision="26" Scale="8" Style="0" Implicit="0">
+                                                <ScalarOperator>
+                                                  <Identifier>
+                                                    <ColumnReference Column="Expr1005" />
+                                                  </Identifier>
+                                                </ScalarOperator>
+                                              </Convert>
+                                            </ScalarOperator>
+                                          </Convert>
+                                        </ScalarOperator>
+                                      </Convert>
+                                    </ScalarOperator>
+                                  </DefinedValue>
+                                </DefinedValues>
+                                <RelOp NodeId="6" PhysicalOp="Compute Scalar" LogicalOp="Compute Scalar" EstimateRows="1" EstimateIO="0" EstimateCPU="1e-007" AvgRowSize="28" EstimatedTotalSubtreeCost="7.6982" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                  <OutputList>
+                                    <ColumnReference Column="Expr1004" />
+                                    <ColumnReference Column="Expr1005" />
+                                  </OutputList>
+                                  <ComputeScalar>
+                                    <DefinedValues>
+                                      <DefinedValue>
+                                        <ColumnReference Column="Expr1005" />
+                                        <ScalarOperator ScalarString="CASE WHEN [globalagg1051]=(0) THEN NULL ELSE [globalagg1053] END">
+                                          <IF>
+                                            <Condition>
+                                              <ScalarOperator>
+                                                <Compare CompareOp="EQ">
+                                                  <ScalarOperator>
+                                                    <Identifier>
+                                                      <ColumnReference Column="globalagg1051" />
+                                                    </Identifier>
+                                                  </ScalarOperator>
+                                                  <ScalarOperator>
+                                                    <Const ConstValue="(0)" />
+                                                  </ScalarOperator>
+                                                </Compare>
+                                              </ScalarOperator>
+                                            </Condition>
+                                            <Then>
+                                              <ScalarOperator>
+                                                <Const ConstValue="NULL" />
+                                              </ScalarOperator>
+                                            </Then>
+                                            <Else>
+                                              <ScalarOperator>
+                                                <Identifier>
+                                                  <ColumnReference Column="globalagg1053" />
+                                                </Identifier>
+                                              </ScalarOperator>
+                                            </Else>
+                                          </IF>
+                                        </ScalarOperator>
+                                      </DefinedValue>
+                                    </DefinedValues>
+                                    <RelOp NodeId="7" PhysicalOp="Compute Scalar" LogicalOp="Compute Scalar" EstimateRows="1" EstimateIO="0" EstimateCPU="8.99802e-006" AvgRowSize="36" EstimatedTotalSubtreeCost="7.6982" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                      <OutputList>
+                                        <ColumnReference Column="Expr1004" />
+                                        <ColumnReference Column="globalagg1051" />
+                                        <ColumnReference Column="globalagg1053" />
+                                      </OutputList>
+                                      <ComputeScalar>
+                                        <DefinedValues>
+                                          <DefinedValue>
+                                            <ColumnReference Column="Expr1004" />
+                                            <ScalarOperator ScalarString="CONVERT_IMPLICIT(int,[Expr1085],0)">
+                                              <Convert DataType="int" Style="0" Implicit="1">
+                                                <ScalarOperator>
+                                                  <Identifier>
+                                                    <ColumnReference Column="Expr1085" />
+                                                  </Identifier>
+                                                </ScalarOperator>
+                                              </Convert>
+                                            </ScalarOperator>
+                                          </DefinedValue>
+                                        </DefinedValues>
+                                        <RelOp NodeId="8" PhysicalOp="Stream Aggregate" LogicalOp="Aggregate" EstimateRows="1" EstimateIO="0" EstimateCPU="8.99802e-006" AvgRowSize="36" EstimatedTotalSubtreeCost="7.6982" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                          <OutputList>
+                                            <ColumnReference Column="globalagg1051" />
+                                            <ColumnReference Column="globalagg1053" />
+                                            <ColumnReference Column="Expr1085" />
+                                          </OutputList>
+                                          <StreamAggregate>
+                                            <DefinedValues>
+                                              <DefinedValue>
+                                                <ColumnReference Column="Expr1085" />
+                                                <ScalarOperator ScalarString="Count(*)">
+                                                  <Aggregate AggType="countstar" Distinct="0" />
+                                                </ScalarOperator>
+                                              </DefinedValue>
+                                              <DefinedValue>
+                                                <ColumnReference Column="globalagg1051" />
+                                                <ScalarOperator ScalarString="SUM([partialagg1050])">
+                                                  <Aggregate Distinct="0" AggType="SUM">
+                                                    <ScalarOperator>
+                                                      <Identifier>
+                                                        <ColumnReference Column="partialagg1050" />
+                                                      </Identifier>
+                                                    </ScalarOperator>
+                                                  </Aggregate>
+                                                </ScalarOperator>
+                                              </DefinedValue>
+                                              <DefinedValue>
+                                                <ColumnReference Column="globalagg1053" />
+                                                <ScalarOperator ScalarString="SUM([partialagg1052])">
+                                                  <Aggregate Distinct="0" AggType="SUM">
+                                                    <ScalarOperator>
+                                                      <Identifier>
+                                                        <ColumnReference Column="partialagg1052" />
+                                                      </Identifier>
+                                                    </ScalarOperator>
+                                                  </Aggregate>
+                                                </ScalarOperator>
+                                              </DefinedValue>
+                                            </DefinedValues>
+                                            <RelOp NodeId="9" PhysicalOp="Stream Aggregate" LogicalOp="Aggregate" EstimateRows="14.1634" EstimateIO="0" EstimateCPU="1.55797e-005" AvgRowSize="32" EstimatedTotalSubtreeCost="7.69819" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                              <OutputList>
+                                                <ColumnReference Column="partialagg1050" />
+                                                <ColumnReference Column="partialagg1052" />
+                                              </OutputList>
+                                              <StreamAggregate>
+                                                <DefinedValues>
+                                                  <DefinedValue>
+                                                    <ColumnReference Column="partialagg1050" />
+                                                    <ScalarOperator ScalarString="Count(*)">
+                                                      <Aggregate AggType="countstar" Distinct="0" />
+                                                    </ScalarOperator>
+                                                  </DefinedValue>
+                                                  <DefinedValue>
+                                                    <ColumnReference Column="partialagg1052" />
+                                                    <ScalarOperator ScalarString="SUM([cher3].[dbo].[_Document775_VT20943].[_Fld20949] as [T2].[_Fld20949])">
+                                                      <Aggregate Distinct="0" AggType="SUM">
+                                                        <ScalarOperator>
+                                                          <Identifier>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T2]" Column="_Fld20949" />
+                                                          </Identifier>
+                                                        </ScalarOperator>
+                                                      </Aggregate>
+                                                    </ScalarOperator>
+                                                  </DefinedValue>
+                                                </DefinedValues>
+                                                <GroupBy>
+                                                  <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T2]" Column="_Document775_IDRRef" />
+                                                </GroupBy>
+                                                <RelOp NodeId="10" PhysicalOp="Nested Loops" LogicalOp="Inner Join" EstimateRows="14.1634" EstimateIO="0" EstimateCPU="5.92029e-005" AvgRowSize="32" EstimatedTotalSubtreeCost="7.69818" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                  <OutputList>
+                                                    <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T2]" Column="_Document775_IDRRef" />
+                                                    <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T2]" Column="_Fld20949" />
+                                                  </OutputList>
+                                                  <NestedLoops Optimized="0">
+                                                    <OuterReferences>
+                                                      <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T2]" Column="_Document775_IDRRef" />
+                                                    </OuterReferences>
+                                                    <RelOp NodeId="11" PhysicalOp="Clustered Index Scan" LogicalOp="Clustered Index Scan" EstimateRows="14.1634" EstimateIO="7.44609" EstimateCPU="0.145332" AvgRowSize="48" EstimatedTotalSubtreeCost="7.59142" TableCardinality="131977" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                      <OutputList>
+                                                        <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T2]" Column="_Document775_IDRRef" />
+                                                        <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T2]" Column="_Fld20949" />
+                                                      </OutputList>
+                                                      <IndexScan Ordered="1" ScanDirection="FORWARD" ForcedIndex="0" ForceSeek="0" ForceScan="0" NoExpandHint="0" Storage="RowStore">
+                                                        <DefinedValues>
+                                                          <DefinedValue>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T2]" Column="_Document775_IDRRef" />
+                                                          </DefinedValue>
+                                                          <DefinedValue>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T2]" Column="_Fld20949" />
+                                                          </DefinedValue>
+                                                        </DefinedValues>
+                                                        <Object Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Index="[_Documen775_VT20943_IntKeyInd]" Alias="[T2]" IndexKind="Clustered" />
+                                                        <Predicate>
+                                                          <ScalarOperator ScalarString="[cher3].[dbo].[_Document775_VT20943].[_Fld38326RRef] as [T2].[_Fld38326RRef]=[@P1]">
+                                                            <Compare CompareOp="EQ">
+                                                              <ScalarOperator>
+                                                                <Identifier>
+                                                                  <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T2]" Column="_Fld38326RRef" />
+                                                                </Identifier>
+                                                              </ScalarOperator>
+                                                              <ScalarOperator>
+                                                                <Identifier>
+                                                                  <ColumnReference Column="@P1" />
+                                                                </Identifier>
+                                                              </ScalarOperator>
+                                                            </Compare>
+                                                          </ScalarOperator>
+                                                        </Predicate>
+                                                      </IndexScan>
+                                                    </RelOp>
+                                                    <RelOp NodeId="12" PhysicalOp="Clustered Index Seek" LogicalOp="Clustered Index Seek" EstimateRows="1" EstimateIO="0.003125" EstimateCPU="0.0001581" AvgRowSize="9" EstimatedTotalSubtreeCost="0.0433444" TableCardinality="67292" Parallel="0" EstimateRebinds="13.1634" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                      <OutputList />
+                                                      <IndexScan Ordered="1" ScanDirection="FORWARD" ForcedIndex="0" ForceSeek="0" ForceScan="0" NoExpandHint="0" Storage="RowStore">
+                                                        <DefinedValues />
+                                                        <Object Database="[cher3]" Schema="[dbo]" Table="[_Document775]" Index="[PK___Documen__AC8ED0C4B52F02E9]" Alias="[T3]" IndexKind="Clustered" />
+                                                        <SeekPredicates>
+                                                          <SeekPredicateNew>
+                                                            <SeekKeys>
+                                                              <Prefix ScanType="EQ">
+                                                                <RangeColumns>
+                                                                  <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775]" Alias="[T3]" Column="_IDRRef" />
+                                                                </RangeColumns>
+                                                                <RangeExpressions>
+                                                                  <ScalarOperator ScalarString="[cher3].[dbo].[_Document775_VT20943].[_Document775_IDRRef] as [T2].[_Document775_IDRRef]">
+                                                                    <Identifier>
+                                                                      <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T2]" Column="_Document775_IDRRef" />
+                                                                    </Identifier>
+                                                                  </ScalarOperator>
+                                                                </RangeExpressions>
+                                                              </Prefix>
+                                                            </SeekKeys>
+                                                          </SeekPredicateNew>
+                                                        </SeekPredicates>
+                                                        <Predicate>
+                                                          <ScalarOperator ScalarString="[cher3].[dbo].[_Document775].[_Posted] as [T3].[_Posted]=0x01">
+                                                            <Compare CompareOp="EQ">
+                                                              <ScalarOperator>
+                                                                <Identifier>
+                                                                  <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775]" Alias="[T3]" Column="_Posted" />
+                                                                </Identifier>
+                                                              </ScalarOperator>
+                                                              <ScalarOperator>
+                                                                <Const ConstValue="0x01" />
+                                                              </ScalarOperator>
+                                                            </Compare>
+                                                          </ScalarOperator>
+                                                        </Predicate>
+                                                      </IndexScan>
+                                                    </RelOp>
+                                                  </NestedLoops>
+                                                </RelOp>
+                                              </StreamAggregate>
+                                            </RelOp>
+                                          </StreamAggregate>
+                                        </RelOp>
+                                      </ComputeScalar>
+                                    </RelOp>
+                                  </ComputeScalar>
+                                </RelOp>
+                              </ComputeScalar>
+                            </RelOp>
+                            <RelOp NodeId="35" PhysicalOp="Compute Scalar" LogicalOp="Compute Scalar" EstimateRows="1" EstimateIO="0" EstimateCPU="1e-007" AvgRowSize="33" EstimatedTotalSubtreeCost="6.24933" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                              <OutputList>
+                                <ColumnReference Column="Expr1015" />
+                                <ColumnReference Column="Expr1016" />
+                                <ColumnReference Column="Expr1017" />
+                              </OutputList>
+                              <ComputeScalar>
+                                <DefinedValues>
+                                  <DefinedValue>
+                                    <ColumnReference Column="Expr1015" />
+                                    <ScalarOperator ScalarString="0x01">
+                                      <Const ConstValue="0x01" />
+                                    </ScalarOperator>
+                                  </DefinedValue>
+                                  <DefinedValue>
+                                    <ColumnReference Column="Expr1016" />
+                                    <ScalarOperator ScalarString="CONVERT(numeric(10,0),[Expr1013],0)">
+                                      <Convert DataType="numeric" Precision="10" Scale="0" Style="0" Implicit="0">
+                                        <ScalarOperator>
+                                          <Identifier>
+                                            <ColumnReference Column="Expr1013" />
+                                          </Identifier>
+                                        </ScalarOperator>
+                                      </Convert>
+                                    </ScalarOperator>
+                                  </DefinedValue>
+                                  <DefinedValue>
+                                    <ColumnReference Column="Expr1017" />
+                                    <ScalarOperator ScalarString="CONVERT_IMPLICIT(numeric(27,8),CONVERT(numeric(22,3),CONVERT(numeric(26,8),[Expr1014],0),0),0)">
+                                      <Convert DataType="numeric" Precision="27" Scale="8" Style="0" Implicit="1">
+                                        <ScalarOperator>
+                                          <Convert DataType="numeric" Precision="22" Scale="3" Style="0" Implicit="0">
+                                            <ScalarOperator>
+                                              <Convert DataType="numeric" Precision="26" Scale="8" Style="0" Implicit="0">
+                                                <ScalarOperator>
+                                                  <Identifier>
+                                                    <ColumnReference Column="Expr1014" />
+                                                  </Identifier>
+                                                </ScalarOperator>
+                                              </Convert>
+                                            </ScalarOperator>
+                                          </Convert>
+                                        </ScalarOperator>
+                                      </Convert>
+                                    </ScalarOperator>
+                                  </DefinedValue>
+                                </DefinedValues>
+                                <RelOp NodeId="37" PhysicalOp="Compute Scalar" LogicalOp="Compute Scalar" EstimateRows="1" EstimateIO="0" EstimateCPU="1e-007" AvgRowSize="28" EstimatedTotalSubtreeCost="6.24933" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                  <OutputList>
+                                    <ColumnReference Column="Expr1013" />
+                                    <ColumnReference Column="Expr1014" />
+                                  </OutputList>
+                                  <ComputeScalar>
+                                    <DefinedValues>
+                                      <DefinedValue>
+                                        <ColumnReference Column="Expr1014" />
+                                        <ScalarOperator ScalarString="CASE WHEN [globalagg1059]=(0) THEN NULL ELSE [globalagg1061] END">
+                                          <IF>
+                                            <Condition>
+                                              <ScalarOperator>
+                                                <Compare CompareOp="EQ">
+                                                  <ScalarOperator>
+                                                    <Identifier>
+                                                      <ColumnReference Column="globalagg1059" />
+                                                    </Identifier>
+                                                  </ScalarOperator>
+                                                  <ScalarOperator>
+                                                    <Const ConstValue="(0)" />
+                                                  </ScalarOperator>
+                                                </Compare>
+                                              </ScalarOperator>
+                                            </Condition>
+                                            <Then>
+                                              <ScalarOperator>
+                                                <Const ConstValue="NULL" />
+                                              </ScalarOperator>
+                                            </Then>
+                                            <Else>
+                                              <ScalarOperator>
+                                                <Identifier>
+                                                  <ColumnReference Column="globalagg1061" />
+                                                </Identifier>
+                                              </ScalarOperator>
+                                            </Else>
+                                          </IF>
+                                        </ScalarOperator>
+                                      </DefinedValue>
+                                    </DefinedValues>
+                                    <RelOp NodeId="38" PhysicalOp="Compute Scalar" LogicalOp="Compute Scalar" EstimateRows="1" EstimateIO="0" EstimateCPU="4.86627e-006" AvgRowSize="36" EstimatedTotalSubtreeCost="6.24933" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                      <OutputList>
+                                        <ColumnReference Column="Expr1013" />
+                                        <ColumnReference Column="globalagg1059" />
+                                        <ColumnReference Column="globalagg1061" />
+                                      </OutputList>
+                                      <ComputeScalar>
+                                        <DefinedValues>
+                                          <DefinedValue>
+                                            <ColumnReference Column="Expr1013" />
+                                            <ScalarOperator ScalarString="CONVERT_IMPLICIT(int,[Expr1086],0)">
+                                              <Convert DataType="int" Style="0" Implicit="1">
+                                                <ScalarOperator>
+                                                  <Identifier>
+                                                    <ColumnReference Column="Expr1086" />
+                                                  </Identifier>
+                                                </ScalarOperator>
+                                              </Convert>
+                                            </ScalarOperator>
+                                          </DefinedValue>
+                                        </DefinedValues>
+                                        <RelOp NodeId="39" PhysicalOp="Stream Aggregate" LogicalOp="Aggregate" EstimateRows="1" EstimateIO="0" EstimateCPU="4.86627e-006" AvgRowSize="36" EstimatedTotalSubtreeCost="6.24933" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                          <OutputList>
+                                            <ColumnReference Column="globalagg1059" />
+                                            <ColumnReference Column="globalagg1061" />
+                                            <ColumnReference Column="Expr1086" />
+                                          </OutputList>
+                                          <StreamAggregate>
+                                            <DefinedValues>
+                                              <DefinedValue>
+                                                <ColumnReference Column="Expr1086" />
+                                                <ScalarOperator ScalarString="Count(*)">
+                                                  <Aggregate AggType="countstar" Distinct="0" />
+                                                </ScalarOperator>
+                                              </DefinedValue>
+                                              <DefinedValue>
+                                                <ColumnReference Column="globalagg1059" />
+                                                <ScalarOperator ScalarString="SUM([partialagg1058])">
+                                                  <Aggregate Distinct="0" AggType="SUM">
+                                                    <ScalarOperator>
+                                                      <Identifier>
+                                                        <ColumnReference Column="partialagg1058" />
+                                                      </Identifier>
+                                                    </ScalarOperator>
+                                                  </Aggregate>
+                                                </ScalarOperator>
+                                              </DefinedValue>
+                                              <DefinedValue>
+                                                <ColumnReference Column="globalagg1061" />
+                                                <ScalarOperator ScalarString="SUM([partialagg1060])">
+                                                  <Aggregate Distinct="0" AggType="SUM">
+                                                    <ScalarOperator>
+                                                      <Identifier>
+                                                        <ColumnReference Column="partialagg1060" />
+                                                      </Identifier>
+                                                    </ScalarOperator>
+                                                  </Aggregate>
+                                                </ScalarOperator>
+                                              </DefinedValue>
+                                            </DefinedValues>
+                                            <RelOp NodeId="40" PhysicalOp="Stream Aggregate" LogicalOp="Aggregate" EstimateRows="7.27712" EstimateIO="0" EstimateCPU="8.00483e-006" AvgRowSize="32" EstimatedTotalSubtreeCost="6.24932" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                              <OutputList>
+                                                <ColumnReference Column="partialagg1058" />
+                                                <ColumnReference Column="partialagg1060" />
+                                              </OutputList>
+                                              <StreamAggregate>
+                                                <DefinedValues>
+                                                  <DefinedValue>
+                                                    <ColumnReference Column="partialagg1058" />
+                                                    <ScalarOperator ScalarString="Count(*)">
+                                                      <Aggregate AggType="countstar" Distinct="0" />
+                                                    </ScalarOperator>
+                                                  </DefinedValue>
+                                                  <DefinedValue>
+                                                    <ColumnReference Column="partialagg1060" />
+                                                    <ScalarOperator ScalarString="SUM([cher3].[dbo].[_Document775_VT20943].[_Fld20949] as [T4].[_Fld20949])">
+                                                      <Aggregate Distinct="0" AggType="SUM">
+                                                        <ScalarOperator>
+                                                          <Identifier>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T4]" Column="_Fld20949" />
+                                                          </Identifier>
+                                                        </ScalarOperator>
+                                                      </Aggregate>
+                                                    </ScalarOperator>
+                                                  </DefinedValue>
+                                                </DefinedValues>
+                                                <GroupBy>
+                                                  <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T4]" Column="_Document775_IDRRef" />
+                                                </GroupBy>
+                                                <RelOp NodeId="41" PhysicalOp="Nested Loops" LogicalOp="Inner Join" EstimateRows="7.27712" EstimateIO="0" EstimateCPU="3.04183e-005" AvgRowSize="32" EstimatedTotalSubtreeCost="6.24931" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                  <OutputList>
+                                                    <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T4]" Column="_Document775_IDRRef" />
+                                                    <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T4]" Column="_Fld20949" />
+                                                  </OutputList>
+                                                  <NestedLoops Optimized="0">
+                                                    <OuterReferences>
+                                                      <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775]" Alias="[T5]" Column="_IDRRef" />
+                                                    </OuterReferences>
+                                                    <RelOp NodeId="42" PhysicalOp="Clustered Index Scan" LogicalOp="Clustered Index Scan" EstimateRows="3.02323" EstimateIO="6.10905" EstimateCPU="0.0741782" AvgRowSize="40" EstimatedTotalSubtreeCost="6.18323" TableCardinality="67292" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                      <OutputList>
+                                                        <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775]" Alias="[T5]" Column="_IDRRef" />
+                                                      </OutputList>
+                                                      <IndexScan Ordered="1" ScanDirection="FORWARD" ForcedIndex="0" ForceSeek="0" ForceScan="0" NoExpandHint="0" Storage="RowStore">
+                                                        <DefinedValues>
+                                                          <DefinedValue>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775]" Alias="[T5]" Column="_IDRRef" />
+                                                          </DefinedValue>
+                                                        </DefinedValues>
+                                                        <Object Database="[cher3]" Schema="[dbo]" Table="[_Document775]" Index="[PK___Documen__AC8ED0C4B52F02E9]" Alias="[T5]" IndexKind="Clustered" />
+                                                        <Predicate>
+                                                          <ScalarOperator ScalarString="[cher3].[dbo].[_Document775].[_Fld20901RRef] as [T5].[_Fld20901RRef]=[@P2] AND [cher3].[dbo].[_Document775].[_Posted] as [T5].[_Posted]=0x01">
+                                                            <Logical Operation="AND">
+                                                              <ScalarOperator>
+                                                                <Compare CompareOp="EQ">
+                                                                  <ScalarOperator>
+                                                                    <Identifier>
+                                                                      <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775]" Alias="[T5]" Column="_Fld20901RRef" />
+                                                                    </Identifier>
+                                                                  </ScalarOperator>
+                                                                  <ScalarOperator>
+                                                                    <Identifier>
+                                                                      <ColumnReference Column="@P2" />
+                                                                    </Identifier>
+                                                                  </ScalarOperator>
+                                                                </Compare>
+                                                              </ScalarOperator>
+                                                              <ScalarOperator>
+                                                                <Compare CompareOp="EQ">
+                                                                  <ScalarOperator>
+                                                                    <Identifier>
+                                                                      <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775]" Alias="[T5]" Column="_Posted" />
+                                                                    </Identifier>
+                                                                  </ScalarOperator>
+                                                                  <ScalarOperator>
+                                                                    <Const ConstValue="0x01" />
+                                                                  </ScalarOperator>
+                                                                </Compare>
+                                                              </ScalarOperator>
+                                                            </Logical>
+                                                          </ScalarOperator>
+                                                        </Predicate>
+                                                      </IndexScan>
+                                                    </RelOp>
+                                                    <RelOp NodeId="43" PhysicalOp="Clustered Index Seek" LogicalOp="Clustered Index Seek" EstimateRows="2.40707" EstimateIO="0.003125" EstimateCPU="0.000165944" AvgRowSize="48" EstimatedTotalSubtreeCost="0.00682395" TableCardinality="131977" Parallel="0" EstimateRebinds="2.02323" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                      <OutputList>
+                                                        <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T4]" Column="_Document775_IDRRef" />
+                                                        <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T4]" Column="_Fld20949" />
+                                                      </OutputList>
+                                                      <IndexScan Ordered="1" ScanDirection="FORWARD" ForcedIndex="0" ForceSeek="0" ForceScan="0" NoExpandHint="0" Storage="RowStore">
+                                                        <DefinedValues>
+                                                          <DefinedValue>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T4]" Column="_Document775_IDRRef" />
+                                                          </DefinedValue>
+                                                          <DefinedValue>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T4]" Column="_Fld20949" />
+                                                          </DefinedValue>
+                                                        </DefinedValues>
+                                                        <Object Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Index="[_Documen775_VT20943_IntKeyInd]" Alias="[T4]" IndexKind="Clustered" />
+                                                        <SeekPredicates>
+                                                          <SeekPredicateNew>
+                                                            <SeekKeys>
+                                                              <Prefix ScanType="EQ">
+                                                                <RangeColumns>
+                                                                  <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T4]" Column="_Document775_IDRRef" />
+                                                                </RangeColumns>
+                                                                <RangeExpressions>
+                                                                  <ScalarOperator ScalarString="[cher3].[dbo].[_Document775].[_IDRRef] as [T5].[_IDRRef]">
+                                                                    <Identifier>
+                                                                      <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775]" Alias="[T5]" Column="_IDRRef" />
+                                                                    </Identifier>
+                                                                  </ScalarOperator>
+                                                                </RangeExpressions>
+                                                              </Prefix>
+                                                            </SeekKeys>
+                                                          </SeekPredicateNew>
+                                                        </SeekPredicates>
+                                                        <Predicate>
+                                                          <ScalarOperator ScalarString="[cher3].[dbo].[_Document775_VT20943].[_Fld38326RRef] as [T4].[_Fld38326RRef]=[@P3]">
+                                                            <Compare CompareOp="EQ">
+                                                              <ScalarOperator>
+                                                                <Identifier>
+                                                                  <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document775_VT20943]" Alias="[T4]" Column="_Fld38326RRef" />
+                                                                </Identifier>
+                                                              </ScalarOperator>
+                                                              <ScalarOperator>
+                                                                <Identifier>
+                                                                  <ColumnReference Column="@P3" />
+                                                                </Identifier>
+                                                              </ScalarOperator>
+                                                            </Compare>
+                                                          </ScalarOperator>
+                                                        </Predicate>
+                                                      </IndexScan>
+                                                    </RelOp>
+                                                  </NestedLoops>
+                                                </RelOp>
+                                              </StreamAggregate>
+                                            </RelOp>
+                                          </StreamAggregate>
+                                        </RelOp>
+                                      </ComputeScalar>
+                                    </RelOp>
+                                  </ComputeScalar>
+                                </RelOp>
+                              </ComputeScalar>
+                            </RelOp>
+                            <RelOp NodeId="66" PhysicalOp="Compute Scalar" LogicalOp="Compute Scalar" EstimateRows="1" EstimateIO="0" EstimateCPU="1e-007" AvgRowSize="33" EstimatedTotalSubtreeCost="0.121716" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                              <OutputList>
+                                <ColumnReference Column="Expr1034" />
+                                <ColumnReference Column="Expr1037" />
+                                <ColumnReference Column="Expr1038" />
+                              </OutputList>
+                              <ComputeScalar>
+                                <DefinedValues>
+                                  <DefinedValue>
+                                    <ColumnReference Column="Expr1037" />
+                                    <ScalarOperator ScalarString="CONVERT(numeric(10,0),[Expr1035],0)">
+                                      <Convert DataType="numeric" Precision="10" Scale="0" Style="0" Implicit="0">
+                                        <ScalarOperator>
+                                          <Identifier>
+                                            <ColumnReference Column="Expr1035" />
+                                          </Identifier>
+                                        </ScalarOperator>
+                                      </Convert>
+                                    </ScalarOperator>
+                                  </DefinedValue>
+                                  <DefinedValue>
+                                    <ColumnReference Column="Expr1038" />
+                                    <ScalarOperator ScalarString="CONVERT(numeric(27,8),[Expr1036],0)">
+                                      <Convert DataType="numeric" Precision="27" Scale="8" Style="0" Implicit="0">
+                                        <ScalarOperator>
+                                          <Identifier>
+                                            <ColumnReference Column="Expr1036" />
+                                          </Identifier>
+                                        </ScalarOperator>
+                                      </Convert>
+                                    </ScalarOperator>
+                                  </DefinedValue>
+                                </DefinedValues>
+                                <RelOp NodeId="67" PhysicalOp="Compute Scalar" LogicalOp="Compute Scalar" EstimateRows="1" EstimateIO="0" EstimateCPU="1.1e-006" AvgRowSize="32" EstimatedTotalSubtreeCost="0.121715" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                  <OutputList>
+                                    <ColumnReference Column="Expr1034" />
+                                    <ColumnReference Column="Expr1035" />
+                                    <ColumnReference Column="Expr1036" />
+                                  </OutputList>
+                                  <ComputeScalar>
+                                    <DefinedValues>
+                                      <DefinedValue>
+                                        <ColumnReference Column="Expr1035" />
+                                        <ScalarOperator ScalarString="CONVERT_IMPLICIT(int,[Expr1087],0)">
+                                          <Convert DataType="int" Style="0" Implicit="1">
+                                            <ScalarOperator>
+                                              <Identifier>
+                                                <ColumnReference Column="Expr1087" />
+                                              </Identifier>
+                                            </ScalarOperator>
+                                          </Convert>
+                                        </ScalarOperator>
+                                      </DefinedValue>
+                                      <DefinedValue>
+                                        <ColumnReference Column="Expr1036" />
+                                        <ScalarOperator ScalarString="CASE WHEN [Expr1088]=(0) THEN NULL ELSE [Expr1089] END">
+                                          <IF>
+                                            <Condition>
+                                              <ScalarOperator>
+                                                <Compare CompareOp="EQ">
+                                                  <ScalarOperator>
+                                                    <Identifier>
+                                                      <ColumnReference Column="Expr1088" />
+                                                    </Identifier>
+                                                  </ScalarOperator>
+                                                  <ScalarOperator>
+                                                    <Const ConstValue="(0)" />
+                                                  </ScalarOperator>
+                                                </Compare>
+                                              </ScalarOperator>
+                                            </Condition>
+                                            <Then>
+                                              <ScalarOperator>
+                                                <Const ConstValue="NULL" />
+                                              </ScalarOperator>
+                                            </Then>
+                                            <Else>
+                                              <ScalarOperator>
+                                                <Identifier>
+                                                  <ColumnReference Column="Expr1089" />
+                                                </Identifier>
+                                              </ScalarOperator>
+                                            </Else>
+                                          </IF>
+                                        </ScalarOperator>
+                                      </DefinedValue>
+                                    </DefinedValues>
+                                    <RelOp NodeId="68" PhysicalOp="Stream Aggregate" LogicalOp="Aggregate" EstimateRows="1" EstimateIO="0" EstimateCPU="1.1e-006" AvgRowSize="32" EstimatedTotalSubtreeCost="0.121715" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                      <OutputList>
+                                        <ColumnReference Column="Expr1034" />
+                                        <ColumnReference Column="Expr1087" />
+                                        <ColumnReference Column="Expr1088" />
+                                        <ColumnReference Column="Expr1089" />
+                                      </OutputList>
+                                      <StreamAggregate>
+                                        <DefinedValues>
+                                          <DefinedValue>
+                                            <ColumnReference Column="Expr1087" />
+                                            <ScalarOperator ScalarString="Count(*)">
+                                              <Aggregate AggType="countstar" Distinct="0" />
+                                            </ScalarOperator>
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Column="Expr1088" />
+                                            <ScalarOperator ScalarString="COUNT_BIG([Expr1049])">
+                                              <Aggregate Distinct="0" AggType="COUNT_BIG">
+                                                <ScalarOperator>
+                                                  <Identifier>
+                                                    <ColumnReference Column="Expr1049" />
+                                                  </Identifier>
+                                                </ScalarOperator>
+                                              </Aggregate>
+                                            </ScalarOperator>
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Column="Expr1089" />
+                                            <ScalarOperator ScalarString="SUM([Expr1049])">
+                                              <Aggregate Distinct="0" AggType="SUM">
+                                                <ScalarOperator>
+                                                  <Identifier>
+                                                    <ColumnReference Column="Expr1049" />
+                                                  </Identifier>
+                                                </ScalarOperator>
+                                              </Aggregate>
+                                            </ScalarOperator>
+                                          </DefinedValue>
+                                          <DefinedValue>
+                                            <ColumnReference Column="Expr1034" />
+                                            <ScalarOperator ScalarString="MIN(CASE WHEN [Expr1047] THEN 0x01 ELSE 0x00 END)">
+                                              <Aggregate Distinct="0" AggType="MIN">
+                                                <ScalarOperator>
+                                                  <IF>
+                                                    <Condition>
+                                                      <ScalarOperator>
+                                                        <Identifier>
+                                                          <ColumnReference Column="Expr1047" />
+                                                        </Identifier>
+                                                      </ScalarOperator>
+                                                    </Condition>
+                                                    <Then>
+                                                      <ScalarOperator>
+                                                        <Const ConstValue="0x01" />
+                                                      </ScalarOperator>
+                                                    </Then>
+                                                    <Else>
+                                                      <ScalarOperator>
+                                                        <Const ConstValue="0x00" />
+                                                      </ScalarOperator>
+                                                    </Else>
+                                                  </IF>
+                                                </ScalarOperator>
+                                              </Aggregate>
+                                            </ScalarOperator>
+                                          </DefinedValue>
+                                        </DefinedValues>
+                                        <RelOp NodeId="69" PhysicalOp="Nested Loops" LogicalOp="Inner Join" EstimateRows="1" EstimateIO="0" EstimateCPU="4.18e-006" AvgRowSize="33" EstimatedTotalSubtreeCost="0.121714" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                          <OutputList>
+                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_IDRRef" />
+                                            <ColumnReference Column="Expr1047" />
+                                            <ColumnReference Column="Expr1049" />
+                                          </OutputList>
+                                          <NestedLoops Optimized="0">
+                                            <OuterReferences>
+                                              <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_IDRRef" />
+                                            </OuterReferences>
+                                            <RelOp NodeId="70" PhysicalOp="Nested Loops" LogicalOp="Left Semi Join" EstimateRows="1" EstimateIO="0" EstimateCPU="4.18e-006" AvgRowSize="33" EstimatedTotalSubtreeCost="0.118427" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                              <OutputList>
+                                                <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_IDRRef" />
+                                                <ColumnReference Column="Expr1047" />
+                                                <ColumnReference Column="Expr1049" />
+                                              </OutputList>
+                                              <NestedLoops Optimized="0">
+                                                <DefinedValues>
+                                                  <DefinedValue>
+                                                    <ColumnReference Column="Expr1047" />
+                                                  </DefinedValue>
+                                                </DefinedValues>
+                                                <OuterReferences>
+                                                  <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20117RRef" />
+                                                </OuterReferences>
+                                                <ProbeColumn>
+                                                  <ColumnReference Column="Expr1047" />
+                                                </ProbeColumn>
+                                                <RelOp NodeId="71" PhysicalOp="Compute Scalar" LogicalOp="Compute Scalar" EstimateRows="1" EstimateIO="0" EstimateCPU="1e-007" AvgRowSize="48" EstimatedTotalSubtreeCost="0.107296" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                  <OutputList>
+                                                    <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_IDRRef" />
+                                                    <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20117RRef" />
+                                                    <ColumnReference Column="Expr1049" />
+                                                  </OutputList>
+                                                  <ComputeScalar>
+                                                    <DefinedValues>
+                                                      <DefinedValue>
+                                                        <ColumnReference Column="Expr1049" />
+                                                        <ScalarOperator ScalarString="[cher3].[dbo].[_Document753].[_Fld20132] as [T7].[_Fld20132]-[cher3].[dbo].[_Document753].[_Fld20133] as [T7].[_Fld20133]">
+                                                          <Arithmetic Operation="SUB">
+                                                            <ScalarOperator>
+                                                              <Identifier>
+                                                                <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20132" />
+                                                              </Identifier>
+                                                            </ScalarOperator>
+                                                            <ScalarOperator>
+                                                              <Identifier>
+                                                                <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20133" />
+                                                              </Identifier>
+                                                            </ScalarOperator>
+                                                          </Arithmetic>
+                                                        </ScalarOperator>
+                                                      </DefinedValue>
+                                                    </DefinedValues>
+                                                    <RelOp NodeId="72" PhysicalOp="Clustered Index Scan" LogicalOp="Clustered Index Scan" EstimateRows="1" EstimateIO="0.103125" EstimateCPU="0.0023867" AvgRowSize="73" EstimatedTotalSubtreeCost="0.105512" TableCardinality="2027" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                      <OutputList>
+                                                        <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_IDRRef" />
+                                                        <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20117RRef" />
+                                                        <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20132" />
+                                                        <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20133" />
+                                                        <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20140RRef" />
+                                                      </OutputList>
+                                                      <IndexScan Ordered="1" ScanDirection="FORWARD" ForcedIndex="0" ForceSeek="0" ForceScan="0" NoExpandHint="0" Storage="RowStore">
+                                                        <DefinedValues>
+                                                          <DefinedValue>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_IDRRef" />
+                                                          </DefinedValue>
+                                                          <DefinedValue>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20117RRef" />
+                                                          </DefinedValue>
+                                                          <DefinedValue>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20132" />
+                                                          </DefinedValue>
+                                                          <DefinedValue>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20133" />
+                                                          </DefinedValue>
+                                                          <DefinedValue>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20140RRef" />
+                                                          </DefinedValue>
+                                                        </DefinedValues>
+                                                        <Object Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Index="[PK___Document753NG__78C2D575]" Alias="[T7]" IndexKind="Clustered" />
+                                                        <Predicate>
+                                                          <ScalarOperator ScalarString="[cher3].[dbo].[_Document753].[_Fld20140RRef] as [T7].[_Fld20140RRef]=[@P9] AND [cher3].[dbo].[_Document753].[_Fld20140RRef] as [T7].[_Fld20140RRef]=[@P8]">
+                                                            <Logical Operation="AND">
+                                                              <ScalarOperator>
+                                                                <Compare CompareOp="EQ">
+                                                                  <ScalarOperator>
+                                                                    <Identifier>
+                                                                      <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20140RRef" />
+                                                                    </Identifier>
+                                                                  </ScalarOperator>
+                                                                  <ScalarOperator>
+                                                                    <Identifier>
+                                                                      <ColumnReference Column="@P9" />
+                                                                    </Identifier>
+                                                                  </ScalarOperator>
+                                                                </Compare>
+                                                              </ScalarOperator>
+                                                              <ScalarOperator>
+                                                                <Compare CompareOp="EQ">
+                                                                  <ScalarOperator>
+                                                                    <Identifier>
+                                                                      <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20140RRef" />
+                                                                    </Identifier>
+                                                                  </ScalarOperator>
+                                                                  <ScalarOperator>
+                                                                    <Identifier>
+                                                                      <ColumnReference Column="@P8" />
+                                                                    </Identifier>
+                                                                  </ScalarOperator>
+                                                                </Compare>
+                                                              </ScalarOperator>
+                                                            </Logical>
+                                                          </ScalarOperator>
+                                                        </Predicate>
+                                                      </IndexScan>
+                                                    </RelOp>
+                                                  </ComputeScalar>
+                                                </RelOp>
+                                                <RelOp NodeId="76" PhysicalOp="Nested Loops" LogicalOp="Left Anti Semi Join" EstimateRows="1" EstimateIO="0" EstimateCPU="1.76157e-005" AvgRowSize="9" EstimatedTotalSubtreeCost="0.0111269" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                  <OutputList />
+                                                  <NestedLoops Optimized="0">
+                                                    <OuterReferences>
+                                                      <ColumnReference Column="Expr1024" />
+                                                    </OuterReferences>
+                                                    <RelOp NodeId="77" PhysicalOp="Stream Aggregate" LogicalOp="Aggregate" EstimateRows="1.11111" EstimateIO="0" EstimateCPU="4.21429e-006" AvgRowSize="23" EstimatedTotalSubtreeCost="0.00328444" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                      <OutputList>
+                                                        <ColumnReference Column="Expr1024" />
+                                                      </OutputList>
+                                                      <StreamAggregate>
+                                                        <DefinedValues />
+                                                        <GroupBy>
+                                                          <ColumnReference Column="Expr1024" />
+                                                        </GroupBy>
+                                                        <RelOp NodeId="78" PhysicalOp="Compute Scalar" LogicalOp="Compute Scalar" EstimateRows="1.11111" EstimateIO="0" EstimateCPU="4.21429e-007" AvgRowSize="39" EstimatedTotalSubtreeCost="0.00328333" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                          <OutputList>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Reference90_VT2496]" Alias="[T9]" Column="_Reference90_IDRRef" />
+                                                            <ColumnReference Column="Expr1024" />
+                                                          </OutputList>
+                                                          <ComputeScalar>
+                                                            <DefinedValues>
+                                                              <DefinedValue>
+                                                                <ColumnReference Column="Expr1024" />
+                                                                <ScalarOperator ScalarString="[cher3].[dbo].[_Reference90_VT2496].[_Reference90_IDRRef] as [T9].[_Reference90_IDRRef]">
+                                                                  <Identifier>
+                                                                    <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Reference90_VT2496]" Alias="[T9]" Column="_Reference90_IDRRef" />
+                                                                  </Identifier>
+                                                                </ScalarOperator>
+                                                              </DefinedValue>
+                                                            </DefinedValues>
+                                                            <RelOp NodeId="79" PhysicalOp="Index Seek" LogicalOp="Index Seek" EstimateRows="1.11111" EstimateIO="0.003125" EstimateCPU="0.000161636" AvgRowSize="23" EstimatedTotalSubtreeCost="0.00328322" TableCardinality="13652" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                              <OutputList>
+                                                                <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Reference90_VT2496]" Alias="[T9]" Column="_Reference90_IDRRef" />
+                                                              </OutputList>
+                                                              <IndexScan Ordered="1" ScanDirection="FORWARD" ForcedIndex="0" ForceSeek="0" ForceScan="0" NoExpandHint="0" Storage="RowStore">
+                                                                <DefinedValues>
+                                                                  <DefinedValue>
+                                                                    <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Reference90_VT2496]" Alias="[T9]" Column="_Reference90_IDRRef" />
+                                                                  </DefinedValue>
+                                                                </DefinedValues>
+                                                                <Object Database="[cher3]" Schema="[dbo]" Table="[_Reference90_VT2496]" Index="[_Referenc90_VT2496_ByField2499_RR]" Alias="[T9]" IndexKind="NonClustered" />
+                                                                <SeekPredicates>
+                                                                  <SeekPredicateNew>
+                                                                    <SeekKeys>
+                                                                      <Prefix ScanType="EQ">
+                                                                        <RangeColumns>
+                                                                          <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Reference90_VT2496]" Alias="[T9]" Column="_Fld2498RRef" />
+                                                                        </RangeColumns>
+                                                                        <RangeExpressions>
+                                                                          <ScalarOperator ScalarString="[@P4]">
+                                                                            <Identifier>
+                                                                              <ColumnReference Column="@P4" />
+                                                                            </Identifier>
+                                                                          </ScalarOperator>
+                                                                        </RangeExpressions>
+                                                                      </Prefix>
+                                                                    </SeekKeys>
+                                                                  </SeekPredicateNew>
+                                                                </SeekPredicates>
+                                                              </IndexScan>
+                                                            </RelOp>
+                                                          </ComputeScalar>
+                                                        </RelOp>
+                                                      </StreamAggregate>
+                                                    </RelOp>
+                                                    <RelOp NodeId="84" PhysicalOp="Filter" LogicalOp="Filter" EstimateRows="1" EstimateIO="0" EstimateCPU="1.18e-006" AvgRowSize="9" EstimatedTotalSubtreeCost="0.00814715" Parallel="0" EstimateRebinds="1.05461" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                      <OutputList />
+                                                      <Filter StartupExpression="0">
+                                                        <RelOp NodeId="85" PhysicalOp="Nested Loops" LogicalOp="Left Outer Join" EstimateRows="1" EstimateIO="0" EstimateCPU="4.18e-006" AvgRowSize="28" EstimatedTotalSubtreeCost="0.00814472" Parallel="0" EstimateRebinds="1.05461" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                          <OutputList>
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_TYPE" />
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_RTRef" />
+                                                            <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_RRRef" />
+                                                          </OutputList>
+                                                          <NestedLoops Optimized="0">
+                                                            <RelOp NodeId="86" PhysicalOp="Clustered Index Seek" LogicalOp="Clustered Index Seek" EstimateRows="1" EstimateIO="0.003125" EstimateCPU="0.0001581" AvgRowSize="9" EstimatedTotalSubtreeCost="0.00344983" TableCardinality="133" Parallel="0" EstimateRebinds="1.05461" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                              <OutputList />
+                                                              <IndexScan Ordered="1" ScanDirection="FORWARD" ForcedIndex="0" ForceSeek="0" ForceScan="0" NoExpandHint="0" Storage="RowStore">
+                                                                <DefinedValues />
+                                                                <Object Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29219]" Index="[_InfoR29219_ByDims_RR]" Alias="[T10]" IndexKind="Clustered" />
+                                                                <SeekPredicates>
+                                                                  <SeekPredicateNew>
+                                                                    <SeekKeys>
+                                                                      <Prefix ScanType="EQ">
+                                                                        <RangeColumns>
+                                                                          <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29219]" Alias="[T10]" Column="_Fld29220RRef" />
+                                                                          <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29219]" Alias="[T10]" Column="_Fld29221RRef" />
+                                                                        </RangeColumns>
+                                                                        <RangeExpressions>
+                                                                          <ScalarOperator ScalarString="[Expr1024]">
+                                                                            <Identifier>
+                                                                              <ColumnReference Column="Expr1024" />
+                                                                            </Identifier>
+                                                                          </ScalarOperator>
+                                                                          <ScalarOperator ScalarString="[@P7]">
+                                                                            <Identifier>
+                                                                              <ColumnReference Column="@P7" />
+                                                                            </Identifier>
+                                                                          </ScalarOperator>
+                                                                        </RangeExpressions>
+                                                                      </Prefix>
+                                                                    </SeekKeys>
+                                                                  </SeekPredicateNew>
+                                                                </SeekPredicates>
+                                                              </IndexScan>
+                                                            </RelOp>
+                                                            <RelOp NodeId="87" PhysicalOp="Clustered Index Seek" LogicalOp="Clustered Index Seek" EstimateRows="1" EstimateIO="0.003125" EstimateCPU="0.000158176" AvgRowSize="29" EstimatedTotalSubtreeCost="0.00468525" TableCardinality="29672" Parallel="0" EstimateRebinds="1.05461" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                                              <OutputList>
+                                                                <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_TYPE" />
+                                                                <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_RTRef" />
+                                                                <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_RRRef" />
+                                                              </OutputList>
+                                                              <IndexScan Ordered="1" ScanDirection="FORWARD" ForcedIndex="0" ForceSeek="0" ForceScan="0" NoExpandHint="0" Storage="RowStore">
+                                                                <DefinedValues>
+                                                                  <DefinedValue>
+                                                                    <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_TYPE" />
+                                                                  </DefinedValue>
+                                                                  <DefinedValue>
+                                                                    <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_RTRef" />
+                                                                  </DefinedValue>
+                                                                  <DefinedValue>
+                                                                    <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_RRRef" />
+                                                                  </DefinedValue>
+                                                                </DefinedValues>
+                                                                <Object Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Index="[_InfoR29305_ByDims_RRRRRL]" Alias="[T11]" IndexKind="Clustered" />
+                                                                <SeekPredicates>
+                                                                  <SeekPredicateNew>
+                                                                    <SeekKeys>
+                                                                      <Prefix ScanType="EQ">
+                                                                        <RangeColumns>
+                                                                          <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_TYPE" />
+                                                                          <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_RTRef" />
+                                                                          <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_RRRef" />
+                                                                          <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29307RRef" />
+                                                                          <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29308RRef" />
+                                                                          <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29309RRef" />
+                                                                        </RangeColumns>
+                                                                        <RangeExpressions>
+                                                                          <ScalarOperator ScalarString="0x08">
+                                                                            <Const ConstValue="0x08" />
+                                                                          </ScalarOperator>
+                                                                          <ScalarOperator ScalarString="[@P5]">
+                                                                            <Identifier>
+                                                                              <ColumnReference Column="@P5" />
+                                                                            </Identifier>
+                                                                          </ScalarOperator>
+                                                                          <ScalarOperator ScalarString="[cher3].[dbo].[_Document753].[_Fld20117RRef] as [T7].[_Fld20117RRef]">
+                                                                            <Identifier>
+                                                                              <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_Fld20117RRef" />
+                                                                            </Identifier>
+                                                                          </ScalarOperator>
+                                                                          <ScalarOperator ScalarString="[@P7]">
+                                                                            <Identifier>
+                                                                              <ColumnReference Column="@P7" />
+                                                                            </Identifier>
+                                                                          </ScalarOperator>
+                                                                          <ScalarOperator ScalarString="[@P6]">
+                                                                            <Identifier>
+                                                                              <ColumnReference Column="@P6" />
+                                                                            </Identifier>
+                                                                          </ScalarOperator>
+                                                                          <ScalarOperator ScalarString="[Expr1024]">
+                                                                            <Identifier>
+                                                                              <ColumnReference Column="Expr1024" />
+                                                                            </Identifier>
+                                                                          </ScalarOperator>
+                                                                        </RangeExpressions>
+                                                                      </Prefix>
+                                                                    </SeekKeys>
+                                                                  </SeekPredicateNew>
+                                                                </SeekPredicates>
+                                                                <Predicate>
+                                                                  <ScalarOperator ScalarString="[cher3].[dbo].[_InfoRg29305].[_Fld29313] as [T11].[_Fld29313]=0x01">
+                                                                    <Compare CompareOp="EQ">
+                                                                      <ScalarOperator>
+                                                                        <Identifier>
+                                                                          <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29313" />
+                                                                        </Identifier>
+                                                                      </ScalarOperator>
+                                                                      <ScalarOperator>
+                                                                        <Const ConstValue="0x01" />
+                                                                      </ScalarOperator>
+                                                                    </Compare>
+                                                                  </ScalarOperator>
+                                                                </Predicate>
+                                                              </IndexScan>
+                                                            </RelOp>
+                                                          </NestedLoops>
+                                                        </RelOp>
+                                                        <Predicate>
+                                                          <ScalarOperator ScalarString="[cher3].[dbo].[_InfoRg29305].[_Fld29306_TYPE] as [T11].[_Fld29306_TYPE] IS NULL AND [cher3].[dbo].[_InfoRg29305].[_Fld29306_RTRef] as [T11].[_Fld29306_RTRef] IS NULL AND [cher3].[dbo].[_InfoRg29305].[_Fld29306_RRRef] as [T11].[_Fld29306_RRRef] IS NULL">
+                                                            <Logical Operation="AND">
+                                                              <ScalarOperator>
+                                                                <Compare CompareOp="IS">
+                                                                  <ScalarOperator>
+                                                                    <Identifier>
+                                                                      <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_TYPE" />
+                                                                    </Identifier>
+                                                                  </ScalarOperator>
+                                                                  <ScalarOperator>
+                                                                    <Const ConstValue="NULL" />
+                                                                  </ScalarOperator>
+                                                                </Compare>
+                                                              </ScalarOperator>
+                                                              <ScalarOperator>
+                                                                <Compare CompareOp="IS">
+                                                                  <ScalarOperator>
+                                                                    <Identifier>
+                                                                      <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_RTRef" />
+                                                                    </Identifier>
+                                                                  </ScalarOperator>
+                                                                  <ScalarOperator>
+                                                                    <Const ConstValue="NULL" />
+                                                                  </ScalarOperator>
+                                                                </Compare>
+                                                              </ScalarOperator>
+                                                              <ScalarOperator>
+                                                                <Compare CompareOp="IS">
+                                                                  <ScalarOperator>
+                                                                    <Identifier>
+                                                                      <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_InfoRg29305]" Alias="[T11]" Column="_Fld29306_RRRef" />
+                                                                    </Identifier>
+                                                                  </ScalarOperator>
+                                                                  <ScalarOperator>
+                                                                    <Const ConstValue="NULL" />
+                                                                  </ScalarOperator>
+                                                                </Compare>
+                                                              </ScalarOperator>
+                                                            </Logical>
+                                                          </ScalarOperator>
+                                                        </Predicate>
+                                                      </Filter>
+                                                    </RelOp>
+                                                  </NestedLoops>
+                                                </RelOp>
+                                              </NestedLoops>
+                                            </RelOp>
+                                            <RelOp NodeId="89" PhysicalOp="Clustered Index Seek" LogicalOp="Clustered Index Seek" EstimateRows="1" EstimateIO="0.003125" EstimateCPU="0.0001581" AvgRowSize="9" EstimatedTotalSubtreeCost="0.0032831" TableCardinality="2027" Parallel="0" EstimateRebinds="0" EstimateRewinds="0" EstimatedExecutionMode="Row">
+                                              <OutputList />
+                                              <IndexScan Ordered="1" ScanDirection="FORWARD" ForcedIndex="0" ForceSeek="0" ForceScan="0" NoExpandHint="0" Storage="RowStore">
+                                                <DefinedValues />
+                                                <Object Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Index="[PK___Document753NG__78C2D575]" Alias="[T12]" IndexKind="Clustered" />
+                                                <SeekPredicates>
+                                                  <SeekPredicateNew>
+                                                    <SeekKeys>
+                                                      <Prefix ScanType="EQ">
+                                                        <RangeColumns>
+                                                          <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T12]" Column="_IDRRef" />
+                                                        </RangeColumns>
+                                                        <RangeExpressions>
+                                                          <ScalarOperator ScalarString="[cher3].[dbo].[_Document753].[_IDRRef] as [T7].[_IDRRef]">
+                                                            <Identifier>
+                                                              <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T7]" Column="_IDRRef" />
+                                                            </Identifier>
+                                                          </ScalarOperator>
+                                                        </RangeExpressions>
+                                                      </Prefix>
+                                                    </SeekKeys>
+                                                  </SeekPredicateNew>
+                                                </SeekPredicates>
+                                                <Predicate>
+                                                  <ScalarOperator ScalarString="[cher3].[dbo].[_Document753].[_Posted] as [T12].[_Posted]=0x01">
+                                                    <Compare CompareOp="EQ">
+                                                      <ScalarOperator>
+                                                        <Identifier>
+                                                          <ColumnReference Database="[cher3]" Schema="[dbo]" Table="[_Document753]" Alias="[T12]" Column="_Posted" />
+                                                        </Identifier>
+                                                      </ScalarOperator>
+                                                      <ScalarOperator>
+                                                        <Const ConstValue="0x01" />
+                                                      </ScalarOperator>
+                                                    </Compare>
+                                                  </ScalarOperator>
+                                                </Predicate>
+                                              </IndexScan>
+                                            </RelOp>
+                                          </NestedLoops>
+                                        </RelOp>
+                                      </StreamAggregate>
+                                    </RelOp>
+                                  </ComputeScalar>
+                                </RelOp>
+                              </ComputeScalar>
+                            </RelOp>
+                          </Concat>
+                        </RelOp>
+                      </StreamAggregate>
+                    </RelOp>
+                  </ComputeScalar>
+                </RelOp>
+              </ComputeScalar>
+            </RelOp>
+            <ParameterList>
+              <ColumnReference Column="@P9" ParameterCompiledValue="0xA6D1005056BF634211E80BDE916A9CD0" />
+              <ColumnReference Column="@P7" ParameterCompiledValue="0x9DD0584C83300F1B4F2F2B7379EC3D97" />
+              <ColumnReference Column="@P6" ParameterCompiledValue="0x00000000000000000000000000000000" />
+              <ColumnReference Column="@P5" ParameterCompiledValue="0x000000B9" />
+              <ColumnReference Column="@P4" ParameterCompiledValue="0xB21A005056BF083E11E6815028BD2E62" />
+              <ColumnReference Column="@P8" ParameterCompiledValue="0xA6D1005056BF634211E80BDE916A9CD0" />
+              <ColumnReference Column="@P3" ParameterCompiledValue="0x00000000000000000000000000000000" />
+              <ColumnReference Column="@P2" ParameterCompiledValue="0xA6D1005056BF634211E80BDE916A9CD0" />
+              <ColumnReference Column="@P1" ParameterCompiledValue="0xA6D1005056BF634211E80BDE916A9CD0" />
+            </ParameterList>
+          </QueryPlan>
+        </StmtSimple>
+      </Statements>
+    </Batch>
+  </BatchSequence>
+</ShowPlanXML>

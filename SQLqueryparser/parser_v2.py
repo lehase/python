@@ -8,7 +8,7 @@ from termcolor import colored
 
 
 def sql_query(query, database):
-    server = 'mow03-sql56c'
+    server = 'mow03-opt06'
     # database = 'agro3'
     # username = 'your_username'
     # password = 'your_password'
@@ -62,13 +62,30 @@ if __name__ == '__main__':
     global SQL_get_indexes
     SQL_get_indexes = """
         SET NOCOUNT ON;
-        USE {0}
-        GO
-        SELECT DB_NAME() as DatabaseName, OBJECT_NAME(ind.OBJECT_ID) AS TableName,
+        --USE {0}
+        --GO
+        SELECT OBJECT_NAME(ind.OBJECT_ID) AS TableName,
             ind.name AS IndexName, indexstats.index_type_desc AS IndexType,
-            indexstats.avg_fragmentation_in_percent
+            round(indexstats.avg_fragmentation_in_percent, 0, -1) as [%frag]
             --FROM sys.dm_db_index_physical_stats(DB_ID('{0}'), null, NULL, NULL, NULL) indexstats
-            --FROM sys.dm_db_index_physical_stats(DB_ID('{0}'), OBJECT_ID('{1}'), NULL, NULL, NULL) indexstats 
+            FROM sys.dm_db_index_physical_stats(DB_ID('{0}'), OBJECT_ID('{1}'), NULL, NULL, NULL) indexstats 
+            INNER JOIN sys.indexes ind
+            ON ind.object_id = indexstats.object_id
+                AND ind.index_id = indexstats.index_id
+        ORDER BY indexstats.avg_fragmentation_in_percent DESC 
+        """
+
+    global SQL_get_indexes11
+    SQL_get_indexes11 = """
+        SET NOCOUNT ON;
+        
+        SELECT 
+            DB_NAME() as DB,
+            OBJECT_NAME(ind.OBJECT_ID) AS TableName,
+            ind.name AS IndexName, indexstats.index_type_desc AS IndexType,
+            round(indexstats.avg_fragmentation_in_percent, 0, -1) as [%frag]
+            --FROM sys.dm_db_index_physical_stats(DB_ID('{0}'), null, NULL, NULL, NULL) indexstats
+            FROM sys.dm_db_index_physical_stats(DB_ID('{0}'), OBJECT_ID('{1}'), NULL, NULL, NULL) indexstats 
             INNER JOIN sys.indexes ind
             ON ind.object_id = indexstats.object_id
                 AND ind.index_id = indexstats.index_id
@@ -77,10 +94,11 @@ if __name__ == '__main__':
     global SQL_get_tableinfo 
     SQL_get_tableinfo = """
 SET NOCOUNT ON;
+
 SELECT
-    DB_NAME() as DatabaseName,
+    DB_NAME() as DB,
     t.Name AS TableName,
-    p.rows AS RowCounts,
+    p.rows AS Rows,
     CAST(ROUND((SUM(a.used_pages) / 128.00), 2) AS NUMERIC(36, 2)) AS Used_MB
 FROM sys.tables t
     INNER JOIN sys.indexes i ON t.OBJECT_ID = i.object_id
@@ -120,6 +138,7 @@ GROUP BY t.Name, p.Rows
 #   a=sql_query("select @@version")
     print colored('Select TOP 10 statemens', 'green')
     a=sql_query(SQL_TOP10_queries, 'master')
+    print colored(a,'red')
     qp = []
     qp = a['query_plan'].tolist()
     # print(qp[0])
@@ -140,7 +159,7 @@ GROUP BY t.Name, p.Rows
             
             DB = str(x.get('Database')).replace("[", "").replace("]", "")
            
-            if Tab != 'None' and DB != 'tempdb' and DB != 'None':
+            if Tab != 'None' and DB != 'tempdb' and DB != 'None' and DB != 'NaN':
                 d = dict(db =DB, table=Tab)
                 Table_List.append(d)
     
@@ -149,14 +168,36 @@ GROUP BY t.Name, p.Rows
         #Dedupe DF
     df.drop_duplicates(inplace=True)
     print( df)
-    
-    print colored('Getting stats for each Table and index','green')
+     
+    allinfo=pandas.DataFrame()
+
+    htm=open("c:\www\index.html", "w")
+    JoinedDF = pandas.DataFrame()
 
     for index, row in df.iterrows():
-        # print row['db'], row['table']
+        
+        # print '111'
         # print SQL_get_tableinfo.format(row['db'], row['table'])
-        a=sql_query(SQL_get_tableinfo.format(row['db'], row['table']), row['db'])   
-        print a
+        # print row['db'], row['table']
+        tabinfo=sql_query(SQL_get_tableinfo.format(row['db'], row['table']), row['db'])   
+        if not tabinfo.empty:
+            indexinfo=sql_query(SQL_get_indexes.format(row['db'], row['table']), row['db'])
+            print colored(tabinfo.to_string(index=False), 'yellow')
+            print colored(indexinfo.to_string(index=False), 'magenta')
+            #print (tabinfo.merge(indexinfo, left_on='TableName', right_on='TableName', how='outer' ))
+            MergedDF = tabinfo.merge(indexinfo, left_on='TableName', right_on='TableName', how='outer' )
+            JoinedDF = JoinedDF.append( MergedDF, ignore_index = True)
+            #JoinedDF = JoinedDF.append( indexinfo.to_string(index=False), ignore_index = True )
+
+    JoinedDF.sort_values(by = ['DB','IndexType', '%frag'], kind= 'mergesort',  inplace = True, ascending=False )
+    htm.write(JoinedDF.to_html(index = False))    
+    #print JoinedDF
+    htm.close()
+    print colored('END!', 'red')
+#all_info=tabinfo.join(indexinfo, on='TableName', how='outer' )
+#print (all_info)
+
+
 
 
 
