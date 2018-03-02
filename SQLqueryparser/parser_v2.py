@@ -8,7 +8,7 @@ from termcolor import colored
 
 
 def sql_query(query, database):
-    server = 'mow03-opt06'
+    #server = 'mow03-sql54c'
     # database = 'agro3'
     # username = 'your_username'
     # password = 'your_password'
@@ -57,60 +57,100 @@ def sql_query1(query):
         print row
     return 
 
+def color_frag(val):
+    """
+    Takes a scalar and returns a string with
+    the css property `'color: red'` for negative
+    strings, black otherwise.
+    """
+    if val > 10:
+        color = 'red'
+    elif val > 1:
+        color = 'orange'
+    else:
+        color = 'black'
+    return 'color: %s' % color
+
+def ident_HEAP(val):
+    """
+    Take text, and return "RED BOLD" style if HEAP Detected 
+    """
+    if val == 'Heap':
+        prop = 'font-weight: bold; color: red'
+    else:
+        prop = 'font-weight: normal; color: black'
+
+    return prop
 
 if __name__ == '__main__':
     global SQL_get_indexes
     SQL_get_indexes = """
         SET NOCOUNT ON;
+        SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
         --USE {0}
         --GO
         SELECT OBJECT_NAME(ind.OBJECT_ID) AS TableName,
-            ind.name AS IndexName, indexstats.index_type_desc AS IndexType,
-            round(indexstats.avg_fragmentation_in_percent, 0, -1) as [%frag]
+            --ind.name AS IndexName, indexstats.index_type_desc AS IndexType,
+            round(avg(indexstats.avg_fragmentation_in_percent), 0, -1) as [avg_frag]
             --FROM sys.dm_db_index_physical_stats(DB_ID('{0}'), null, NULL, NULL, NULL) indexstats
             FROM sys.dm_db_index_physical_stats(DB_ID('{0}'), OBJECT_ID('{1}'), NULL, NULL, NULL) indexstats 
             INNER JOIN sys.indexes ind
             ON ind.object_id = indexstats.object_id
                 AND ind.index_id = indexstats.index_id
-        ORDER BY indexstats.avg_fragmentation_in_percent DESC 
+        --ORDER BY indexstats.avg_fragmentation_in_percent DESC 
+		group by OBJECT_NAME(ind.OBJECT_ID)
         """
+    global SQL_Rebuild_command 
+    SQL_Rebuild_command = """
+    USE [{1}];
+    SET LOCK_TIMEOUT 120000;
+    ALTER INDEX ALL ON [{0}] REBUILD
+    WITH
+    (SORT_IN_TEMPDB = ON, ONLINE = ON)
+    """
 
-    global SQL_get_indexes11
-    SQL_get_indexes11 = """
-        SET NOCOUNT ON;
-        
-        SELECT 
-            DB_NAME() as DB,
-            OBJECT_NAME(ind.OBJECT_ID) AS TableName,
-            ind.name AS IndexName, indexstats.index_type_desc AS IndexType,
-            round(indexstats.avg_fragmentation_in_percent, 0, -1) as [%frag]
-            --FROM sys.dm_db_index_physical_stats(DB_ID('{0}'), null, NULL, NULL, NULL) indexstats
-            FROM sys.dm_db_index_physical_stats(DB_ID('{0}'), OBJECT_ID('{1}'), NULL, NULL, NULL) indexstats 
-            INNER JOIN sys.indexes ind
-            ON ind.object_id = indexstats.object_id
-                AND ind.index_id = indexstats.index_id
-        ORDER BY indexstats.avg_fragmentation_in_percent DESC 
-        """
+    global SQL_Reorg_command 
+    SQL_Reorg_command = """
+    USE [{1}];
+    SET LOCK_TIMEOUT 120000;
+    ALTER INDEX ALL ON [{0}] REORGANIZE
+    WITH (LOB_COMPACTION = ON)
+    """
+
+    global SQL_Heap_rebuild_command 
+    SQL_Heap_rebuild_command = """
+    USE [{1}];
+    SET LOCK_TIMEOUT 120000; 
+    ALTER TABLE [{0}] REBUILD
+    """
+
     global SQL_get_tableinfo 
     SQL_get_tableinfo = """
 SET NOCOUNT ON;
-
-SELECT
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+SELECT TOP 1
     DB_NAME() as DB,
     t.Name AS TableName,
     p.rows AS Rows,
-    CAST(ROUND((SUM(a.used_pages) / 128.00), 2) AS NUMERIC(36, 2)) AS Used_MB
+    CAST(ROUND((SUM(a.used_pages) / 128.00), 2) AS NUMERIC(36, 2)) AS Used_MB,
+	 Case 
+  when i.index_id=0 then 'Heap' 
+  Else 'Clustered' 
+             End as TableType
 FROM sys.tables t
     INNER JOIN sys.indexes i ON t.OBJECT_ID = i.object_id
     INNER JOIN sys.partitions p ON i.object_id = p.OBJECT_ID AND i.index_id = p.index_id
     INNER JOIN sys.allocation_units a ON p.partition_id = a.container_id
 WHERE t.name = '{1}'
-GROUP BY t.Name, p.Rows
+
+GROUP BY t.Name, p.Rows,  i.index_id 
+ORDER BY i.index_id 
     """
 
     global SQL_TOP10_queries
     SQL_TOP10_queries = """
         SET NOCOUNT ON;
+        SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
         SELECT TOP 10
 
             qs.execution_count,
@@ -130,15 +170,29 @@ GROUP BY t.Name, p.Rows
         -- ORDER BY qs.total_worker_time DESC -- CPU time
         ORDER BY total_elapsed_time_in_S DESC 
             """
-
     
+    global server
 
   
 #   mssql_connect
 #   a=sql_query("select @@version")
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    server = 'mow03-sql52c'
+    html_file = 'c:\www\index.html'
+    log_file = 'c:\www\log.txt'
+
+    log=open(log_file, "w")
+
     print colored('Select TOP 10 statemens', 'green')
     a=sql_query(SQL_TOP10_queries, 'master')
     print colored(a,'red')
+    log.write(a.to_string())
+
+
     qp = []
     qp = a['query_plan'].tolist()
     # print(qp[0])
@@ -168,10 +222,13 @@ GROUP BY t.Name, p.Rows
         #Dedupe DF
     df.drop_duplicates(inplace=True)
     print( df)
-     
+    log.write(df.to_string())
+
     allinfo=pandas.DataFrame()
 
-    htm=open("c:\www\index.html", "w")
+    htm=open(html_file, "w")
+    
+    
     JoinedDF = pandas.DataFrame()
 
     for index, row in df.iterrows():
@@ -180,19 +237,50 @@ GROUP BY t.Name, p.Rows
         # print SQL_get_tableinfo.format(row['db'], row['table'])
         # print row['db'], row['table']
         tabinfo=sql_query(SQL_get_tableinfo.format(row['db'], row['table']), row['db'])   
+        print colored(tabinfo.to_string(index=False), 'yellow')
+        log.write(tabinfo.to_string(index=False))
+       
         if not tabinfo.empty:
             indexinfo=sql_query(SQL_get_indexes.format(row['db'], row['table']), row['db'])
-            print colored(tabinfo.to_string(index=False), 'yellow')
             print colored(indexinfo.to_string(index=False), 'magenta')
-            #print (tabinfo.merge(indexinfo, left_on='TableName', right_on='TableName', how='outer' ))
-            MergedDF = tabinfo.merge(indexinfo, left_on='TableName', right_on='TableName', how='outer' )
-            JoinedDF = JoinedDF.append( MergedDF, ignore_index = True)
-            #JoinedDF = JoinedDF.append( indexinfo.to_string(index=False), ignore_index = True )
+            log.write(indexinfo.to_string(index=False))
 
-    JoinedDF.sort_values(by = ['DB','IndexType', '%frag'], kind= 'mergesort',  inplace = True, ascending=False )
-    htm.write(JoinedDF.to_html(index = False))    
+            TableType = tabinfo['TableType'].iloc[0]
+            Frag = indexinfo['avg_frag'].iloc[0]
+            if TableType == 'Clustered':
+                if int(Frag) >= 50:
+                    RebuildString = SQL_Rebuild_command.format(row['table'], row['db'] )
+                else:
+                    RebuildString = SQL_Reorg_command.format(row['table'], row['db'] )
+            elif TableType == 'Heap':
+                RebuildString = SQL_Heap_rebuild_command.format(row['table'], row['db'] )
+            else:
+                RebuildString = '---'
+        
+
+        indexinfo['Rebuildstring']= RebuildString
+
+        
+        #print colored(RebuildString , 'green')
+        #print tabinfo.iat(0,'TableType').to_string()
+        #print (tabinfo.merge(indexinfo, left_on='TableName', right_on='TableName', how='outer' ))
+        MergedDF = tabinfo.merge(indexinfo, left_on='TableName', right_on='TableName', how='inner' )
+        JoinedDF = JoinedDF.append( MergedDF, ignore_index = True)
+        #JoinedDF = JoinedDF.append( indexinfo.to_string(index=False), ignore_index = True )
+
+    JoinedDF.sort_values(by = ['DB','TableType', 'avg_frag'], kind= 'mergesort',  inplace = True, ascending=False )
+   # JoinedDF.style = JoinedDF.style.applymap(color_frag_red)
+
+    htm.write(
+    JoinedDF.style.set_properties(subset = ['Rebuildstring'], **{'display.max_colwidth':'1000'})
+    .set_properties(**{'border': '1px solid black', 'nth-child(even)':'#f2f2f2' })
+    .applymap(color_frag, subset = ['avg_frag'] )
+    .applymap(ident_HEAP, subset = ['TableType'] )
+    .render()
+    )    
     #print JoinedDF
     htm.close()
+    log.close()
     print colored('END!', 'red')
 #all_info=tabinfo.join(indexinfo, on='TableName', how='outer' )
 #print (all_info)
