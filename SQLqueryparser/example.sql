@@ -49,3 +49,9 @@ Select top 1
 FROM sys.indexes
 WHERE Object_id = object_id('[dbo].[_Reference252]')
 order BY index_id
+
+USE {1};
+SET LOCK_TIMEOUT 120000;
+ALTER INDEX ALL ON {0} REBUILD
+WITH
+(SORT_IN_TEMPDB = ON, ONLINE = ON)
