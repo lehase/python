@@ -39,3 +39,13 @@ FROM sys.tables t
     INNER JOIN sys.allocation_units a ON p.partition_id = a.container_id
 WHERE t.name = '_InfoRg18426'
 GROUP BY t.Name, p.Rows
+
+
+Select top 1
+    Case 
+  when index_id=0 then 'Heap' 
+  Else 'Clustered' 
+             End as TableType
+FROM sys.indexes
+WHERE Object_id = object_id('[dbo].[_Reference252]')
+order BY index_id

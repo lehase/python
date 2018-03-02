@@ -8,7 +8,7 @@ from termcolor import colored
 
 
 def sql_query(query, database):
-    server = 'mow03-opt06'
+    server = 'mow03-sql58c'
     # database = 'agro3'
     # username = 'your_username'
     # password = 'your_password'
@@ -65,14 +65,15 @@ if __name__ == '__main__':
         --USE {0}
         --GO
         SELECT OBJECT_NAME(ind.OBJECT_ID) AS TableName,
-            ind.name AS IndexName, indexstats.index_type_desc AS IndexType,
-            round(indexstats.avg_fragmentation_in_percent, 0, -1) as [%frag]
+            --ind.name AS IndexName, indexstats.index_type_desc AS IndexType,
+            round(avg(indexstats.avg_fragmentation_in_percent), 0, -1) as [avg_frag]
             --FROM sys.dm_db_index_physical_stats(DB_ID('{0}'), null, NULL, NULL, NULL) indexstats
             FROM sys.dm_db_index_physical_stats(DB_ID('{0}'), OBJECT_ID('{1}'), NULL, NULL, NULL) indexstats 
             INNER JOIN sys.indexes ind
             ON ind.object_id = indexstats.object_id
                 AND ind.index_id = indexstats.index_id
-        ORDER BY indexstats.avg_fragmentation_in_percent DESC 
+        --ORDER BY indexstats.avg_fragmentation_in_percent DESC 
+		group by OBJECT_NAME(ind.OBJECT_ID)
         """
 
     global SQL_get_indexes11
@@ -95,17 +96,23 @@ if __name__ == '__main__':
     SQL_get_tableinfo = """
 SET NOCOUNT ON;
 
-SELECT
+SELECT TOP 1
     DB_NAME() as DB,
     t.Name AS TableName,
     p.rows AS Rows,
-    CAST(ROUND((SUM(a.used_pages) / 128.00), 2) AS NUMERIC(36, 2)) AS Used_MB
+    CAST(ROUND((SUM(a.used_pages) / 128.00), 2) AS NUMERIC(36, 2)) AS Used_MB,
+	 Case 
+  when i.index_id=0 then 'Heap' 
+  Else 'Clustered' 
+             End as TableType
 FROM sys.tables t
     INNER JOIN sys.indexes i ON t.OBJECT_ID = i.object_id
     INNER JOIN sys.partitions p ON i.object_id = p.OBJECT_ID AND i.index_id = p.index_id
     INNER JOIN sys.allocation_units a ON p.partition_id = a.container_id
 WHERE t.name = '{1}'
-GROUP BY t.Name, p.Rows
+
+GROUP BY t.Name, p.Rows,  i.index_id 
+ORDER BY i.index_id 
     """
 
     global SQL_TOP10_queries
@@ -130,7 +137,7 @@ GROUP BY t.Name, p.Rows
         -- ORDER BY qs.total_worker_time DESC -- CPU time
         ORDER BY total_elapsed_time_in_S DESC 
             """
-
+    
     
 
   
@@ -185,11 +192,11 @@ GROUP BY t.Name, p.Rows
             print colored(tabinfo.to_string(index=False), 'yellow')
             print colored(indexinfo.to_string(index=False), 'magenta')
             #print (tabinfo.merge(indexinfo, left_on='TableName', right_on='TableName', how='outer' ))
-            MergedDF = tabinfo.merge(indexinfo, left_on='TableName', right_on='TableName', how='outer' )
+            MergedDF = tabinfo.merge(indexinfo, left_on='TableName', right_on='TableName', how='inner' )
             JoinedDF = JoinedDF.append( MergedDF, ignore_index = True)
             #JoinedDF = JoinedDF.append( indexinfo.to_string(index=False), ignore_index = True )
 
-    JoinedDF.sort_values(by = ['DB','IndexType', '%frag'], kind= 'mergesort',  inplace = True, ascending=False )
+    JoinedDF.sort_values(by = ['DB','TableType', 'avg_frag'], kind= 'mergesort',  inplace = True, ascending=False )
     htm.write(JoinedDF.to_html(index = False))    
     #print JoinedDF
     htm.close()
