@@ -102,37 +102,31 @@ if __name__ == '__main__':
         """
     global SQL_Rebuild_command 
     SQL_Rebuild_command = """
-    USE [{1}];
-    SET LOCK_TIMEOUT 120000;
-    ALTER INDEX ALL ON [{0}] REBUILD
-    WITH
-    (SORT_IN_TEMPDB = ON, ONLINE = ON); 
-    GO
-    UPDATE STATISTICS [{0}]
-    WITH FULLSCAN;
+    USE [{1}];<br>
+    SET LOCK_TIMEOUT 120000;<br>
+    ALTER INDEX ALL ON [{0}] REBUILD WITH (SORT_IN_TEMPDB = ON, ONLINE = ON); <br>
+    GO<br>
+    UPDATE STATISTICS [{0}] WITH FULLSCAN;<br>
     GO
     """
 
     global SQL_Reorg_command 
     SQL_Reorg_command = """
-    USE [{1}];
-    SET LOCK_TIMEOUT 120000;
-    ALTER INDEX ALL ON [{0}] REORGANIZE
-    WITH (LOB_COMPACTION = ON); 
-    GO
-    UPDATE STATISTICS [{0}]
-    WITH FULLSCAN;
+    USE [{1}];<br>
+    SET LOCK_TIMEOUT 120000;<br>
+    ALTER INDEX ALL ON [{0}] REORGANIZE WITH (LOB_COMPACTION = ON);<br>
+    GO<br>
+    UPDATE STATISTICS [{0}] WITH FULLSCAN;<br>
     GO
     """
 
     global SQL_Heap_rebuild_command 
     SQL_Heap_rebuild_command = """
-    USE [{1}];
-    SET LOCK_TIMEOUT 120000; 
-    ALTER TABLE [{0}] REBUILD; 
-    GO
-    UPDATE STATISTICS [{0}]
-    WITH FULLSCAN;
+    USE [{1}];<br>
+    SET LOCK_TIMEOUT 120000;<br>
+    ALTER TABLE [{0}] REBUILD;<br>
+    GO<br>
+    UPDATE STATISTICS [{0}] WITH FULLSCAN;<br>
     GO
     """
 
@@ -193,7 +187,7 @@ ORDER BY i.index_id
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    server = 'mow03-opt06'
+    server = 'mow03-sql52c'
     html_file = 'c:\www\index.html'
     log_file = 'c:\www\log.txt'
 
@@ -252,6 +246,7 @@ ORDER BY i.index_id
         print colored(tabinfo.to_string(index=False), 'yellow')
         log.write(tabinfo.to_string(index=False))
        
+       #Calculate Rebuild String
         if not tabinfo.empty:
             indexinfo=sql_query(SQL_get_indexes.format(row['db'], row['table']), row['db'])
             print colored(indexinfo.to_string(index=False), 'magenta')
@@ -269,9 +264,11 @@ ORDER BY i.index_id
             else:
                 RebuildString = '---'
         
-
         indexinfo['Rebuildstring']= RebuildString
 
+        #Calculate More info string
+        MoreInfoString = ("EXEC dbo.sp_BlitzIndex @DatabaseName='{1}', @TableName='{0}';").format(row['table'], row['db'])
+        indexinfo['MoreInfo']= MoreInfoString
         
         #print colored(RebuildString , 'green')
         #print tabinfo.iat(0,'TableType').to_string()
@@ -284,7 +281,7 @@ ORDER BY i.index_id
    # JoinedDF.style = JoinedDF.style.applymap(color_frag_red)
 
     htm.write(
-    JoinedDF.style.set_properties(subset = ['Rebuildstring'], **{'display.max_colwidth':'1000'})
+    JoinedDF.style.set_properties(subset = ['Rebuildstring','MoreInfo'], **{'display.max_colwidth':'1000'})
     .set_properties(**{'border': '1px solid black', 'nth-child(even)':'#f2f2f2' })
     .applymap(color_frag, subset = ['avg_frag'] )
     .applymap(ident_HEAP, subset = ['TableType'] )
