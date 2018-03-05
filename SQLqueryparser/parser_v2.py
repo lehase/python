@@ -106,7 +106,11 @@ if __name__ == '__main__':
     SET LOCK_TIMEOUT 120000;
     ALTER INDEX ALL ON [{0}] REBUILD
     WITH
-    (SORT_IN_TEMPDB = ON, ONLINE = ON)
+    (SORT_IN_TEMPDB = ON, ONLINE = ON); 
+    GO
+    UPDATE STATISTICS [{0}]
+    WITH FULLSCAN;
+    GO
     """
 
     global SQL_Reorg_command 
@@ -114,14 +118,22 @@ if __name__ == '__main__':
     USE [{1}];
     SET LOCK_TIMEOUT 120000;
     ALTER INDEX ALL ON [{0}] REORGANIZE
-    WITH (LOB_COMPACTION = ON)
+    WITH (LOB_COMPACTION = ON); 
+    GO
+    UPDATE STATISTICS [{0}]
+    WITH FULLSCAN;
+    GO
     """
 
     global SQL_Heap_rebuild_command 
     SQL_Heap_rebuild_command = """
     USE [{1}];
     SET LOCK_TIMEOUT 120000; 
-    ALTER TABLE [{0}] REBUILD
+    ALTER TABLE [{0}] REBUILD; 
+    GO
+    UPDATE STATISTICS [{0}]
+    WITH FULLSCAN;
+    GO
     """
 
     global SQL_get_tableinfo 
@@ -181,7 +193,7 @@ ORDER BY i.index_id
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    server = 'mow03-sql52c'
+    server = 'mow03-opt06'
     html_file = 'c:\www\index.html'
     log_file = 'c:\www\log.txt'
 
