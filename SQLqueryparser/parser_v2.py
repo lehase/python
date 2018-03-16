@@ -8,10 +8,7 @@ from termcolor import colored
 
 
 def sql_query(query, database):
-    #server = 'mow03-sql54c'
-    # database = 'agro3'
-    # username = 'your_username'
-    # password = 'your_password'
+
     driver= '{ODBC Driver 13 for SQL Server}'
     # print colored('Connectinng to {}', 'green').format(server)
     try:
@@ -28,8 +25,7 @@ def sql_query(query, database):
     return DF
     
 def sql_query1(query):
-    server = 'mow03-sql56c'
-    # database = 'agro3'
+
     # username = 'your_username'
     # password = 'your_password'
     driver= '{SQL Server Native Client 11.0}'
@@ -102,31 +98,31 @@ if __name__ == '__main__':
         """
     global SQL_Rebuild_command 
     SQL_Rebuild_command = """
-    USE [{1}];<br>
+    USE [{0}];<br>
     SET LOCK_TIMEOUT 120000;<br>
-    ALTER INDEX ALL ON [{0}] REBUILD WITH (SORT_IN_TEMPDB = ON, ONLINE = ON); <br>
+    ALTER INDEX ALL ON [{1}].[{2}] REBUILD WITH (SORT_IN_TEMPDB = ON, ONLINE = ON); <br>
     GO<br>
-    UPDATE STATISTICS [{0}] WITH FULLSCAN;<br>
+    UPDATE STATISTICS [{1}].[{2}] WITH FULLSCAN;<br>
     GO
     """
 
     global SQL_Reorg_command 
     SQL_Reorg_command = """
-    USE [{1}];<br>
+    USE [{0}];<br>
     SET LOCK_TIMEOUT 120000;<br>
-    ALTER INDEX ALL ON [{0}] REORGANIZE WITH (LOB_COMPACTION = ON);<br>
+    ALTER INDEX ALL ON [{1}].[{2}] REORGANIZE WITH (LOB_COMPACTION = ON);<br>
     GO<br>
-    UPDATE STATISTICS [{0}] WITH FULLSCAN;<br>
+    UPDATE STATISTICS [{1}].[{2}] WITH FULLSCAN;<br>
     GO
     """
 
     global SQL_Heap_rebuild_command 
     SQL_Heap_rebuild_command = """
-    USE [{1}];<br>
+    USE [{0}];<br>
     SET LOCK_TIMEOUT 120000;<br>
-    ALTER TABLE [{0}] REBUILD;<br>
+    ALTER TABLE [{1}].[{2}] REBUILD;<br>
     GO<br>
-    UPDATE STATISTICS [{0}] WITH FULLSCAN;<br>
+    UPDATE STATISTICS [{1}].[{2}] WITH FULLSCAN;<br>
     GO
     """
 
@@ -187,7 +183,7 @@ ORDER BY i.index_id
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    server = 'mow03-sql52c'
+    server = 'mow03-sql18c'
     html_file = 'c:\www\index.html'
     log_file = 'c:\www\log.txt'
 
@@ -215,12 +211,13 @@ ORDER BY i.index_id
         # print xml.get('Table')
         for x in xml.iter():
             # fff=x.get()
-            Tab = str(x.get('Table')).replace("[", "").replace("]", "")
+            
             
             DB = str(x.get('Database')).replace("[", "").replace("]", "")
-           
+            Tab = str(x.get('Table')).replace("[", "").replace("]", "")
+            Sch = str(x.get('Schema')).replace("[", "").replace("]", "")
             if Tab != 'None' and DB != 'tempdb' and DB != 'None' and DB != 'NaN':
-                d = dict(db =DB, table=Tab)
+                d = dict(db =DB, schema=Sch, table=Tab)
                 Table_List.append(d)
     
         #Conver to Pandas Dataframe
@@ -242,13 +239,13 @@ ORDER BY i.index_id
         # print '111'
         # print SQL_get_tableinfo.format(row['db'], row['table'])
         # print row['db'], row['table']
-        tabinfo=sql_query(SQL_get_tableinfo.format(row['db'], row['table']), row['db'])   
-        print colored(tabinfo.to_string(index=False), 'yellow')
+        tabinfo=sql_query(SQL_get_tableinfo.format(row['db'],row['table']), row['db'])   
+        print colored(tabinfo.to_string(index=False), 'green')
         log.write(tabinfo.to_string(index=False))
        
        #Calculate Rebuild String
         if not tabinfo.empty:
-            indexinfo=sql_query(SQL_get_indexes.format(row['db'], row['table']), row['db'])
+            indexinfo=sql_query(SQL_get_indexes.format(row['db'], row['schema']+'.'+row['table']), row['db'])
             print colored(indexinfo.to_string(index=False), 'magenta')
             log.write(indexinfo.to_string(index=False))
 
@@ -256,18 +253,18 @@ ORDER BY i.index_id
             Frag = indexinfo['avg_frag'].iloc[0]
             if TableType == 'Clustered':
                 if int(Frag) >= 50:
-                    RebuildString = SQL_Rebuild_command.format(row['table'], row['db'] )
+                    RebuildString = SQL_Rebuild_command.format(row['db'], row['schema'], row['table']  )
                 else:
-                    RebuildString = SQL_Reorg_command.format(row['table'], row['db'] )
+                    RebuildString = SQL_Reorg_command.format(row['db'], row['schema'], row['table'] )
             elif TableType == 'Heap':
-                RebuildString = SQL_Heap_rebuild_command.format(row['table'], row['db'] )
+                RebuildString = SQL_Heap_rebuild_command.format(row['db'], row['schema'], row['table'] )
             else:
                 RebuildString = '---'
         
         indexinfo['Rebuildstring']= RebuildString
 
         #Calculate More info string
-        MoreInfoString = ("EXEC dbo.sp_BlitzIndex @DatabaseName='{1}', @TableName='{0}';").format(row['table'], row['db'])
+        MoreInfoString = ("EXEC dbo.sp_BlitzIndex @DatabaseName='{0}',@SchemaName='{1}', @TableName='{2}';").format(row['db'], row['schema'], row['table'], )
         indexinfo['MoreInfo']= MoreInfoString
         
         #print colored(RebuildString , 'green')
@@ -293,8 +290,3 @@ ORDER BY i.index_id
     print colored('END!', 'red')
 #all_info=tabinfo.join(indexinfo, on='TableName', how='outer' )
 #print (all_info)
-
-
-
-
-
