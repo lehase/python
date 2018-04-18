@@ -14,9 +14,9 @@ def sql_query(query, database):
     try:
         
         cnxn = pyodbc.connect('DRIVER='+driver+';PORT=1433;SERVER='+server+';PORT=1443;DATABASE='+database+';Trusted_Connection=yes;autocommit=True')
-    except Exception, e:
-        print server
-        print type(e), e
+    except Exception as e:
+        print(server)
+        print(type(e), e)
               
     DF=pandas.read_sql_query(query, cnxn)
     #print(DF)
@@ -33,9 +33,9 @@ def sql_query1(query):
     try:
         
         cnxn = pyodbc.connect('DRIVER='+driver+';PORT=1433;SERVER='+server+';PORT=1443;DATABASE=master;Trusted_Connection=yes;autocommit=True')
-    except Exception, e:
-        print server
-        print type(e), e
+    except Exception as e:
+        print(server)
+        print(type(e), e)
     
     cursor = cnxn.cursor()         
     cursor.execute(query)
@@ -43,14 +43,14 @@ def sql_query1(query):
     while cursor.nextset():   # NB: This always skips the first resultset
         try:
             for row in cursor.fetchall():
-                print row
+                print(row)
             
             break
         except pyodbc.ProgrammingError:
             continue
     
     for row in cursor.fetchall():
-        print row
+        print(row)
     return 
 
 def color_frag(val):
@@ -189,9 +189,9 @@ ORDER BY i.index_id
 
     log=open(log_file, "w")
 
-    print colored('Select TOP 10 statemens', 'green')
+    print(colored('Select TOP 10 statemens', 'green'))
     a=sql_query(SQL_TOP10_queries, 'master')
-    print colored(a,'red')
+    print(colored(a,'red'))
     log.write(a.to_string())
 
 
@@ -205,7 +205,7 @@ ORDER BY i.index_id
         if q == None: continue
         i=i+1
         
-        print colored('Parsing {} QueryPlan', 'green').format(i)
+        print(colored('Parsing {} QueryPlan', 'green').format(i))
         #Parse XML Query Plan for DB and Tables in it into Table+List
         xml = etree.fromstring(q)
         # print xml.get('Table')
@@ -240,13 +240,13 @@ ORDER BY i.index_id
         # print SQL_get_tableinfo.format(row['db'], row['table'])
         # print row['db'], row['table']
         tabinfo=sql_query(SQL_get_tableinfo.format(row['db'],row['table']), row['db'])   
-        print colored(tabinfo.to_string(index=False), 'green')
+        print(colored(tabinfo.to_string(index=False), 'green'))
         log.write(tabinfo.to_string(index=False))
        
        #Calculate Rebuild String
         if not tabinfo.empty:
             indexinfo=sql_query(SQL_get_indexes.format(row['db'], row['schema']+'.'+row['table']), row['db'])
-            print colored(indexinfo.to_string(index=False), 'magenta')
+            print(colored(indexinfo.to_string(index=False), 'magenta'))
             log.write(indexinfo.to_string(index=False))
 
             TableType = tabinfo['TableType'].iloc[0]
@@ -287,6 +287,6 @@ ORDER BY i.index_id
     #print JoinedDF
     htm.close()
     log.close()
-    print colored('END!', 'red')
+    print(colored('END!', 'red'))
 #all_info=tabinfo.join(indexinfo, on='TableName', how='outer' )
 #print (all_info)
