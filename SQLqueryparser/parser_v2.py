@@ -183,7 +183,7 @@ ORDER BY i.index_id
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    server = 'mow03-sql18c'
+    server = 'mow03-sql60c'
     html_file = 'c:\www\index.html'
     log_file = 'c:\www\log.txt'
 
