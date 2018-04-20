@@ -5,6 +5,8 @@ import pandas
 #import queries
 from lxml import etree
 from termcolor import colored
+import webbrowser
+
 
 
 def sql_query(query, database):
@@ -184,8 +186,8 @@ ORDER BY i.index_id
 #
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     server = 'mow03-sql60c'
-    html_file = 'c:\www\index.html'
-    log_file = 'c:\www\log.txt'
+    html_file = r'c:\www\index.html'
+    log_file = r'c:\www\log.txt'
 
     log=open(log_file, "w")
 
@@ -288,5 +290,6 @@ ORDER BY i.index_id
     htm.close()
     log.close()
     print(colored('END!', 'red'))
+    webbrowser.open(html_file, new=0, autoraise=True)
 #all_info=tabinfo.join(indexinfo, on='TableName', how='outer' )
 #print (all_info)
