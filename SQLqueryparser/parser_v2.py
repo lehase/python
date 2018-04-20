@@ -6,6 +6,8 @@ import pandas
 from lxml import etree
 from termcolor import colored
 import webbrowser
+import colorama
+
 
 
 
@@ -191,6 +193,8 @@ ORDER BY i.index_id
 
     log=open(log_file, "w")
 
+    colorama.init()
+    
     print(colored('Select TOP 10 statemens', 'green'))
     a=sql_query(SQL_TOP10_queries, 'master')
     print(colored(a,'red'))
