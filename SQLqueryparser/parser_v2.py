@@ -295,7 +295,6 @@ ORDER BY i.index_id
     log.close()
     print(colored('END!', 'red'))
     webbrowser.open(html_file, new=0, autoraise=True)
-    #11
     
 #all_info=tabinfo.join(indexinfo, on='TableName', how='outer' )
 #print (all_info)
