@@ -11,3 +11,5 @@ class Config(object):
     db_pass = 'flask'
     
     SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://{}:{}@{}:{}/{}?driver=SQL+Server+Native+Client+11.0'.format(db_user, db_pass, db_host, db_port, db_name)
+    #SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://flask:flask@mow03-rdps13:1433/flask?driver=SQL+Server+Native+Client+11.0'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
