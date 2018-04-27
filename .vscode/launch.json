@@ -81,17 +81,17 @@
             "request": "launch",
             "stopOnEntry": false,
             "pythonPath": "${config:python.pythonPath}",
-            "program": "fully qualified path fo 'flask' executable. Generally located along with python interpreter",
+            "program": "${workspaceFolder}/microblog/venv/Scripts/flask.exe",
             "cwd": "${workspaceFolder}",
             "env": {
-                "FLASK_APP": "${workspaceFolder}/quickstart/app.py"
+                "FLASK_APP": "${workspaceFolder}/microblog/microblog.py"
             },
             "args": [
                 "run",
                 "--no-debugger",
                 "--no-reload"
             ],
-            "envFile": "${workspaceFolder}/.env",
+            "envFile": "${workspaceFolder}/microblog/venv",
             "debugOptions": [
                 "RedirectOutput"
             ]
