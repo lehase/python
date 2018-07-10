@@ -1,0 +1,271 @@
+MOW03-SBO01T
+   World ID: 2164493
+   Process ID: 0
+   VMX Cartel ID: 2164492
+   UUID: 42 3f 41 61 d0 e6 62 60-82 2b de 43 82 a1 52 2e
+   Display Name: MOW03-SBO01T
+   Config File: /vmfs/volumes/59833424-d6281eb1-9510-9cdc716269e0/MOW03-SBO01T/MOW03-SBO01T.vmx
+
+mow03-s4d55dl
+   World ID: 166087
+   Process ID: 0
+   VMX Cartel ID: 166083
+   UUID: 42 3f 3c 76 e9 46 2f 53-98 7f 31 a0 8f 10 83 55
+   Display Name: mow03-s4d55dl
+   Config File: /vmfs/volumes/59833424-d6281eb1-9510-9cdc716269e0/mow03-s4d55dl/mow03-s4d55dl.vmx
+
+alfrescodb3_split
+   World ID: 8522213
+   Process ID: 0
+   VMX Cartel ID: 8522212
+   UUID: 42 3f 5f 73 c5 1f 06 03-5a 01 3d d6 c5 b5 5f a5
+   Display Name: alfrescodb3_split
+   Config File: /vmfs/volumes/59833479-41ad5b81-a620-9cdc716269e0/alfrescodb3_split/alfrescodb3_split.vmx
+
+MOW03-SQL62T
+   World ID: 166460
+   Process ID: 0
+   VMX Cartel ID: 166456
+   UUID: 42 3f a3 d6 4d d9 3a 86-b7 22 df 6e c7 1a c7 5b
+   Display Name: MOW03-SQL62T
+   Config File: /vmfs/volumes/5718cf93-aa166493-592a-f0921c0d94e0/MOW03-SQL62T/MOW03-SQL62T.vmx
+
+alfrescodb3
+   World ID: 8522820
+   Process ID: 0
+   VMX Cartel ID: 8522817
+   UUID: 42 3f 6d 28 06 2a 35 89-37 68 f8 d2 d0 79 88 35
+   Display Name: alfrescodb3
+   Config File: /vmfs/volumes/5983345e-cca673d3-c26d-9cdc716232f0/alfrescodb3/alfrescodb3.vmx
+
+alfrescoapps3
+   World ID: 8523563
+   Process ID: 0
+   VMX Cartel ID: 8523562
+   UUID: 42 3f 24 f4 ef b0 64 ce-e3 da cb 48 9e f0 e2 8c
+   Display Name: alfrescoapps3
+   Config File: /vmfs/volumes/5983345e-cca673d3-c26d-9cdc716232f0/alfrescoapps3/alfrescoapps3.vmx
+
+MOW03-SQL48T
+   World ID: 2757303
+   Process ID: 0
+   VMX Cartel ID: 2757302
+   UUID: 42 3f 93 b3 f4 cd 69 bd-34 25 b0 10 08 05 48 e1
+   Display Name: MOW03-SQL48T
+   Config File: /vmfs/volumes/596c5f74-833e8d58-d3fd-f0921c0d94e0/MOW03-SQL48T/MOW03-SQL48T.vmx
+
+mow03-ear01dl
+   World ID: 137993
+   Process ID: 0
+   VMX Cartel ID: 137992
+   UUID: 42 3f ef 83 51 42 98 3e-7b 63 9a d3 fb b4 69 9f
+   Display Name: mow03-ear01dl
+   Config File: /vmfs/volumes/59833479-41ad5b81-a620-9cdc716269e0/mow03-ear01dl/mow03-ear01dl.vmx
+
+mow03-ear55dl
+   World ID: 137996
+   Process ID: 0
+   VMX Cartel ID: 137991
+   UUID: 42 3f 3f 93 2a bb 6a 3b-51 bb 04 6b 61 23 e6 f9
+   Display Name: mow03-ear55dl
+   Config File: /vmfs/volumes/59833479-41ad5b81-a620-9cdc716269e0/mow03-ear55dl/mow03-ear55dl.vmx
+
+mow03-eaq55tl
+   World ID: 3644410
+   Process ID: 0
+   VMX Cartel ID: 3644409
+   UUID: 42 3f b2 a8 80 77 a7 02-2e 8b c8 b7 af 04 dc 75
+   Display Name: mow03-eaq55tl
+   Config File: /vmfs/volumes/59833444-3c11653a-e985-9cdc71625110/mow03-eaq55tl/mow03-eaq55tl.vmx
+
+MOW03-TST55L
+   World ID: 3644690
+   Process ID: 0
+   VMX Cartel ID: 3644689
+   UUID: 56 4d 4f ae d3 cb d3 c7-58 f0 72 72 ef a7 a7 8f
+   Display Name: MOW03-TST55L
+   Config File: /vmfs/volumes/59833424-d6281eb1-9510-9cdc716269e0/MOW03-TST55L/MOW03-TST55L.vmx
+
+mow03-epp01pl
+   World ID: 3546791
+   Process ID: 0
+   VMX Cartel ID: 3546789
+   UUID: 42 3f 57 86 9f a7 9d ab-40 d6 7c 7a 2c c7 b5 f2
+   Display Name: mow03-epp01pl
+   Config File: /vmfs/volumes/59833424-d6281eb1-9510-9cdc716269e0/mow03-epp01pl/mow03-epp01pl.vmx
+
+MOW03-TST01L
+   World ID: 6958418
+   Process ID: 0
+   VMX Cartel ID: 6958417
+   UUID: 42 3f 8c 72 3e 69 b6 0b-8a ae 5b b6 c5 4c 39 1d
+   Display Name: MOW03-TST01L
+   Config File: /vmfs/volumes/59833424-d6281eb1-9510-9cdc716269e0/MOW03-TST01L/MOW03-TST01L.vmx
+
+mow03-maq01tl
+   World ID: 2142608
+   Process ID: 0
+   VMX Cartel ID: 2142607
+   UUID: 42 3f 18 d1 af 39 7c c8-5c 0e 8f 63 d1 2a 41 da
+   Display Name: mow03-maq01tl
+   Config File: /vmfs/volumes/5983345e-cca673d3-c26d-9cdc716232f0/mow03-maq01tl/mow03-maq01tl.vmx
+
+mow03-epp55pl
+   World ID: 213113
+   Process ID: 0
+   VMX Cartel ID: 213112
+   UUID: 42 3f da 71 f5 01 de 6e-7e 52 88 fd b3 60 21 29
+   Display Name: mow03-epp55pl
+   Config File: /vmfs/volumes/59833479-41ad5b81-a620-9cdc716269e0/mow03-epp55pl/mow03-epp55pl.vmx
+
+alfrescodb3_zup
+   World ID: 770497
+   Process ID: 0
+   VMX Cartel ID: 770495
+   UUID: 42 3f ea 54 8a 85 e1 ac-30 4c 20 48 2f e1 fe 67
+   Display Name: alfrescodb3_zup
+   Config File: /vmfs/volumes/5983345e-cca673d3-c26d-9cdc716232f0/alfrescodb3_zup/alfrescodb3_zup.vmx
+
+mow03-eat55tl
+   World ID: 1721036
+   Process ID: 0
+   VMX Cartel ID: 1721035
+   UUID: 42 3f 38 45 23 3c a3 e0-3e 68 cd 15 60 fa d1 48
+   Display Name: mow03-eat55tl
+   Config File: /vmfs/volumes/59833479-41ad5b81-a620-9cdc716269e0/mow03-eat55tl/mow03-eat55tl.vmx
+
+MOW03-EXCH10
+   World ID: 771434
+   Process ID: 0
+   VMX Cartel ID: 771432
+   UUID: 42 3f b9 be 34 77 e1 e1-5d 55 40 70 28 b5 dd a1
+   Display Name: MOW03-EXCH10
+   Config File: /vmfs/volumes/5983345e-cca673d3-c26d-9cdc716232f0/MOW03-EXCH10/MOW03-EXCH10.vmx
+
+MOW03-EXCH12
+   World ID: 771603
+   Process ID: 0
+   VMX Cartel ID: 771602
+   UUID: 42 3f 37 3f 2d 44 e7 5e-ec 0b 58 3a 5b 50 c9 4c
+   Display Name: MOW03-EXCH12
+   Config File: /vmfs/volumes/59833424-d6281eb1-9510-9cdc716269e0/MOW03-EXCH12/MOW03-EXCH12.vmx
+
+MOW03-SQL50T
+   World ID: 5031498
+   Process ID: 0
+   VMX Cartel ID: 166457
+   UUID: 42 3f 9e a4 52 39 d6 a1-96 be 1d f1 a6 e9 4c b0
+   Display Name: MOW03-SQL50T
+   Config File: /vmfs/volumes/58e5f990-8558bafb-a009-f0921c0d94e0/MOW03-SQL50T/MOW03-SQL50T.vmx
+
+mow03-s4d01dl
+   World ID: 3491485
+   Process ID: 0
+   VMX Cartel ID: 3491482
+   UUID: 42 3f 2d 83 2a 0a 8a b1-d9 77 69 d7 1d 51 aa 35
+   Display Name: mow03-s4d01dl
+   Config File: /vmfs/volumes/5ac71bc9-923db4bb-48b9-f0921c0d94e0/mow03-s4d01dl/mow03-s4d01dl.vmx
+
+MOW03-EXCH14
+   World ID: 771884
+   Process ID: 0
+   VMX Cartel ID: 771881
+   UUID: 42 3f c4 fd 74 75 3c a4-bd 1a dc be f8 51 2a 98
+   Display Name: MOW03-EXCH14
+   Config File: /vmfs/volumes/5983345e-cca673d3-c26d-9cdc716232f0/MOW03-EXCH14/MOW03-EXCH14.vmx
+
+MOW03-OPT46T
+   World ID: 7293585
+   Process ID: 0
+   VMX Cartel ID: 7293584
+   UUID: 42 3f 5f a3 24 36 d9 fc-05 ac ee 7b 5a f9 0d f5
+   Display Name: MOW03-OPT46T
+   Config File: /vmfs/volumes/59833479-41ad5b81-a620-9cdc716269e0/MOW03-OPT46T/MOW03-OPT46T.vmx
+
+MOW03-OPT47T
+   World ID: 6934402
+   Process ID: 0
+   VMX Cartel ID: 6934399
+   UUID: 42 3f 72 02 5d 4c 6e fc-5e ec e5 c3 07 af 26 04
+   Display Name: MOW03-OPT47T
+   Config File: /vmfs/volumes/59833444-3c11653a-e985-9cdc71625110/MOW03-OPT47T/MOW03-OPT47T.vmx
+
+MOW03-OPT42T
+   World ID: 7296021
+   Process ID: 0
+   VMX Cartel ID: 7296018
+   UUID: 42 3f db 33 07 4e 08 be-f8 5b 61 31 67 91 5f 95
+   Display Name: MOW03-OPT42T
+   Config File: /vmfs/volumes/59833479-41ad5b81-a620-9cdc716269e0/MOW03-OPT42T/MOW03-OPT42T.vmx
+
+MOW03-OPT41T
+   World ID: 6936965
+   Process ID: 0
+   VMX Cartel ID: 6936963
+   UUID: 42 3f e1 87 de 21 52 77-c9 65 95 b4 1b 0e c0 ab
+   Display Name: MOW03-OPT41T
+   Config File: /vmfs/volumes/59833424-d6281eb1-9510-9cdc716269e0/MOW03-OPT41T/MOW03-OPT41T.vmx
+
+alfrescoapps2
+   World ID: 8642202
+   Process ID: 0
+   VMX Cartel ID: 8642201
+   UUID: 42 3f 78 fd 52 32 94 8d-d0 7d a6 37 e3 aa 7a 7b
+   Display Name: alfrescoapps2
+   Config File: /vmfs/volumes/59833444-3c11653a-e985-9cdc71625110/alfrescoapps2/alfrescoapps2.vmx
+
+MOW03-VRT11T
+   World ID: 123971
+   Process ID: 0
+   VMX Cartel ID: 123970
+   UUID: 42 3f d9 0c 8c a1 30 d1-48 8a 85 27 9c df a4 d7
+   Display Name: MOW03-VRT11T
+   Config File: /vmfs/volumes/59833479-41ad5b81-a620-9cdc716269e0/MOW03-VRT11T/MOW03-VRT11T.vmx
+
+mow03-sgraf01
+   World ID: 1109756
+   Process ID: 0
+   VMX Cartel ID: 1109755
+   UUID: 42 3f 3c 9f b7 fc c7 ae-67 82 87 77 4f da 8c 8c
+   Display Name: mow03-sgraf01
+   Config File: /vmfs/volumes/58e5f870-2e798fb0-e509-f0921c0d94e0/mow03-sgraf01/mow03-sgraf01.vmx
+
+alfrescodb2_zup
+   World ID: 2454693
+   Process ID: 0
+   VMX Cartel ID: 2454692
+   UUID: 42 3f e5 63 a0 2e ab 95-5e e5 47 9e 78 df 4b 66
+   Display Name: alfrescodb2_zup
+   Config File: /vmfs/volumes/59833424-d6281eb1-9510-9cdc716269e0/alfrescodb2_zup/alfrescodb2_zup.vmx
+
+MOW03-SQL25
+   World ID: 95839
+   Process ID: 0
+   VMX Cartel ID: 95838
+   UUID: 42 3f ec 1b e6 f6 13 06-e6 7d 12 26 cd 12 64 23
+   Display Name: MOW03-SQL25
+   Config File: /vmfs/volumes/58e5f870-2e798fb0-e509-f0921c0d94e0/MOW03-SQL25/MOW03-SQL25.vmx
+
+mow03-snd01dl
+   World ID: 95876
+   Process ID: 0
+   VMX Cartel ID: 95874
+   UUID: 42 3f 15 46 96 03 21 e7-f7 ba 78 d2 96 a0 24 8a
+   Display Name: mow03-snd01dl
+   Config File: /vmfs/volumes/59833424-d6281eb1-9510-9cdc716269e0/mow03-snd01dl/mow03-snd01dl.vmx
+
+mow03-baq55tl
+   World ID: 2162087
+   Process ID: 0
+   VMX Cartel ID: 2162086
+   UUID: 42 3f e6 cd f3 eb 0b 26-04 97 ef 8b d0 81 b3 57
+   Display Name: mow03-baq55tl
+   Config File: /vmfs/volumes/5983345e-cca673d3-c26d-9cdc716232f0/mow03-baq55tl/mow03-baq55tl.vmx
+
+MOW03-SBO01D
+   World ID: 2162612
+   Process ID: 0
+   VMX Cartel ID: 2162611
+   UUID: 42 3f 40 8d 49 0d 12 e3-6c 17 77 27 91 4e a7 43
+   Display Name: MOW03-SBO01D
+   Config File: /vmfs/volumes/58e5f990-8558bafb-a009-f0921c0d94e0/MOW03-SBO01D/MOW03-SBO01D.vmx
