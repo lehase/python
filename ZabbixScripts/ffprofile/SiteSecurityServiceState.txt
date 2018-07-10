@@ -1,3 +1,0 @@
-services.addons.mozilla.org:HSTS	0	16952	1496224976920,1,0
-self-repair.mozilla.org:HSTS	0	16952	1464692605322,1,1
-addons.mozilla.org:HSTS	0	16952	1496224976560,1,0
