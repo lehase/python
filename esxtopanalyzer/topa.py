@@ -24,17 +24,17 @@ def AnalyzeVMList(filepath):
             
             #Translate lists to series
             wid=pd.Series(wid)
-            #print(wid)
+            print(wid)
             vmname=pd.Series(vmname)
-            #print(vmname)
+            print(vmname)
             
             WID_VM=pd.DataFrame()
             WID_VM['wid']=wid
             WID_VM['VM']=vmname
-            #print(colored('      Dataframe is:', 'green'))
-           # print(WID_VM)
-            # WID_VM = pd.DataFrame.from_records(se)
-            #WID_VM=WID_VM.assign(wid, se.values())
+            print(colored('      Dataframe is:', 'green'))
+            print(WID_VM)
+            #WID_VM = pd.DataFrame.from_records(se)
+            #WID_VM=WID_VM.assign(wid,  .values())
             WID_VM['wid']=WID_VM['wid'].astype('int64', copy=False)
     finally:
         fp.close()
@@ -125,10 +125,21 @@ if __name__ == '__main__':
     PerfomanceCSV=datafolder + 'esxc02.csv'
     ESX_List_file=config_folder + '\\esxlist.txt'
     
+    #Detect CPU count
     CPU_count=multiprocessing.cpu_count()
     print('We have {} CPUs'.format(CPU_count))
     
+
+    #Read config with ESXi hosts
     ESXList=GetHostsConfig(ESX_List_file)
+    for i in range(len(ESXList)):
+        host = ESXList.iloc[i,0]
+        login = ESXList.iloc[i,1]
+        password = ESXList.iloc[i,2]
+        print(host, login, password)
+    
+    
+    
     #print(ESXList.columns)
     
     #WID_VM=AnalyzeVMList(VMList)
